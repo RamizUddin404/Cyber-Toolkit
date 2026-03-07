@@ -1,0 +1,24 @@
+🔥🔥🔥 THE BIGGEST TERMUX RELEASE 2026 🔥🔥🔥
+
+🔰 ULTIMATE MASTER STATION v150.0 (100 TOOLS)
+👑 Created By: RAMIZ UDDIN
+
+😱 এক টুলের ভেতরেই ১০০টি হ্যাকিং টুল! 
+বিশ্বাস হচ্ছে না? এখনই ইন্সটল করে দেখুন!
+
+🔥 ফিচারস:
+✅ ১০০টি প্রিমিয়াম টুল (Nmap, Hydra, Phishing, OSINT)
+✅ GOD MODE (সিস্টেম কন্ট্রোল)
+✅ 3D রেইনবো এনিমেশন
+✅ অটোমেটিক ফেসবুক ফলো সিস্টেম
+✅ কোনো আলাদা ইন্সটলেশন ঝামেলা নেই!
+
+🚀 ইন্সটল কমান্ড (টার্মাক্সে কপি-পেস্ট করুন):
+
+pkg update -y && pkg install git python -y && git clone https://github.com/RamizUddin404/Cyber-Toolkit && cd Cyber-Toolkit && bash setup.sh
+
+🔗 GitHub: https://github.com/RamizUddin404/Cyber-Toolkit
+👤 Developer: https://www.facebook.com/Ramiz.Uddin404
+
+⚠️ নিজ দায়িত্বে ব্যবহার করুন। শুধুমাত্র শিক্ষামূলক কাজের জন্য।
+#Termux #Hacking #RamizUddin #CyberSecurity #100Tools
