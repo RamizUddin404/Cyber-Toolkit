@@ -58,7 +58,7 @@ def header(page):
     print(f"  GITHUB: https://github.com/RamizUddin404")
     print(f"  FB: https://www.facebook.com/Ramiz.Uddin404")
     print("─" * 45)
-    animate_text(f"  ULTIMATE MASTER STATION v160.0 | PAGE {page}/4", 0.02)
+    animate_text(f"  ULTIMATE MASTER STATION v162.0 | PAGE {page}/4", 0.02)
     print("\033[1;33m       CREATED BY: \033[5mRAMIZ UDDIN\033[0m \033[0m") 
     print("\033[1;36m" + "─" * 45 + "\033[0m")
 
@@ -72,7 +72,8 @@ names = {
     61:'SSL Scan', 62:'CF Resolve', 63:'Fake ID', 64:'CC Validator', 65:'MAC Vendor', 66:'Pass Strength', 67:'Dict Gen', 68:'Hash Buster', 69:'MD5 Crack', 70:'Img Stego',
     71:'Bin Conv', 72:'Sys Info', 73:'CPU Stress', 74:'Speed Test', 75:'Router Find', 76:'Net Map', 77:'UA Switch', 78:'IBAN Valid', 79:'Rainbow Table', 80:'SHA1 Crack',
     81:'ZIP Lock', 82:'PDF Lock', 83:'Audio Stego', 84:'Hex Conv', 85:'ASCII Art', 86:'Proc Killer', 87:'Mem Clean', 88:'Bat Opt', 89:'Pub IP', 90:'Local Map',
-    91:'Email Spoof', 92:'SMS Spoof', 93:'Call Spoof', 94:'Port Scan', 95:'Subnet Calc', 96:'Drupal', 97:'Joomla', 98:'Whois Bulk', 99:'Image Resize', 100:'GOD MODE'
+    91:'Email Spoof', 92:'SMS Spoof', 93:'Call Spoof', 94:'Port Scan', 95:'Subnet Calc', 96:'Drupal', 97:'Joomla', 98:'Whois Bulk', 99:'Image Resize', 100:'GOD MODE',
+    101:'Cloud Tunnel', 102:'WiFi PassView', 103:'IP Tracker', 104:'Web Crawler'
 }
 
 tools_map = {
@@ -95,13 +96,14 @@ tools_map = {
     '81':'zip_lock.py','82':'pdf_lock.py','83':'audio_stego.py','84':'hex_conv.py','85':'ascii_art.py',
     '86':'proc_kill.py','87':'mem_clean.py','88':'bat_opt.py','89':'pub_ip.py','90':'local_map.py',
     '91':'email_spoof.py','92':'sms_spoof.py','93':'call_spoof.py','94':'port_scan.py','95':'subnet_calc.py',
-    '96':'drupal_scan.py','97':'joomla_scan.py','98':'whois_bulk.py','99':'img_resize.py','100':'god_mode.py'
+    '96':'drupal_scan.py','97':'joomla_scan.py','98':'whois_bulk.py','99':'img_resize.py','100':'god_mode.py',
+    '101':'cloud_tunnel.py','102':'wifi_pass_view.py','103':'ip_tracker.py','104':'web_crawler.py'
 }
 
 def show_page(page_num):
     clear(); header(page_num)
     start = (page_num - 1) * 30 + 1
-    end = min(start + 30, 101)
+    end = min(start + 30, 105)
     current_list = list(range(start, end))
     for i in range(0, len(current_list), 2):
         id1 = current_list[i]
