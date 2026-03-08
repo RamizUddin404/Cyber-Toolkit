@@ -1,3 +1,34 @@
-# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
-# SOURCE PROTECTED. DO NOT TAMPER.
-import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVN1P21YUv47txAkUGNW60a7tDVoZaUsChUxaCtWyJTBrECKbVJQURcYxibXYjq4daP3QrxfQXsY0TdseJvG6vexlL/sf9hBEEJLF25CmvaG2f8DutZMQRjSJq+Te43PP+Z3Pe/4CHcvXPN/M4+17IAKR+hIg76QQ5Z4+5HNPGtGi7ypAjEjjnX3sF5nEMgASB8BjdhjEm1AQlKgSFWH/IR8ZmeqwxuI/Taz96lrLty8EHzi3hrHNONXCzLMtvujryqVzQAicR2l51Qcmu+sxXbnsKbcEIv6Mw8oVRUL21LX8xP3Jj7WZiyzbD91lX/fOz4V0cimdgp89SkAhucCvwFwqxWfsiQuhXsuPaxHG8Rmm4zefmpaiOWwVqbrlsLVqVUERymF0SVNMEgl0gNNjGUalUFakooJQD2Yy+G8+wNsLcMT4t/hX/HapwVw5YoL10M0GAzGxPbsz9UPi28R30zvReijcYIbd20iDue0SHxww19+QPMmdSfe36vwn5da53QNnKkp3rSjT7gl/156gRSbm65Dizkv9/63IfkKL/sQm7tww6PQi0OFFqI3Q29ULrkO2v40QbHH1ToSB8wjC5fO8HGhpjzY50vgZ/0IX8K8n99+OP8XpPeUu9nTwL3WNqe/MS+jP2HAhvZRMJZeSUFwS+Gw2LcDR9DI/C4X0wuLDtBCx59xHck/L316FgqIZGwrE/WgaulSBmmJJRcmS4OhcVrwLU8qGKiuQ19eNCFxHhgZVTSopZpR0t8NullW57HDKE3WdNG/Eh1vdKho1yz1xGyMyOOyJkGtxQsuHV2G6KQx1w4LrRk0vRjG+aUmViqqXolEX2v6j+lUJqh6beFeBmyXFgmNP4ciIR5Ytq2omYrGSapVra1HZ0GItP04JCclldUOJaRJ+gChqq1WiX9MJcZanbcCW1ph300aBH2aF9Cy/HFtT9RiRlcuaUYR3npy5aEnbYS/aSS2tYxSYlawytAzIk8QloBvdrVBHCUQLqdUqjh0uNJPfSkJ/24MxnIYZaM+09e5gvZosK6YZbqtB5Baz6BXKQGpJJSVdVyuKh3ejowyzmHtagrB7/34on0UYEnqeY6cFxaohfTUScgcSIgPcCZm1tSoyiG2HkbFjTiCVfpjJzc8jMqARmQsOq+pV3AZMFUfv+HEcpmXiiRckzhQI0xt7iDwUh0Y1HQ1hihgxfwPexOuvD9xrMJPuHHvUYFbe+gE3uPX81fMfA7tX6+/d/X3lMD63F59rZFcOs2t7+BeQ66XyfqB8xF2q933R4PgjLvRN8OvgCQCXM/RbAIKL9PHAu/Urn+4PJF/wR4Hg1ubLza1nL5/tqIcBuBeAruZ0g5tpau4s7vK79+uDsQY37t4tHXC5Y0JMNbj4MXHt1gEzgsgrd7hCQZNUvVCIBNxMODSe+w5jqZqCBklm3BwONUXJ7C8UfgGurpcHbhr3Va2iPEA38SdJkDmCtxOaoqi/ATwE8DXDUjde971DfXQyApjebXufHvpp8ud4nR5ycf4FFQjK2w=='))))
+# FIXED BY GEMINI CLI
+import os
+import sys
+import time
+import subprocess
+import shutil
+
+def tool_header(name):
+    os.system('clear')
+    print('\x1b[1;36m=============================================')
+    print(f'      {name.upper()}')
+    print('      CREATED BY: RAMIZ UDDIN')
+    print('=============================================\x1b[0m')
+
+def run():
+    tool_header('METADATA STRIPPER (EXIF REMOVER)')
+    print('\x1b[1;32m[*] Remove personal metadata (GPS, Device Info) from images.\x1b[0m')
+    
+    if shutil.which('exiftool') is None:
+        print('\n\x1b[1;31m[!] Exiftool not found. Installing...\x1b[0m')
+        os.system('pkg install perl wget -y && wget https://github.com/exiftool/exiftool/archive/master.zip && unzip master.zip && mv exiftool-master/exiftool $PREFIX/bin/ && chmod +x $PREFIX/bin/exiftool')
+    
+    file_path = input('\n\x1b[1;33mEnter Path to Image: \x1b[0m')
+    if os.path.exists(file_path):
+        print('\n\x1b[1;32m[*] Stripping Metadata...\x1b[0m')
+        os.system(f'exiftool -all= "{file_path}"')
+        print('\n\x1b[1;32m[+] Success! Metadata removed from original file.\x1b[0m')
+    else:
+        print('\x1b[1;31m[!] File not found!\x1b[0m')
+    
+    input('\n[Press Enter to Return]')
+
+if __name__ == '__main__':
+    run()

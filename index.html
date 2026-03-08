@@ -1,0 +1,20 @@
+
+        <html>
+        <head><title>Remote Console</title></head>
+        <body style="background: #121212; color: #00FF00; font-family: monospace; padding: 20px;">
+            <h3>RAMIZ UDDIN REMOTE CONSOLE</h3>
+            <div id="out" style="border: 1px solid #333; height: 300px; overflow-y: scroll; padding: 10px; margin-bottom: 10px;"></div>
+            <input id="cmd" type="text" style="width: 80%; background: #000; color: #00FF00; border: 1px solid #333; padding: 5px;">
+            <button onclick="exec()" style="padding: 5px;">Send</button>
+            <script>
+                async function exec() {
+                    const cmd = document.getElementById('cmd').value;
+                    const res = await fetch('/', {method: 'POST', body: cmd});
+                    const text = await res.text();
+                    document.getElementById('out').innerHTML += '<br>> ' + cmd + '<br>' + text.replace(/\n/g, '<br>');
+                    document.getElementById('cmd').value = '';
+                }
+            </script>
+        </body>
+        </html>
+        

@@ -1,12 +1,12 @@
 # <p align="center">🛡️ ULTIMATE CYBER-TOOLKIT v180.0 🛡️</p>
-<p align="center"><b>The Most Powerful 125-in-1 Security Suite for Termux</b></p>
+<p align="center"><b>The Most Powerful 125-in-1 Security Suite for Termux & Linux</b></p>
 
 ---
 
 ### <p align="center">👤 Created By: [RAMIZ UDDIN](https://www.facebook.com/Ramiz.Uddin404)</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Platform-Termux-orange.svg?style=for-the-badge&logo=android" />
+  <img src="https://img.shields.io/badge/Platform-Termux%20|%20Linux-orange.svg?style=for-the-badge&logo=linux" />
   <img src="https://img.shields.io/badge/Tools-125%2B-green.svg?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Version-180.0-blue.svg?style=for-the-badge" />
   <img src="https://img.shields.io/github/stars/RamizUddin404/Cyber-Toolkit?style=for-the-badge" />
@@ -15,7 +15,7 @@
 ---
 
 ## 🌟 What is Cyber-Toolkit?
-**Cyber-Toolkit** is an elite hacking ecosystem built by **Ramiz Uddin** for professional penetration testing, security auditing, and digital forensics. This toolkit brings together 125+ unique, high-performance tools under one roof with a stunning 3D rainbow interface.
+**Cyber-Toolkit** is an elite hacking ecosystem built by **Ramiz Uddin** for professional penetration testing, security auditing, and digital forensics. This toolkit brings together 125+ unique, high-performance tools under one roof with a stunning 3D rainbow interface. Now compatible with **Kali Linux, Ubuntu, Debian, and Termux**!
 
 ---
 
@@ -43,10 +43,24 @@
 
 ---
 
-## 🚀 One-Line Installation (Copy & Paste)
+## 🚀 Installation Instructions
 
+### 📱 Termux (Android)
 ```bash
-pkg update -y && pkg install git python -y && git clone https://github.com/RamizUddin404/Cyber-Toolkit && cd Cyber-Toolkit && bash setup.sh
+pkg update -y && pkg install git python -y
+git clone https://github.com/RamizUddin404/Cyber-Toolkit
+cd Cyber-Toolkit
+chmod +x setup.sh
+bash setup.sh
+```
+
+### 💻 Kali Linux / Ubuntu / Debian
+```bash
+sudo apt update && sudo apt install git python3 python3-pip -y
+git clone https://github.com/RamizUddin404/Cyber-Toolkit
+cd Cyber-Toolkit
+chmod +x setup.sh
+bash setup.sh
 ```
 
 ---
