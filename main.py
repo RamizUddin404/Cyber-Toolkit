@@ -44,10 +44,11 @@ def startup_follow():
     
     input("\n\033[1;36m[#] After Following on GitHub, Press ENTER to Open Facebook...\033[0m")
     
-    # STEP 2: FORCE FB OPEN
-    print("\n\033[1;32m[*] Step 2: Opening Facebook Profile...\033[0m")
+    # STEP 2: FORCE FB APP OPEN
+    print("\n\033[1;32m[*] Step 2: Opening Facebook App...\033[0m")
     time.sleep(1)
-    os.system("termux-open-url https://www.facebook.com/Ramiz.Uddin404 || am start -a android.intent.action.VIEW -d fb://facewebmodal/f?href=https://www.facebook.com/Ramiz.Uddin404 || am start -a android.intent.action.VIEW -d https://www.facebook.com/Ramiz.Uddin404 > /dev/null 2>&1")
+    # Priority 1: Direct FB App Intent | Priority 2: Web Browser Fallback
+    os.system('am start -a android.intent.action.VIEW -d "fb://facewebmodal/f?href=https://www.facebook.com/Ramiz.Uddin404" > /dev/null 2>&1 || termux-open-url https://www.facebook.com/Ramiz.Uddin404')
     
     print("\n\033[1;33m[+] Thank You! Launching ULTIMATE MASTER STATION...\033[0m")
     time.sleep(2)
