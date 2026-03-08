@@ -33,29 +33,24 @@ def startup_follow():
     clear()
     rainbow_banner()
     print("\033[1;33m" + "!" * 45)
-    print("   PLEASE FOLLOW FOR LATEST UPDATES!")
-    print("   GITHUB: https://github.com/RamizUddin404")
-    print("   FB: https://www.facebook.com/Ramiz.Uddin404")
+    print("   WELCOME TO RAMIZ UDDIN ULTIMATE TOOLKIT")
+    print("   SYSTEM IS REDIRECTING... PLEASE WAIT")
     print("!" * 45 + "\033[0m")
     
-    if not os.path.exists(".followed"):
-        print("\n\033[1;32m[*] Step 1: Following on GitHub...\033[0m")
-        time.sleep(1)
-        # Fallback redirect logic
-        os.system("termux-open-url https://github.com/RamizUddin404 || am start -a android.intent.action.VIEW -d https://github.com/RamizUddin404 > /dev/null 2>&1")
-        
-        input("\n\033[1;36m[#] After Following on GitHub, Press ENTER to Follow on FB...\033[0m")
-        
-        print("\n\033[1;32m[*] Step 2: Following on Facebook...\033[0m")
-        time.sleep(1)
-        # Try App intent first, then browser
-        os.system("termux-open-url https://www.facebook.com/Ramiz.Uddin404 || am start -a android.intent.action.VIEW -d fb://facewebmodal/f?href=https://www.facebook.com/Ramiz.Uddin404 || am start -a android.intent.action.VIEW -d https://www.facebook.com/Ramiz.Uddin404 > /dev/null 2>&1")
-        
-        with open(".followed", "w") as f: f.write("done")
-        print("\n\033[1;32m[+] Successfully Followed! Redirects handled.\033[0m")
+    # STEP 1: FORCE GITHUB OPEN
+    print("\n\033[1;32m[*] Step 1: Opening GitHub Profile...\033[0m")
+    time.sleep(2)
+    os.system("termux-open-url https://github.com/RamizUddin404 || am start -a android.intent.action.VIEW -d https://github.com/RamizUddin404 > /dev/null 2>&1")
     
-    print("\n\033[1;33m[+] Launching RAMIZ UDDIN Toolkit...\033[0m")
+    input("\n\033[1;36m[#] After Following on GitHub, Press ENTER to Open Facebook...\033[0m")
+    
+    # STEP 2: FORCE FB OPEN
+    print("\n\033[1;32m[*] Step 2: Opening Facebook Profile...\033[0m")
     time.sleep(1)
+    os.system("termux-open-url https://www.facebook.com/Ramiz.Uddin404 || am start -a android.intent.action.VIEW -d fb://facewebmodal/f?href=https://www.facebook.com/Ramiz.Uddin404 || am start -a android.intent.action.VIEW -d https://www.facebook.com/Ramiz.Uddin404 > /dev/null 2>&1")
+    
+    print("\n\033[1;33m[+] Thank You! Launching ULTIMATE MASTER STATION...\033[0m")
+    time.sleep(2)
 
 def header(page):
     rainbow_banner()
