@@ -1,5 +1,5 @@
 # CREATED BY: RAMIZ UDDIN
-import os, time
+import os, time, platform
 
 def tool_header(name):
     os.system("clear")
@@ -8,24 +8,25 @@ def tool_header(name):
     print("      CREATED BY: RAMIZ UDDIN")
     print("="*45 + "\033[0m")
 
-# CREATED BY: RAMIZ UDDIN
-import os
-import platform
-
-def audit():
-    print("\033[1;32m[*] ", end=""); print("[*] System Information:")
-    print("\033[1;32m[*] ", end=""); print(f"System: {platform.system()}")
-    print("\033[1;32m[*] ", end=""); print(f"Release: {platform.release()}")
-    print("\033[1;32m[*] ", end=""); print(f"Architecture: {platform.machine()}")
+def run():
+    tool_header("SYSTEM AUDIT & INFO")
+    print("\033[1;32m[*] Extracting System Information...\033[0m")
     
-    print("\033[1;32m[*] ", end=""); print("\n[*] Checking for Root Access...")
-    if os.geteuid() == 0:
-        print("\033[1;32m[*] ", end=""); print("[+] Root Access: DETECTED (Dangerous if not careful)")
+    print(f"\n  \033[1;36mOS Type      : {platform.system()}")
+    print(f"  Release      : {platform.release()}")
+    print(f"  Architecture : {platform.machine()}")
+    print(f"  Processor    : {platform.processor()}\033[0m")
+    
+    print("\n\033[1;32m[*] Checking for Root Access...\033[0m")
+    if os.getuid() == 0:
+        print("  \033[1;31m[!] Status: ROOTED (Full Access)\033[0m")
     else:
-        print("\033[1;32m[*] ", end=""); print("[-] Root Access: Not Detected (Safe)")
+        print("  \033[1;32m[+] Status: NON-ROOT (User Access)\033[0m")
 
-    print("\033[1;32m[*] ", end=""); print("\n[*] Checking Open Ports (Netstat)...")
-    os.system("netstat -tuln 2>/dev/null || echo 'Netstat not available'")
+    print("\n\033[1;32m[*] Checking Network Interfaces...\033[0m")
+    os.system("ip addr | grep 'state UP' -A2 || echo 'Could not fetch interface info'")
+    
+    input("\n[Press Enter to Return]")
 
 if __name__ == "__main__":
-    audit()
+    run()

@@ -1,5 +1,5 @@
 # CREATED BY: RAMIZ UDDIN
-import os, time
+import os, time, cyber_deps
 
 def tool_header(name):
     os.system("clear")
@@ -8,25 +8,20 @@ def tool_header(name):
     print("      CREATED BY: RAMIZ UDDIN")
     print("="*45 + "\033[0m")
 
-# CREATED BY: RAMIZ UDDIN
-import os
-import cyber_deps
-cyber_deps.ensure_deps(system_pkgs=["sqlmap"])
-
 def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;33m[*] SQLMap Injection Tool\033[0m")
-        print("\033[1;32m[*] ", end=""); print("1. Automatic Scan")
-        print("\033[1;32m[*] ", end=""); print("99. Uninstall SQLMap")
-        print("\033[1;32m[*] ", end=""); print("99. Uninstall This Tool (Remove Packages)")
-        print("\033[1;32m[*] ", end=""); print("0. Back")
-        
-        c = input("\nSQLMap > ")
-        if c == '0': break
-        if c == '99':
-            cyber_deps.remove_deps(system_pkgs=["sqlmap"])
-            break
-        # ... logic
-        input("\n[Press Enter]")
+    tool_header("SQLMAP INJECTION TOOL")
+    print("\033[1;32m[*] Advanced SQL Injection Scanner via SQLMap.\033[0m")
+    
+    cyber_deps.ensure_deps(system_pkgs=["sqlmap"])
+    
+    target = input("\n\033[1;33mEnter Target URL (e.g. site.com/php?id=1): \033[0m").strip()
+    if target:
+        print(f"\n\033[1;32m[*] Starting SQLMap Scan on {target}...\033[0m")
+        print("[!] Using --batch and --random-agent for efficiency.")
+        time.sleep(1)
+        os.system(f"sqlmap -u '{target}' --batch --random-agent --level=1 --risk=1")
+    
+    input("\n[Press Enter to Return]")
 
-if __name__ == "__main__": run()
+if __name__ == "__main__":
+    run()

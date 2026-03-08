@@ -1,2 +1,7 @@
 requests
-apksigner
+colorama
+beautifulsoup4
+mechanize
+dnspython
+tqdm
+faker
