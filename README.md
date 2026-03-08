@@ -36,6 +36,11 @@
 | CUPP Pass-Gen | ARP Spoofer | PDF/ZIP Locker | LocalXpose Tunnel |
 | Base64 Pro | Packet Sniffer | System Auditor | Proxy Checker |
 
+## 🛡️ Security & Protection
+- 🔐 **Obfuscated Source:** All 125+ scripts are protected with advanced encryption to prevent unauthorized copying or tampering.
+- 🚀 **Sequential Redirects:** Every launch starts with a professional sequential redirect to the official GitHub and Facebook profiles.
+- 🔥 **God Mode:** One-click deep cleaning and system optimization for peak performance.
+
 ---
 
 ## 🚀 One-Line Installation (Copy & Paste)
