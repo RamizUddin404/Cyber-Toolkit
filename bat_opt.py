@@ -1,18 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-def run():
-    print("\033[1;32m[*] ", end=""); print("[*] Battery Info")
-    if input("Show? ") == "99": import cyber_deps; cyber_deps.remove_deps(); return
-    os.system("dumpsys battery")
-    input("[Enter]")
-import os
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVUk9PE0EUn9md3ZYtAQwgBgRX/JMsJkYsmFABAxaTTWMPXTHIQjalXUsTdreZ3WrYi0YP9ogxRj2YePCiH8DP4LFKiWbCzYPxZuALODNtsaaNCS+ZN29+b+a9N+/3foAWERr7YZKql8AABkwBXN8hhoYwDLBgiFSLTd8aMlBiBYBsFIA1cRxMN0KooAALUJN+sUM6B1uySHSJLMtHnsU8cmQE0CbjNM80bMY0pSZuCB1RcRlkIu1RmlX1gHjnd6gjKv1FC0CT00TKbdlZHE6NmJPX49ecueNIKKtcwtH6fjOztHBnKaku3kuomYXb+qq6nEzq6XDyWFFHzCuOhojg+UT2t/3AdohUwkU3IFK5VLKxBglys47ts5+oBJBY4Hlb1qadzdsYxyiI6PLnqXoM9pH8TH+iVwo1dHIfdVWVMzWkUqNya2fqVeJ54sXszuWqcraGxrlXq6EJbpzeQ6OHrE+51qYf8fypzvPRDBh0kgxxRlBbsVYGxHYGDJlP2QC1IgZICd5/eWZ8mdEmmlHab9K5inbM2PUP50o6jHGyrzrmxLqKWSTaUtF282EfQxazQWDjbVV373uhbGx6D2+oRJiZwWyWw9582SlRWtSN+rUwYi651FjXZMzKJ1LRLZUDouS2N2xs5e2ST2LYdrwHNj9g1kMs86T4BCOK08jLICIuu7ifWt3MkWwwSOkYfid8RefeL1cvzdUuzO9HuisrTx+9Pr8bGdtVJ7/F9S9xvRZPfb7boLva06RZ20MDmEUjUctyskXXsjSJ10BQUHRsPi88JbvAxsqyPgD+ol5SdNbx8uUtex6fokdWq3+Rqt8ihPAn6D1AEhw76ENw8FABUPkuxiqru+LQm/63g1VxiMf5A5QK3KA='))))

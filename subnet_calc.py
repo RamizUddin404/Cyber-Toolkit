@@ -1,17 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-def run():
-    print("\033[1;32m[*] ", end=""); print("[*] Subnet Calc")
-    if input("IP/CIDR: ") == "99": import cyber_deps; cyber_deps.remove_deps(); return
-    print("\033[1;32m[*] ", end=""); print("Use ipcalc tool for details.")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVUs9PE0EUnt2dbUtLRAOI8kMHCIfFBEWgCbWQIMVkBRvSpUZZyGZpx9qku9vMbk3Yk/Fijxhj1IOJBy969g+ptsRkws2D8UbgH3BmC1il0fCSefPmvZnvvXnf+w5aRDzaD5NMvQIa0IRlQJq7QARN7AdE1CSmpQ2owcQDAMwIABvSCJg5eopAQSgIivyTH9I5oQVdZkvi6J8CdP0kkBHBKRlhOWeEY0xdPvZrYluvlAWZ8GmU46rOgan272Bbr/zbWwBKKE3lXAmbxJ8e0CdvTcWtubOIH0KB+EPNfTGztLC2lEK3HyZQZuGeuo6yqZSa9ifPhDqg37AUSEXHpSF32/WwReUyKdoelSvlMiaKQKFtWtjlP0EU0JjnOCXjMTbzmJAYc0K23HmmnoI9GHquPlOrhQa8uAc7atGrDYiYUb2zM/068SLxMrkzUYsON+BIEFUacDwwBnfh0CHvU6616Sc8f27yfDIDGpsgTZoVUauvlQHpNANaKJiyHmaFNbAsOv/kmfP1n3yRtvk6/mA8mvZjAdU3LX18E5EoC7CGStjO+13co1W2bOyhRbOU8zvU1euLaiqTQFScnSV8lv3BrItRsZxjccT7jh45BOWxZxZL7oQf1pdsD5NNBRL+FyoX7XLFo9Hc9hYmRh6XXRoj2HKe4OCgCOQC5ypgMqiFSqRik25mdfLAyhGJjJH+9+JXOPohW7uWbIzN7YU7q3o9fPnNWj08XB+d/hZf+RJfacTTtdX7f11XG2N3OePKLuwhHJVGDMMyi7ZhKDLhlFLoFS0cjE6Qml/gE2YYH0HwollaJGk5+UoJz5NL7MhrdkeZ2pcEQfgBug6gLFw5OA+F3v0ogJ3V9brU97b7XW9N6gtAfgGNC+F8'))))

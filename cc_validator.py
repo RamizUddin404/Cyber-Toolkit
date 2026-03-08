@@ -1,18 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-def run():
-    print("\033[1;32m[*] ", end=""); print("\n[*] Luhn Validator")
-    n = input("CC Number: ")
-    if n=="99": import cyber_deps; cyber_deps.remove_deps(); return
-    print("\033[1;32m[*] ", end=""); print("Valid" if n.isdigit() and len(n)>12 else "Invalid")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVU81PE0EUn9mdbUtbFQJI5MuFSuJiYkRA04Ik5cOkQWvStUQpuFnbtWzobpvZLYY9ET3YI0aN8WDiwQue5IR3PHCsUqKZcPNguBH4B5zdUiihkvCSee/Ne/M+9r3f/gFVxBzI/WHK3gERiHAS4LKEGIpMK8CMyFLOziARhR4BIHsAmGG7weBBKA/SMA0Fbse+RJOwKjtHD2tn/+JkTxw6Ygw4Qd205iCs5ExwFbvI1LSycRBzn8xS6eo86K8dh2pauSNrGgiuKOGSGUXG1kBbom+o/5Z25yxkuXiHrI6yHItNhB9OjPOjj0N8LHw/Ms3Hx8cjUavvTFnbEjc0AREmaxCXsWiYika4HFZ1k3D5XE7BAiRIlzXFsL+EJ4D4zGw2I80pckrB2EeNiB5jhLIlsI1cryIvIoV0CV3cRnVF7+US4qlSuLs88D70OvRmePl60dtVQt2OVyihXkdp30Id+/acktVDP9wzgs6eDzEgUgSJbJDhq23VG2BPbkAHcSC6HKQ1UbtbBJNMtuG0Xds7O70mxUrd/+OvHki5AYCE7yim0pHoCb2lXopZse4BFL01+/cdQ5A/avkc6NzUEr2zPPZSB10Qq+gpq9Frm+7l53R+Ss6oKdnMYss3NsZH89pTBYd4wgSD2P5DdvyUEc55RdwRfcFWLHdiQjcVPCu4sNvxq3oubxJvcpFGSyklZxAfVrTsglK+uFUjpaZVk7AZRRcYAnVMBwsMuwJfbo2wOK/jS1SzKxoKKGOELrz1E/MTBT7Hi9fCpZ7Rbc+5grbpaV8K/3Z7CldePt+s7/oVCP4IBEuBoW9TxyK+ymvqqro2vzr/PbnRtf5sI7aurtwuxp+UeiQbacIWasLOB3okSZNVXZIEDttQIshUNcWBrNOT/cBGtiStACei3LNnWMum8hllBHfSqz19I0DZLgsh/Asu7CEOdu7Vc7B51w+QvzC9ybZ8aPzYXGRbnCT/AJQk+c4='))))

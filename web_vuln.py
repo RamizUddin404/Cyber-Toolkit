@@ -1,34 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import os
-import cyber_deps
-cyber_deps.ensure_deps(system_pkgs=["nikto"])
-
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;33m[*] Web Vulnerability Scanner (Nikto)\033[0m")
-        print("\033[1;32m[*] ", end=""); print("1. Start Scan")
-        print("\033[1;32m[*] ", end=""); print("99. Uninstall Nikto (Remove)")
-        print("\033[1;32m[*] ", end=""); print("99. Uninstall This Tool (Remove Packages)")
-        print("\033[1;32m[*] ", end=""); print("0. Back")
-        
-        c = input("\nNikto > ")
-        if c == '0': break
-        if c == '99':
-            cyber_deps.remove_deps(system_pkgs=["nikto"])
-            break
-        
-        target = input("Enter Website (URL): ")
-        if target: os.system(f"nikto -h {target}")
-        input("\n[Press Enter to Continue]")
-
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVFtPG0cUnvFebHYXg1XhiiTA1IpUNg0GQ6i6TkoVAq1QixV5cS8xkbWYkdlir63ZdSXvS6u+1FJe3JvSPlRCfSJVH/IH+htqma2CNqgvjVT1LQ1/oLPrCwasioy0M3O+c+bbM+cyf4G+wXbWY4NO3wMVqPB9QNorJFANXAIkcAplCLPJpEPg3IgBlZmFKqtABFSOnuM2eZVPfgyARq03uRhY7FgiUIAFKAf/8YRUHvaRcPRjPH9+8f3J9hTpwMA/wkXY5cxyXVwNDESZDEgHz7N0vQqDhcHn2IEod4IWgMynXC5fxBqxb1zOJm4uvFl6+2WGzSN/2BPt9U569fbG6gpa/iSJ0rfX1+6hzMrKWspOvBTr5excSWbdQNl0ebNmWrjkchWiG5bLVSsVTGTosoZWwqZ3E+QCV7TK5WJuB2vbmBARtMvDXKLTF+CI5b9a+3KtXnDY6BE71BSmHBbRTf3dxo2Hya+T395qxJvCaw4b87Wyw17zN1f+YCeOvTi5nKHvWuVH0BXbzuQquwUz35+KXvZ/hl72J0G2VxsqrUWVUQKoH+vPzP9bche25C9sGbywZajPkumhQ13UABmgCn6nUKTgSaIvRQHIdjsUpHlwbtAOkGjPDXs9V+jnDve4YQZOd1BtnPL1OjctDOQbycAznXDCOnqCrv8OgBxJ2aJf7vOl7LX7iHiMtKgYbGzbCcHXLPiaj/AW+rBaNDDRtvSibtWQmtcMKqLplFcUsleq9nAijlRLI5avta8oShxlDN0wLa1YRL4hmk7jUvkzLNvyae3Gjm6iDVq+XQt0V8vvagVsynZwLo6WqWQPCW2SJeTCOTegKGSYekzCdLLHVg2L+kM9NXULo+lM+gM5iewhv2jRzA6yLwnZuwSbJmpbUvRO2bB0o4rvyzzxXhaX041K1XKFfG0Lk9w2rpiuSHx3fIF4BU68PMoBF+Zdnl62gC3Te9tQO3wuQ6oGoYkCo/QzfwNe7x0K4aPQcDM8ubfcCr3+61hzVnfkT09B+5878jtnjNYdOXUGuufI2dPnao6sPJMijesH0lQdHopSg3nwViPjbdgHypEUfSLFWlLscXC/1pKUQynyLBJtvho/iMzW+T/FyHfzD5VvlB9q+9H9UHMi4bwy79O/4YSu/zsFxBEieZcK5XIlTTdyOTnox8BlLb2E/SeGjHmyiA2zSjpRGu8c8d6mXO4R8Dna0QndKpW3q0W8RKao6FWjeZNOzxkI4d9g5AXLwcnjUQCFpyByCIQnINoC0b339pQWmHnBjsKZ51cBK9XtA2b8x4WfFpvMuE/+H8/vcFE='))))

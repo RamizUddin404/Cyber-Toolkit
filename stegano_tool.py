@@ -1,34 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import cyber_deps
-cyber_deps.ensure_deps(system_pkgs=["steghide"])
-import os
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;35m[*] Steganography: Hide/Extract Data in Images\033[0m")
-        print("\033[1;32m[*] ", end=""); print("1. Embed (Hide) File in Image")
-        print("\033[1;32m[*] ", end=""); print("2. Extract (Find) Hidden File")
-        print("\033[1;32m[*] ", end=""); print("99. Uninstall This Tool (Remove Packages)")
-        print("\033[1;32m[*] ", end=""); print("0. Back")
-        
-        c = input("\nStegano > ")
-        if c == '0': break
-        
-        img = input("Enter Image Path: ")
-        if c == '1':
-            secret = input("Enter Secret File Path: ")
-            os.system(f"steghide embed -cf {img} -ef {secret}")
-        elif c == '2':
-            os.system(f"steghide extract -sf {img}")
-        
-        input("\n[Press Enter to Continue]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVFtvG0UUnvHu2o7tOG1ColxIMk0l8LbYubrCbghqEkeYqm7ljaVQp7K29sRZ1bu2ZteI7BPiBYs+YIQQ4gEpjwHxkB/BD7ASF6LFD5WIhHgrzR9gdnwtiWg60s7lO9/55uzMOfMn6Gl8azzTaPcdkIAE7wLSHCGBkmMcEAdbcYTb5pJucK7NAImbhRIfgajrL1A/YdspOaNbAMjUa1uYAeGWBwJ5mIei6297kcjCHjGBfpwdz88snnTHkHRcuDMMw7ZmWmjjkuNClEuBpOu8SjsqP1i82I+/EBW6aB6IzoQlZAtYJubSRHr+9uIt9YM3aaYTsWZONse1ZOzOZmwdrX4SRck79+IPUWp9PZ4w599IdSI9p4q85SjqllPf0w2sWkKJKJphCeVSCRMRWrwmq1i3/wRZwPIaxWIhs4vlHCbEC5rpoa/Q7nPQ4J1fxr+IV/J1fqTB99U803Ue0Ullo7r0ffSb6LfL1VDNc63OzzCrWOdvsMnbz/jJM/ucLDeNIL+r5DDd19uMJ1N6ktezvbfhbCfAr9BOgCmQ7qSHRNNR4iIO1Iv1Xs7/M4VLM52XZrouzXT3MLkO2tdGNZACkocVC0XyvRxvhwMpx8c4AdDL6O8wHOl2QYOkE5xrtGD8KegH0kDKQdO95+zuT1PtK0x7jGq/TuWqrfJKuXSjGeyi954DIA4lTC+riQU1feMRIh5qohnAYS1nRj3MEmYWiaaHrBXzRC7t7kXRRzRTZmOfGUTOGmhdNmSkaCiuynms24ltTs6HUEx9jHMoYFNFtKEUcIdjTi5Qc8s7sKFoOdFWzGGN8UwxEgmhlKZouiEXCmhzV9HRJs1+FEhitfgpRg/k7BN7L9F0zYXQKl2ZXk8rRLSCLDhnDsY0A5PmfpRv7EYpPG+ONmEJZwk2mlE1jeZQuwIQZoEHszvIFFAQ71DHBXO4a24FHtQpYdyTfkCwrqOmrlFEa0XNULQyfiTyxH7RLEHRSmWD2K8TsW9M5CyYtThFzdPKZ3Ho9gXRl4Udv8WRskZG6WyAfvpvwC7wE4+/4e6v+af2V4/c7/4yXJsldVH/D5Soi/dfDz2si+lXoIO9uhg59V2tho591yrwxOurck/fr6ZO/UO1twLHfrHCtbDG8HhtInw8fKuy0fD5v45/Fa+N3jxYOwgfCoc7h1u1kZVnvg9P+v3V60+3OoTgQfYgVRtZrPuWTu1tb9bd7/1zHXgHiM/+W3cmo8qKlsmILnZEFm8oKmYPnOXJ7j3GJJPDJd3yYk0vE8wW7HRsT/uBzGR+AkyqeXruZbWYKxfwCpmmSzvb9du0e8FBCP8CAy95AU6dXQFw8AR4fgcjR2Bk/+P95SMw9wfoe+kYhMEX7wDeVzGPubEfFn8M17gxJv4vBCmZLQ=='))))

@@ -1,20 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import random
-def run():
-    print("\033[1;32m[*] ", end=""); print("\n[*] Fake ID Gen")
-    if input("Gen? ") == "99": import cyber_deps; cyber_deps.remove_deps(); return
-    names = ["John", "Smith", "Doe", "Alex"]
-    print("\033[1;32m[*] ", end=""); print(f"Name: {random.choice(names)} {random.choice(names)}")
-    print("\033[1;32m[*] ", end=""); print(f"CC: 4{random.randint(100000000000000, 999999999999999)}")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVE1sE0cUntmdXRvbGBDhR5CUIShSl6ACdhIphpimcdI4USzhxfwZujj2kFh4d61ZB8EeWgSH5tADVdW/Q6UeOBSOCIkrR4SQWLBRpVFuHBA3RDhxgZl1nDqKRZWR5s17b/a9N2++b/YVaBvSyrqc4uJXoAMdTgPaXCGFurQHUMm3ZCrrMrfQBUVHibMAFIIAXEC9YHAlBQZzcA5qyhthZIqwrYrCpyyq3POr5Fc3shJYN3p5tUHYyplXWn5d6uiVcyAbWJ+ldaooiHeOQx29yn/eOaCpGaYUK6RA3YG9+aPH4kPmyEaGq2J/uD3NdSw7PnpqPIW/OZfA2dGZ9HmcS6XSGffohrLuzR8xNcQk22Gqc92pEZMpVVq2akxZqFYJ1SBDVsEkjugEM8DCNduuGPOkUCKUhrkT8ekkubgBlpD6Y/pmenGugXYuoU1eaF8DYa4sTtwe+D3xc+KX47e/8kL7G6jX39Ua6KCvdL9EPcvinortlx5s4Uyhj/MqB3TOJF0elnC7rx0BeT0CuuqzrItrAR1MS/ZncRZ4HQZ68CS04P/U3ZQPtvRsaH3GXpBb5V8U6KGNfB1v7+nzpwi35Y10yqtH9M2D0mpmqeNtRdfwdUvGDftEjZn5gxcxFefldJCJVXK3hoRronCF4HQKf0ssV+HiBGbS8DAVZTin0JQ9bzFFN8u1eSanbMLQaIVcc9UM51MCM4hdZWwsgQcqgkLg6/f46RUJ+MbHH35KfxjsBm4gP27VCL2oBaiAiyllq7pQY6Hi9VlCjRKpOixMiWlfJU1DpQWrZJtMLc7b5SJhAWFzNmsS3enH+1x2xAlxsyMm0wWLdnNtM5/Ob6BJZM7KPX9LL9CBOzmvP9noO7EUiCyeufX9H131QE9935F/Y5PPY5ON2NTjCRY5dGN8TcQ/px9MPJy5P/Oorz4w6cXTj7c9HXo28mTEO/ddfdrwpi55/YVG3+zamNyDoYfJ+8lHhz19th4verGS108afZfF+9Feoi4qcGVBwzALZcswNJWKHw1DtbJJ/IdIdwvRvfKVaNQw7gI/rNlp8LhplxYqJEn3c1NA7XzJxVsZQvgabHmHFPjF8lYAo+8kFe54GwUosni+Lu/6c/tfOzx5l5/pE2FMJyo='))))

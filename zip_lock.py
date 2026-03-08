@@ -1,33 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, sys, time, subprocess
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-def run():
-    tool_header("ZIP LOCKER (PASSWORD PROTECTOR)")
-    print("\033[1;32m[*] Create a password protected ZIP archive.\033[0m")
-    
-    # Check for zip
-    if subprocess.call(["which", "zip"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL) != 0:
-        os.system("pkg install zip -y")
-
-    target = input("\n\033[1;33mEnter Path to File/Folder to Lock: \033[0m")
-    password = input("Enter Password to set: \033[0m")
-    out_file = input("Enter Output Filename (default: secured.zip): ") or "secured.zip"
-    
-    if os.path.exists(target):
-        print("\n\033[1;32m[*] Creating ZIP with Password...\033[0m")
-        # zip -P [pwd] -r output input
-        os.system(f"zip -P {password} -r {out_file} {target}")
-        print(f"\n\033[1;32m[+] SUCCESS! File saved as {out_file}\033[0m")
-    else:
-        print("\033[1;31m[!] Target not found!\033[0m")
-    
-    input("\n[Press Enter to Return]")
-
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVM1PG0cUn/2yF/NhakjSBGgGqgJOi4EQQHUDErFNcXCx5cVJG4dam/ViVrHX1uw6bvaQkFxAvZSqikoPlXJMe+LQQ4899lCpRhghrbgVqeotSvoHdGb8EadYrTKyZ2bf+837fu8P0LTY2vkygrcnQAISswxQ9WQQQ08WsfTkECexFwDiJQ7vwm2HxPs/BUAWAbgtDIHpmigIMkyG8Qp/kY8VhWnSJuA/R7T9SLUlG4w4C06tIaxzmqnLTAp1usS2pHIJEHeellK3qgtMtX7Ht6QKr6gZ4HWs2IKSVWVkXelLTn40NZObe5NlOSBd1kD1DMRDC6uhILz2mR/GFz4J34KJYDC8Yk2+kdS+5ETOy9ts3rAdxn3DVHO2UECabtpCsVBQkZexeV3OqQbxBNrAbjfz+WxqQ5XTKkLtmMjjvzGPt01wzDu2wo/D25kKf/aYbyu7LlZ4iC/biztXvvV/7f/m6o6v7Bqs8EOU663wl+il/5AfeEnipDQHXaznWWRpnhs18FpGuZYZ5Rs14WhZE5zEj7NNKPE06r+5kvAhJzn8JVy5ZzHW1cB2tNTnbLLN3ZAh1ql6M7WtQWWaqK46dY4ZrdHSLJEntetsk/7u0/rjPadpCVCXV5cm+0FzNDuaLP4/7zoTTBeQuhIs3t0J0iWOlhnqpoi3prhX3Gh7E9/TMko9r3VR74p18VY4BiPRwHIoDkdjC5J0MxoPwlg8uhoKrEbjXmuW9tflXPLSGgwgVTZVKMOCbBilPErDAsqbqmKqaUjkyEjZ0O6pPtIItlDa0JQNm7O0gpfFDWGm80WTnrjYERkvlqdwNwM13TDlbBZiHBy7b427qMKpXEg3VQRjsrkBzTxc1LLq+GI+ix+Tz0heueuHRI/VVwfWTMJcQzVrTF+VGS2ahaJJhZAGhKNpdV0uZjHKUJUiUtM+YqUfWu1N39aY69++a3qGOlrSsFV1jT4fddhyUg9i0OLhGII2A613GwLeX4NSIhAISdIgtQIa8j0cNNnAaPoYUuRkLjm4BldllFFNqOdNuJ4v6ulBinjblYwh1TBg1SXsZlw1i0hf87ro7EBk1touo3gHJ0XBQJtXcFxtZzB0YyURiSAySxFpYVvQdBwOmy/g4NoO9QvNMA0vZztMqtgW6+m1RZyy1Dq21yCFhQclIuVrc6ioo358I3qN30F1XrnL3ZMV/jKdQuEKf/1vBxA9Ww8fP9x1Pj1TPjfyk+to4tr+xLXf/EfLa/v45/y8fEc5cCrHouurti/byp7hijhy0ukp9ywfdEY2F4/dveUz0wfumc0leg0duBeP3Dd/HdtcOnG2bZUelbYePHqws37kHNh3DhyLneWuYEUMnVTF7Xy8u7Trf7r6bPTZhb3JvRt7S2XPXEWcJ7ju2Z/FPeuXc+Wu8KF4/YS8nKmIsyfE9PcO+WFEetMWU6mcrOmplNdJg2dzeKrbvKnlVETGQDXs/TUoKaxU6gdA31bjJF7N5dPFrDqPhvAn6TxjGG/POYZh/gTwCMAXvMC886Krlxl5/gHgO7atA+78d1PfT5e581TOPy1+sig='))))

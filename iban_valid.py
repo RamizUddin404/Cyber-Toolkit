@@ -1,18 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-def run():
-    print("\033[1;32m[*] ", end=""); print("[*] IBAN Validator")
-    i = input("IBAN: ")
-    if i=="99": import cyber_deps; cyber_deps.remove_deps(); return
-    print("\033[1;32m[*] ", end=""); print("Valid (Format check only)" if len(i)>15 else "Invalid")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVUk1PE0EYnt2dbUtbBQUk8qELFeNCYkTApAXRIpA0xBq7lgiFbJZ2Uhq7u810i2FPRA828YJRYzyYePCiv8CfYIKHAiWaCTcPhhuBP+DMlmIJDQmTzDvvx7wfM8/zB9Qs/vA8GKXiPVCAwk0DXDk5zCl8O8C8IlApzEMFhp4CoHkAmBd6wPBhqgTSXJqTxV1mRJNcTXWRboFV/+ZUTxwFYjw4sXpoz2GuWjMhVv0KX9crxEHMfbJKdarzYLB+HqzrFf9700B2RYmYzCIN20MdiYGRwTv63bMs2yU5y+6qnA9ik+EnkxPS+GxIioUfRuak+MREJGoPnKlqR+KWLkPCm3niyq/kLaQTMYczhkXEQi6HsMwRaGg6yrOXSAQQn2WaWXUJaSmEsY86Id35MSpWwQ50vYq8iBTTZXhpBzaUvFfLUKJKcWpt6EPoTejt6NrNkre7DHucqFyGfY7SuQ27Dtg/JWs//QhnUsH5iAMKZZAiBHmp1leLgHASAQPEgeJymNZC/W4FTPPmhdOwZpid3jPRUNXioNpH8YTe0R6UiUrDI07x1p3Kd4wX/qjtcwhxW0/0LUjYSwP02wVkpOyLzBMZD0elGS2bSWmWiW0Xs0MS4YNBzBi/20iFfdm5IN2YMrGuWVJyCSWfSaaRXZGJO2Iss6DtTkwaFsILsojZw4mYMXIFi3iTK4sIqymUyxMfRrq5jCqGkEWGzBMug5sZyKyZVJmPCLhg4Daq+Vlk/hB+imX7Z34TBr7ES/33yr33dzznikuvG1fDv92e4rWXz7eaun8FghuBYDkw8n3mWMLPwA9t/XrpsbIub/RPlWYXy71Jxh15G7Zg1oV4VFXXMoaq0vkZOQi0MjpySOiMwi4wrqrqV+BkVEb1jOpmqpBFY7iTmuzn8wEq9gSO4/6Cxn0oclf2m0Sudc8PoL84tyW0fWz+1FoS2pwi/wAs5fO+'))))

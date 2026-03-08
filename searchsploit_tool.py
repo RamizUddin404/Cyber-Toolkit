@@ -1,22 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import cyber_deps
-cyber_deps.ensure_deps(system_pkgs=["searchsploit"])
-import os
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;32m[*] Searchsploit: Official Exploit Database Lookup\033[0m")
-        query = input("\nEnter software/vulnerability name (e.g. wordpress 5.0) (or '0' to exit): ")
-        if query == '0': break
-        os.system(f"searchsploit {query}")
-        input("\n[Press Enter to Search Another]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVU1tPG1cQnuO9sF5zEwpElEJPiCpYHrjEUAmXInGrRBs7kTdISUy0WuyDWWHvbs6uuexT1Zei9qFUVdX2oRWvrfpjLHAUtPFbHqK+peEP9OxZLlbgJSP5nDMznplvZr59DS0int9nNjt+AR109DXQ+EYU6YmPgCa4JlBhXcgrcE2GQRcmkC7OInwVL7E4aV3W5cxjAJNFrUvDMHMegaGMykhr+zdSckXUkkxiPyHC8zfHU7h05BM3VkYz6CJnQbqw64kbrcIa5NuuZ7lA1Qnpm+PEG63SlbUMmpwLpWKFmDSYHihMfZ7+rPrFh0ggYy7BYHwv5VcWHq0s48UnGZxfyK4+xWvLy6u5YOqDsg4UJquaGCYcL5S9fc8n1VByqWX7oVRzXUI1FIq2WSVe1AkOIUz5jlMxtohZIpSmIKaHN8+Ob6Apyt+tfrt6UG6IfU0xWVc/aYiYPQ6+PJz+NfNT5ue5w/G6eqchDnOv1hDH+OPjF+LgWTSnsN1j8ylueW7FsXxWOxVjMtztslds3cglCf7kJBiCwiVFdEZJXZhN4FZb64KE6wuyYQ3OicgsZShckB7y8nU6MFK1rb1PhqusypU1mwXQkrkgxTd+r1oYe4apylysN4HYpWBebfHoLc1n8IPNTatomRW8sscteNn0zQ3TI/i+42zX3Gh1wVfqiu0Tij1n0981KZnYqVVsQs0Nq2L5+zhaHR4l4+VxvOvQkkuJ5+GZ8UkNjzoUj0yOYN/BZI/NOoNDNBl0tM4fB1gtPOQhcRH23xgiXrAdf4vQZ5pIo88llCzbrfk02gqV4/ak5zVC92Pe8JZDgdZseou9uiLKZDllTtXOptJR7xw6WjxWRv7prU/sNLTdZndvva940l06kE5T3YdLP8z91ttU1B+T3ycPs0efHt2u92gNZYxHTjWUe/+lINVF26MiimFUTcs2DK2NwwlF36oSztRQLe5vEGqUiOuFKWJ7NUq4wkFFkdG4DOMv4Kli0Mpc1SnVKmSeDjA16sabY8dbASH0BrreiRIaOusG1HMK6kvoO4a+o1z9bvoYpl9B8l1CRum3nSC2HwQnQv/v6T9m6kI/z/4/zeok9Q=='))))

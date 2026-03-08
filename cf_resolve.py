@@ -1,20 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import socket
-def run():
-    print("\033[1;32m[*] ", end=""); print("\n[*] Cloudflare Resolver")
-    h = input("Domain: ")
-    if h=="99": import cyber_deps; cyber_deps.remove_deps(); return
-    try: print("\033[1;32m[*] ", end=""); print(f"IP: {socket.gethostbyname(h)}")
-    except: print("\033[1;32m[*] ", end=""); print("Failed")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVU01oE0EUntmd3W6T/vhTrf/dpi24VUStWhOtEE0roRhr1og2lSUmYxrNZsPspto9iR7MwYMiIh4EDx5URDx4EDx58xjbFGXoTUG8FXsRT85sjA22KD7Ymfe+mX3fm3nffAINJvyaFyNsuAd0oMNRQGozJFAXNgEieJFIRF1kEZqQdBQ6C0BKAWACBcD+XylUkIVZqElfeRBLwwYWiX0iZ3nmsSR/L8QFsMwCjG0/rOdMSnVcF1ZExQSINy3PUq+qDQys/B9aEZWW0CzQ5BiV0nmcIu6+zck9hwYOmEP/Y66seuZurc3H4sPh08MR9ei5kBoPn4iOq4lIJBpz9/xX1s3J3aaGqGDZVLanbQebVCqSXMGhUqlYxESDFBVSJrb5SVQKqN+xrLwxiVMZTIifgYh99hE2XAPzSL4ZvR4tZ6to/Txqrvi6qkhlTnnk9r77oTuhu4dv76r4uqso4K1qVdTvOVvm0NZFfk/pxkuX633eBr0+/9aAzpSki0FBbcQaOyAu70ABJIAue0rrYHiTDkYFa/Xfes179g9OJanU/bhveaYA46zz/6GcpQp9jRrpBuq/OJuX9neBWN+Q2AUuQs0fc/2eqPaayf7zKuHVsNaJuJBxN/g4dCxvlTIX8ymC1Ti2rfwUJq4SscxUrhBSqRAMEv56XBQdY6E8ksrlccZtSg4XHEzOazLhN0WlXKFYcqgvPX0BEyODizb1E2xaU7gWyLaVvowd2prFzqRlOxemuXY0gcJJsoYlsDmHWiuPiqRUIJ3Ma+UrV0FNQUwOmx4JM6jncaKyY6Tad3xeaS1fmlU2Xgt/bFLKvTeuzK7q/tATfN8TrPYcen1mvrmt0t71KD7TvP1538veV1MfBkdnBkffhWcHY5UDJyu7x6r9pz4zDWpzqOP7ggikoVvDlTWBJ8JMy47niZcHXxg/bK7jNzvDA+DtQOfRFpEqhsEvxjDYwflzpsjJmdiTO+ngAy+b7+LHM4yngLRw1DuWcti0MqU8PkK2sJA3y97OhgURQvgFtH9DEty2uArAtm+CDNcttAHUUh6fFTsfrH24riJ2epl+Arx2Cbw='))))

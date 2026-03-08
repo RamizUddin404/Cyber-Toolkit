@@ -1,17 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-def run():
-    print("\033[1;32m[*] ", end=""); print("[*] Call Spoofer SIMULATION")
-    if input("Start? ") == "99": import cyber_deps; cyber_deps.remove_deps(); return
-    print("\033[1;32m[*] ", end=""); print("Initiating VoIP Call... Ringing.")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVUs1PE0EUn92dbUtL/AggBkQGCIfFpBEoJlTEIGBcPqrpUiMUslnboW7S3W1mtybsyXixR4wx6sHEgxc9+0d4rLbEZMLNg/FG4B9wZgtYpdHwsvvmze/N+5j5ve+gScTD9WCKqZdAA5qwCEhjFYigiT2AiJrEtLQONZh8AIARAWBdGgQTh6EIFISCoMg/+SaVE5qyy+yXePaPQfbssSMtghMyyGpOCEc5s/IRroktUSkD0uGTWY66OgPGW8fBlqj8Gy0AJZSicq6IDeInerOj18evWTdOI34IBeL3NdbZ9PzMyvwcurWaROmZZXUNZebm1JQ/eqqsvdmrlgKp6Lg05G65HraoXCKm7VG5XCphoggU2oaFXX4TRAGNeY5T1B9hI48JiTEQst+dZuoJ2IWhZ+pTtVKowwu7sK0a7a9DxIzK7e3Eq+Tz5Iup7Xg1OlCHg4FXqcORwLi0A/sO+Dvlmh/9mOdPDZ6PZ0BjE6RJkyJqxpoZkE4yoIWCKetkVlgDi6LzT545X/+pF2lZr+0PxqMpPxZQPWZlRzYQiTIHe1AJ23m/lyOzRrGItJLjbGKCNHU5szSzot5N+WHNM4h3E1FxcpLwqfaRapueaXimXUD3HfVeEBqPx1GaIeyL++HsvO1hsqFAwm9GZdMulT0azW09xETP45JLYwRbzmMcbBSBnOfMBbwGnVGJlG3Swax27lg8pJTx0/NO/AqH3meqV+7Uh9XdcHtltRbufp2ohftrA2PfEgtfEgv1xNLnzb9OL9eHU5x+ZQd2Ep6URnTdMkxb1xWZcH4p9EwLB3MUVOYH+Ljp+gcQRDQ6i0xZTr5cxNPkItvylt0hpvYkQRB+gLP7UBYu75+DQtdeFMD2ylpN6n7T8barKnUHSX4BuQPljQ=='))))

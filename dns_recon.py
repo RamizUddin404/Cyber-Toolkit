@@ -1,23 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import cyber_deps
-cyber_deps.ensure_deps(system_pkgs=["host"])
-import os
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;34m[*] Advanced DNS Reconnaissance\033[0m")
-        domain = input("\nEnter Domain (or '0' to exit): ")
-        if domain == '0': break
-        print("\033[1;32m[*] ", end=""); print(f"[*] Fetching DNS records for {domain}...")
-        os.system(f"host -a {domain} || nslookup {domain}")
-        input("\n[Press Enter to Continue]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVU1tvE0cUnvHOrtfrXAhqwyVNOo1U0uWSC06q4gBSwImIqljI20QFB61c7+CsiGet2TUqKx4qXojgoamqqulDpby26gM/g8dVcNto6zceEG+U/AFmxnHiKpYqjrRzOWfON9/Z881L0GFof96jfPgJWMCCXwLWmiGDVuI0YAm5U5iyqhR0cMRGgaVMQAtdgvgwX+V56qpmadmvASjxrFV1FMzsZ2BQgRVoJl+LTb4MO8BU/imCz++ST/EgUEh0vRnOwDZmUW37rURXr7IMCsmjKG1WfSDTPQ919aqH3gowtXysltdJiYXTQ8Wp2czn1SvvY6GGpYXDrfl6YX7uq/kcvnYriwtzS4u38XIut5gPp94Ldag4WTVRnPD8WPMf+AGpxmqNuTSI1XqtRpgJY0RLVeKLSnAM4nTgeev2Gik5hLE0aMnDv8qH70ATaY8XHy1uVBposIlSkfFxA2G+2FjYnP45+0P2x8ub45HxSQONyqjZQGfl4qM/0fCe+E8xWvP8gN+ZbnGxa/cqfrmzE1q7+X/J5o+A4oE0LC5FS7mUwJ2+zsYoRxtDwTLYFyD3VP4PLbnMJWDpGaUDtf08QEE7Khwuv5TMMcSY6c4mfehdcgEwe/JhWirkYrV49g5mBg/xf6IQ6oTnDBmZlpE5536JlomDc3kLF0jZo7Tk+r7wib6G2JinAWE451VLLsWfeQyPTY7hwMPkWzcwsziGk+GwQFogQXnNpRWJxDgSc3x8l58PlfHx8VAXbcEXSjjsxQ8fYuqve969eg2Hp43iTUZ8H7cu4sjXPRq4tE7umIiJlxSrLq3VAyZeBdNalWiOJNTSlCwvVlidsg/4ql/IqSbltGv0NfXeqG9k+9qOPvbHh9FEuWE6zYHB6ET2xcDshrabHti0nl7Z+vS/x6byz+8/X4tWbkUTtxtmsakb36eepDZvbK1s3dheenbm2cnoeLahz8qscw39/L+9IN3PegQP3bYFNds2k5JyjAK3SqTQY6P84BvCbIfU/DhNqF9nRG4kb5EpHopt/wYkVKsu/XLVc+rr5Cob4ltRsD/LhzcKhPAV6H+LVDiydwzA47vA+BsM7oDB7YXtL3bA+X9A6m0iCS+8OQZQz0b4Qjn1S+bXmUg5JcHfAW69Kyw='))))

@@ -1,22 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import socket
-def run():
-    h = input("Host: ")
-    if h=="99": import cyber_deps; cyber_deps.remove_deps(); return
-    for p in [21,22,80,443,8080]:
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.settimeout(1)
-        if s.connect_ex((h,p)) == 0: print("\033[1;32m[*] ", end=""); print(f"Port {p}: OPEN")
-        s.close()
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVU09vG0UUn9mdXa93naRJmkZQ2m4SWuEgRZSkSHbcSqF2VCu1G7xxVOqElXFGiUV215rdAF1xqECCDSASQIhWKoIDlyI+ABIXDhw4uthVoyE3Dqi30vABmNnEiSv70ifNm3nvzfsz837vb9BGwsG+l2bsG2AAA84Bsr9DAg3heUCEUBKJaIhMQkuSgZLXASgrACyhUXDhIIQOVuEqjEuPuJCvwLYsElsiz/JTmKV0aCgIoINGWbYLsBWzJLX0htBVKxZBIdIZpVVVL5js7oe6aqUj7SqIy3kqVdZxmfhTJ0vnpydfsy4+C/myHpJ/an+/XMjMLGTS+utvJvXCTC57Qy+m09m8f/6Zop4svWLFERUcl8ruTdfDFpVqpGp7VNqo1TCJQ4rssoVd/hKdAqp5jrNuruHyCiZEY0rElnuJsVtgF8mfZD/MBqtNdGIXRevqmSbS2SGY3Z76Nvll8uvU9kRdHWmi0dAab6Lx8PDCA3Rqj/9Tpf3T5VafP4Bhnw8xcNRRGxRZJ0P8HOfdM8AcdPoLEuigNlyxbg2CKx8zb6Ekt+wFudNnFLTZlU57m1XtkvEAjbZYFAs9nfZ2dLAbfZ03rgtTh2gzxPCVz7Gs/YcRZCNiKAlBb9dFi0IvMNRJ8anog13qAy17LgBA48g9+mHtKeTG8r58xXG9pE6FRILwh7HJHGLboxOczTNW/ZV5VLfPMJG7+lqI8Vet0viyTvj3MCSJ2F7xpXmHeLovJ/Vr85m8HyllbA+T5bhKpapd2/CoWrn5NibmCq65VCPYct7F+4LsOpV3sEcjM7NmNp9ZoJpx7fKcaSywSchR1cWeV7WwE4ZwbBtXPBO/T/g488FzXMyADtcIr5vCGoWuy7HLZykskIpkwyY6O/FuuV+BENJKT7D2Wd+tmZ2IErz40XuNYyMPxxL3xxLNselfFv/q0QO4GxvYyn2au3vu+4k7Ez+fezieuj+easQuBnBHiW7FNmPbb3zet6PFtlKbqdv9t6WGdvqHkYY29mOx/vL0bwN/nk3/jv/A9YVi3VisLy7Vry43Z9/irpHNyBfRf6Ogd+Q/FUhqEH+AjpMYr1QxTatctU0zLhMOdor4y8NxJMOc6Qe3+Oia5j0Quu2/UklZzsrGOr5EzjKR98p9ibHHIoTwH9D3BEnw9N4xAHufCAocejwAUCy40RCH7wx+N1QXh8NI/wOATh8f'))))

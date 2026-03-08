@@ -1,29 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time, cyber_deps
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-def run():
-    tool_header("ADB SCANNER (NETWORK DEBUG)")
-    print("\033[1;32m[*] Android Debug Bridge (ADB) Scanner")
-    print("[!] This checks if a phone has left USB Debugging OPEN over Network.\033[0m")
-    
-    cyber_deps.ensure_deps(system_pkgs=["android-tools"])
-    
-    target = input("\n\033[1;33mEnter Target IP: \033[0m")
-    if target:
-        print(f"\n\033[1;32m[*] Connecting to {target}:5555...\033[0m")
-        os.system(f"adb connect {target}:5555")
-        print("\n\033[1;36m[*] Checking Connection Status...\033[0m")
-        os.system("adb devices")
-        print("\n\033[1;32m[*] If device is listed, you can run 'adb shell' to access it.\033[0m")
-    
-    input("\n[Press Enter to Return]")
-
-if __name__ == "__main__":
-    run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVM9rG0cUnpVmpdXvEENIpbqdGFpboVKaOi616gRkS07VpIrRSiStYsR6NZYWS7tiduXiPYVCqcmlLqX0mqPbU/8UEW8IXUwvMZTeTPIPdGZWkmWsiwd2fnwz7/vee/Nm34CJ5huO7wq0+w3IQBYeAOKNAhH46CM+2ZcExC/7aQ+fijLMPQFAkQB4CufA0pACgZbQEtLif2xRVoUJFZF+fqbyJ1epjzcqPnChzVHNJWHEWRdHuOybivproBK8yDLyKg4Wp9vBqah4hrZAOlB2RbWDFWLfSdVvf7n4effuZZodQLzZs964Vinmq8UCWv02hyr5b0rfoVqhUCrbty/Fmqp/2k1D12eYbsDcMy3cdcUe0XTLFfu9HiZpwYW60sUmiwS5wI1YhtFptLHSxIREKAjpZ96j3TNwDAM/lX4o7bcceO0YhgbhDx2I6GR//eDO77lfcr+uHGQH4RsOnOO7aQfe5JP3X8HZdyxP6mTSx/dcFfg9j2vg3I36p97oGeqfQOEIrQQu3jGtFHhLkMVlgZ4Mje0DI3sd1MDCEFVqYFIjWKOVIUuLk1rhsVZ0qlaI24TP2ZwxRi7BFJ3KEJtAz6KJn6vIRNlO5QurSF7Ll8vFClooF6uPH1UeoEJxtXY/bWd4nX7Wrd/cRHm9SQytiQp4q99Cq0RrtjBaoNZpJKuKrmNif1W/sYmqbc1EahurOybStpGCem1Dx6itmKiDty1Uk1c9jpamt9CjjWIZGbuYoDK2vjfITpYVpB1TPLUMKzaT1mDEq81Gb6dl2rNh7tdit6hb1LKqkBa2UGkjh7hxMjzh9ppBXVMtpmUZyI7mlmjLZj2ZqNLcQqp3Atki37Mz4eHr5OYsEGY84jF0JFuK1TdHHBHG0cS7mopN++tJ6dL2EEc0Ix2N+t/8BO0ZfUTThUhfR/PM1GzjTmeeOaeolIImzfKIr4frG4QBXpT0QAVbfaJvpoP83RH2n3LD6t4WJo0m7pluBOtmn2BvIWp6r28R9ogIq3aaxIDFM+U9ZcLKyvVTP8gMnTFG8znwXnFicCXjwCx/mysOvMsnjx345ATGX8PkS5g8TAzmv3gJl09iVwczy0ex3LP1f4KxYyk2uJI93D1s/2UM4uuOdP9YCv8ceh46ePji2gvpUBxczTrSLXYsXnCk4mg340iIg4ojbZ0wsY9ewY8JK3dXajS6iqY3GukAD8aFltbFJMHi4mmYGZ5if6lG4w/AzbzopJWu0ex38D1ynS5Z2Gaadqd+QRD+BakjkHoLReGDt/GEMH86B2B03z7yv/c3DP5YPPUDmORU/wNmQnDt'))))

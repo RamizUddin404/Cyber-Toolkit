@@ -1,24 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, cyber_deps
-cyber_deps.ensure_deps(system_pkgs=["nmap"])
-def run():
-    while True:
-        os.system("clear")
-        print("\033[1;36m" + "="*45)
-        print("      ADVANCED NMAP SCANNER")
-        print("      CREATED BY: RAMIZ UDDIN")
-        print("="*45 + "\033[0m")
-        print("\033[1;32m[1] Fast Scan")
-        print("[2] OS Detection")
-        print("[3] Aggressive Scan")
-        print("[99] Uninstall Nmap")
-        print("[0] Back\033[0m")
-        c = input("\nNmap > ")
-        if c == '0': break
-        if c == '99': import cyber_deps; cyber_deps.remove_deps(["nmap"]); break
-        target = input("\033[1;33mEnter Target IP/URL: \033[0m")
-        if c == '1': os.system(f"nmap -F {target}")
-        elif c == '2': os.system(f"nmap -O {target}")
-        elif c == '3': os.system(f"nmap -A {target}")
-        input("\n[Press Enter to Continue]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVM9v00gUnrGd4CZpaLZt0h9aOpRlwYLSHyGo6e5SQtOiCppWMVlR3CgywYoiaicaO0j1iWO1PWyEWKE9IPVY/guOHKM2iGrU2x5W3KryDzAzabIBLC3MYfzeN+978/mLX/4BXUs6fX58QLe/gApUeBfg1hNiuAGzEvhqjQNVmISqmIQIqNIIwOKGpPrmaAtdBmBDHAeJ00oESrAEFf8HlmSIZJl6VYEkaG/ZjmEWqk9KdvFLOSKTkxaYnHNA6xxlBU8hMAHbV2m+Nq4KnqjoiUqeqM8T9XuiZzxR2RPt8UQDXeiZDhpsoxbIATXEDaZIiWW9PIvRqrAK7kqVSDbg6c/ZyS6HSt3d+zrdBdovwvuNgP93/IecEAbxLodX5ym//5v5A1/xxyh/kPOHv4Ef/ZLf9U6x/9A7cAUBoAxliK+4aejYvT6qTf8Sv2H+9j3LHUV8pdK/pzILi2mUWUmtIXUhlcksZt0fW4cL2cXUfXp2e30OZVMryw9RLp1ezrjT33XVqDZlugNc5IypTefRkm47SC3qltunzeTRqorShmMUnXLFcvu1eB6lSiVs2Hb5qdEq69eSyTzKWWXLdvTNTZSh0+aGtKk8uq0Xn/D+coCB6CYicIoIySRmHmM2ci7iV8fNRcsxMLqv45LhoOW1yVz23hxiZAKnXZlNMJpYovyZdrJKk3g7SSF3JKCtMV2o1cmpoIWK5ZStmpFX/ESo2MTfmn/iq+Ky5RBf2arWHBIobj0ycOGxUbVJEBtm5anBE0UksIj7qEbid7gsmwmmxhNARFyz8CBo/XXYJ3R7Bg4D4SM58GfPHz31S0155EjubYQvNOWfeHClKV/lwURTvsYD1JTP84AWX/4c6bA6wVhTRkehSP3KQejcNjwMhurizmw9xwJpJ3kQvfRemd9X5t9E38hNZflt4igSbcTmDyK3tv2nxS+yL9efr+8O7f28N9QYm3k3GD/sDdcv7Dx4gV9uPd/and1b2pttnL/+LpbwPmjGEp03ObkIgmc/si+eyIWCqZetQkHx4RD7VbljQcOya7hlJPeJ1Vm6aRQKrwGOsroBjv5qVh7XNo2beJSmbIrsa3Q7FiGE/4LBQxB4D6L7ILq7tDu7D66eCP1w4vgykELb7oE4/Hf8VaIhDvN+nwBr9klf'))))

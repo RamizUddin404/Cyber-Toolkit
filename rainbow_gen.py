@@ -1,22 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import hashlib
-def run():
-    print("\033[1;32m[*] ", end=""); print("[*] Rainbow Table Gen")
-    w = input("Wordlist: ")
-    if w=="99": import cyber_deps; cyber_deps.remove_deps(); return
-    try:
-        with open(w, "r") as f:
-            for l in f: print("\033[1;32m[*] ", end=""); print(f"{l.strip()}:{hashlib.md5(l.strip().encode()).hexdigest()}")
-    except: print("\033[1;32m[*] ", end=""); print("Error")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVEtsG0UYntmZtR3bSZvmVTkkWSdFxSmqWtKk2EmLEsdAVGWlemsedorl2BPHjXfXmnUIMRwqOOBDkVwhBJVA4sCBVgj1yKFCLTmAEBJO7BI05IDEAXGLEqRKcGF2HTdGSVN1VvP4v3/nf//zB2gYws6+PcmXj4ACFHgB0NoOKVQED6CCRSGKFMQpPCMqOPAaAAkHADO4HwzviJBAGqahT/zLJOQkbNAi8olMLbcsLbGHjLAA9ox+rm0Y1mXGxDquCPuiKALC9r1S6la1gKH97+F9UXEXTQOfTWZiMksStHCmO3Z6dGhEPfcko2CTrFHoqe3BcGj8UmhSmng9IIXHp6eiUmRyckounH4iqd2xU6oPM0E3mM1YNvJEZWKOZrQ8ExdzOUJ9kGEtoRLD9ERigLnyup6Nz5NEilDq4iDm0zjPl6tgA9ven3p3qpiu4s4N3FR29lWxxA/FF0tnPg5cD3w4VjpZdnqruN/i+qp40Do8dR/3bJtxSjYG3VnP8xa08vywBhReSQryC1Ij1pgBtDcDGogAxWZVWjvH7Qq4IOitB+XazFkviDXVcX7fMbxTYQLQhIjQBl7OcMnoYMsiKOx6tJYWoDTF3HU03LL3z/7HSAi3PppX9z7cdpAFQ2g3dtMLALj4rlhf3d//xdTVWNVe8Cx4ZoeT4vgc972PcyQge86hPjAHvUB6XO6cuxL7gDxSu+dzywWX1SjPqbHByxI164GXIyJaqtBhIuFERpvVl6RLidkskV4iWsH5qk5T2YyRD0hM8PupaT6DlMEAE0OU6rRgj4W0PKGXfU5q5p6JGS23mGfO5PIsofEUyRnMRYmqv0lqBNZzRGOikaeZHLPPJ4z5bGaWITU1zGxES+opwprmyVupTJoYed5IcIm2W0rnGMwaZm+YvWrZzhBd1GgfPzXzaXwLai3D69/zubCGB76IlE9MVJ8Objiai9mKo/vq+K92R/HYe0uVw971Af/qgL86MPrNK5sCEsc2mltL3pJybeaTi791dJbgp2K59+TtibWjZ+903PV+f/ze8RXf3e4fxn9K/7zw40I5GluPJlajiUo0uR69shq9UolmK7K6Li+tyksVebk8XSi/8PYv/neuX3yAQIvnbxsQnUXffdz+wM7JD2b+/R2PXguVj/R/Kay5T3wVuX326zf+MQa5C3fcwR5wzzF+KuhG3z3v4MSK2xn02Fc6kXn2WGtPV3AEMUc8rvKUxeM+GzUfSYbzGZVYjwg9ai5mbMy/zAcnHr8JqNkYtdg5xlQ9tZgl5+kxTprlYphlt4kghH+CQ1tYhL3bhwE8tCU4YMfmEYDdxWgFdd1o+6yjjLosSf8BfJVI+A=='))))

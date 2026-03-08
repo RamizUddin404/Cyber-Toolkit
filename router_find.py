@@ -1,18 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import os
-def run():
-    print("\033[1;32m[*] ", end=""); print("[*] Router Finder")
-    if input("Scan? ") == "99": import cyber_deps; cyber_deps.remove_deps(); return
-    os.system("ip route | grep default")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVUk9rE0EUn9md3aRJrZa2Vlpbx6rYrSDWtEJjbammhRDMIWulNi1LTMYYyP5hkghdBEUP5lgRUQ+CBy/6AfwMHqPdIiy9eRBvpf0Czkz+GEkQ+mBm3vu9mffevN/7CdpEapyHMba9BjrQYQLQ+gkp1KURQKUWKjNL3kA6iq4BkAkCsCFPgNlGCAzyMA815Tc3klnYlkVhS+ZZPoss6ZYjJYEOmWDZZmEzZlpp4rrUFZVXQSrQGaVZVR+IdH+HuqLKXzQPNDXpK9kiyVB3ZjQ9fT1yzbxxFHFVLMQdq5+3UstLd5Zj+Oa9KE4t3Y6v49VYLJ50p48UdTR9xdSQL9klXy1tlcrE9BWHFqyyr1Qch1AN+sjKmKTEf4J94IfLtl00HpJMjlAaZiBiq7TAtqdgD6kv4s/i1byHTu6hnlrojIcwU6or2zNvoi+jr+a3L9dCZz00Ibyah6aEcnoXjR3yPmXbm97i+Uud59YM6GySdHlOwu1YOwNyJwO6KqZskGkBHSQk+788c77SwSaaCnXeZHMV7Jqx5x/OQ0k3LMi+aqanNjHlkVhLZWLl3H6OpOxKmVC8UrBYP11Vz2asRexLc3OUD7M7XHAw5VfwY5ynxME58iBTKZbdQHrZYg83NZXyf/hKwXIqZT+U3bpPqJEjTskPU2Laj4gwKG8mVUV22s8ZE3yKenyZViw6wLRj3BFrUMl4GfkgfUfnPq7WLi14Fxb3Ar3VtedP3p7fCYzv4Okfkfi3SNyLJL7ebfBe67vooUnOt7aLBmkvjx00DDNTsAxDU0QNPioXTCIGR6TkF/h8GcYnIF7USwrOm3auUiQL9BQzea2lSbbtyxDCX+D4AVLg+OEJAEMHEoJD+yGAeqvrO/Lwu4H3QzV5WET6A4JL35c='))))

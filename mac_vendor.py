@@ -1,21 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import requests, cyber_deps
-cyber_deps.ensure_deps(python_mods=["requests"])
-def run():
-    print("\033[1;32m[*] ", end=""); print("\n[*] MAC Vendor")
-    m = input("MAC: ")
-    if m=="99": import cyber_deps; cyber_deps.remove_deps(); return
-    try: print("\033[1;32m[*] ", end=""); print(requests.get(f"https://api.macvendors.com/{m}").text)
-    except: print("\033[1;32m[*] ", end=""); print("Not found")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVM1vG0UUf7M7u15/NCmUJKhpm01CJDYViUvTCjuJi9ukUqjqgxdXECesjD11LGV3zey6kL1QwQFLcChCCHFAyoEDVD0ghEQPXPgPFscl1So3kBC3qD2AODGzjlujGFV90s77mDfvY+b39jfoIXzAH1ps+Rx00NEVoB2OKNKF40CFUBOpGHJM8RrOx+AQTYAuziIdp5AKusTOyWsRXU6/AVBSANbkCTh34KlCFVWRFvmTK7ky6gkisU/k9dwO6yk+2sgLfTOic6gbsyh17brQ1yoWIB85HKVb1QCc7X8O97VKj61V0ORcIJU3SYl6c6PFM/Nnz5uLT0OerIbknezwS/nl7OvLS+rFN9NqPnt1ZVUtLC2t5LwzTxV1tJg0NRwIthPIzpbjEjOQ6rRmuYHUqNcJ1VCArZJJHN6JGkAQd21709ggpQqhNA4deDgZttyEPSx/tPLBSrPaxsN7OOrHxtpYZULz8q25L9Kfpj9buDXjx8bbeCLc1dp4OhRO3MMnH/J7ChRK3mkQx3VY3nh9y92wLcO0K0659zXkLgDmUAiAR+DQGRh1MSWovbbepxEPP40FBTiA4BCzR3S4ItjP5OV+UOoB5xOyFpWu9D9joBT+A6Z84rBX37pjvZAaB/VJ3Ucf+49BbmpRHIPrSIvnvHiIwZfN4vS6SnmN7MZFYlW8wRg3Xc1eUq8x1aaexOS0GgipFOUD5o1uuG7dSc/Oluq1GbNUvhG6OTNl25z1ojnbVa/bDRYoUly2XELXtQjlIxVINavecINYeettQo0KqTtBnBLTvkFChR7hTmKVuAF2yXuuJgTIpMeY0eFp1U6VgUgbFn0e+CyynfehgzsGouPbQgtPfl3wTy+2pzJ7ypFm9eOBm9n7EaX5wofv7hwd351MtSZT7cn5u9f2ogP+4Nh2vhV98c7UD8qPie8T/oVVv7jmr677i2/tJI3dZOWXZKU9TX5n8NXu4ef+3hdBehV9suw/O/GN0EqcvlP4bv7Xly784/Ah+Ol8NgM/Z0YujoiBYhhmqWYZhqZQ/i9g7dRMEs5K2GPYUxAnltOgB63zfvg5PmmG8S1QDodOv8oCw39jk2ToKabyx3ReYcu+iBD6AwYfYAmd+usooBP3IbYLwy0Y3n5te6EFyQeCjIb2BwAnmqs74siXx74a8sWRMPK/+ucmTQ=='))))

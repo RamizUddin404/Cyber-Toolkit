@@ -1,23 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import os
-def run():
-    print("\033[1;32m[*] ", end=""); print("\n[*] Ping Sweep")
-    base = input("Subnet (e.g. 192.168.1): ")
-    if base=="99": import cyber_deps; cyber_deps.remove_deps(); return
-    print("\033[1;32m[*] ", end=""); print("Scanning...")
-    for i in range(1, 20):
-        ip = f"{base}.{i}"
-        res = os.system(f"ping -c 1 -W 1 {ip} >/dev/null")
-        if res == 0: print("\033[1;32m[*] ", end=""); print(f"[+] {ip} is UP")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVU01vG0UYnt2dtR1v4jiNQyGhMA0l6jbNBudLtXEtFZxCVMUq3q6AbiLLH4NZyV6bWTuoe6rgwAoJMAIEHJA4cDCcOPTAMT/BNC5EK984oNxKww9gZh27jhJRdaT5embe93nfeZ/5Cww1/mg+TNHhG6AClbsBSG/mCKfy04DwA1SgO2ELqjD+DgC5AABbwixYPXKBQIkrcbJ4wDbpAjfEItIuMJZfPBZ9cJDhwYk2S9lWub5PXezjKn8qKmgg4z/ppR9VCCyfbgdPRcXHaAnIvrQrFso4R+yVGT366vJa5erTNNuHvGaf682vZ9av3VpPodfejaPMtc2N20hLpTbSdvSpvM7or1Rk6PJVy/VZd6w6rrhijRhm3RUbtRomMudCM1fBFssEucCV6tVqOfs+zhUxIRIFIe1Wkg53QRf6Ptn4aMMpdeAzXTjSDr7YgYgunOvNlW/jX8a/SjSVdvB8B856p3IHXvIWzz+A5w7ZOxWGH93Xr3Oe8+o80IBKlaQKMR4NY8MVEE5WwAQaUH2e0iIU96vgBl+d+L9as5o9gTMwxDkyQEfU4OqREifBm+uUm9eoclRJ46l+BFPQg/27mdGT/FSxo5pA748tC4PooQZVP4u+SD1vXgZPiizkeRh/7AGBzTcAkI6/TviYPifStuQJc6miX9pGhEVJyy9gs2iPBxl00zBLSP0Q45r9nNrIm7iOLmKlpKBobEmJrl1RonIcuXwsRlj+tqQWcqZJbRRFOWBMB/Tpgcsp9niNeVoooChaeJsOtoSSi0W8s2g2ymUb6vPbiMrdsJB20/br62Ydk23ZT1i1XNEwa426GyzcyWOSLeKa5UoEV6o7uLcRSc4sYcJ+IWESkkUX5nMWJj1yw+WNmisQbFnsiveVvFQp1jDJDF2N0W61QE/RVJ7TP/L34Us/ae35q52Xk10p3J64vCct3E3t+yXn1sf23uSFP+cSv88lOnPJXd8xkxa1iHXHzjSjzfznWw63H444O823mh80C862w3dD4S+MT43vFluzrUhLbz8b2wvFHWFfCjXPf3bla609M//rmftTK/fwb8Xdpd0Lu++1E5t/rKX/8YPQ9L8BIAYd+QGMECYjN5DNVnKGmc3Kope9C+tGBXt/1EuLXWBfOZv9GXgWvbQDiUq12CjjJEF0y8pkXaTDQ4HjuL/B+CMoci8chgEXfMSPcFMPIwCOOrf3hLPfT/4w1RbOep7+A/R+Lmk='))))

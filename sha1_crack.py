@@ -1,25 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import hashlib
-def run():
-    print("\033[1;32m[*] ", end=""); print("[*] SHA1 Cracker")
-    t = input("Hash: ")
-    if t=="99": import cyber_deps; cyber_deps.remove_deps(); return
-    w = input("Wordlist: ") or "pass.txt"
-    try:
-        with open(w, "r") as f:
-            for l in f:
-                if hashlib.sha1(l.strip().encode()).hexdigest() == t:
-                    print("\033[1;32m[*] ", end=""); print(f"Found: {l.strip()}"); break
-    except: print("\033[1;32m[*] ", end=""); print("Error")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVE1MG0cUntmdtReb35if1iRhDSmKSRXhAEEYm8rFRCAUt3jrksSklmMv2Kq9a80uTeITag+11FSiraqkh0qpWqk/qqocesgRyqFXg42opr71UPVGQ6VI7aUza0wcAYkyq3kz75u37715P/MHqBvc/roXpORzIAMZzgJcXSGGMucEmDM5HvMyTzm0IMjIewWAuAjAAuoFI/sqJLAEl6Bb+IsxoQSssyLQyTMrP5hWogcHYQ4cGr3U2gis6YwKNVzmjkT5CAhbD2upedUMho7+Dx2JCk/QJeC2hIiQyChxnB/ujnrGhy5m/S8y8hbJHPlT1XUyPBV4ayoovX7VK4UDl2euSZFgcCaU97yQ1u7oYNaNCKfpxKLf1g0lS4QcTqsGEZZzOQW7IUFqPKvo7CYSAcRuaFomllLiSQVjOwURnfoEJSuggiwfzrw/U1gqo84KaijaespIopvCpdXhu95PvJ/5Vs8Xba4y6jVP3WU0YG5ObqNTeyxOifqgW2t57ufMPB/UgEwrSebHOKkeq88AfzgDKogA2WJWWjvFrTKY5bS2Z+Wa5axOk1jT5Idn97Ekx6TkBpU7DaINNckIJ9tG9iuRAyof4R1gWqMeoKitJhNuPGy3F0RQuOV4f8Jtx5/VfAs7jpeJAHZ75vPlGfC8aNqf7cvTfSCBNzg7i4T51e7+VB6a6jvBBV4FBzGk+CK13WPqCTn9fA9YhC4gPc/Dxicae0DoYvU/d3Mobzeb60I2OnBdwizitIR5RU3mWxkiTwc80iSOJ95VcN4yHddTXolwY2OYeZ23zWs4mUnrhlfKi7m4rp83bhkE4rz1krasJqmoMIWxRvnolGoo+LrbhlkJESGt5pYNYkvcvqHgWFLJ6cSOlaz2nlJlkJZTVGJNUXuZ9A2C9FTcQwTdwOkcsShqQksqpCGl3EqmlxTdcAsEGpjlksCbBC4SmNHZq2L2vXknwuNlFffQXROdehlU24/2kvM+t4X6vokUz/nLr0xUxKZC6qOWlcBvVrFw5oObpVbXTt/YZt9YuW/84dvsNFMSu3dE9738SmCXEwRfpalt1bUq31m4N/d7R+cqrDicd32f+u7Db61fWb9u2JEGN6XBknSh5Bjacfg3Hf6S47U1z7YjWGl/uegceMBttQ/9HHk4vzb36/z6/MbVtdni+JvlkblN+crfAujsesyDZuc/NiDYCu5t1P7YTtmPF/7bFYHguzNVPNH7HbfVeO7HyIPRn975V/fQi623Nk6OgvWTAXGyn//l7AClGydECm302yaHrRuDPNsPm3S0K9jKEzEWy8bTaizmtmAWN4KMdFYxXyvcyQgLHJNiL1ss9j3ArB+rgRV9WS25nFEm8BnKshrTWa3u8hDCP0HLIyTA03utALY84uywY/clgBoL10p81xeOLzuKfJep6X9w1FdH'))))

@@ -1,18 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import os, cyber_deps
-def run():
-    print("\033[1;32m[*] ", end=""); print("\033[1;32m[*] Running Tool 28: zip_cracker.py\033[0m")
-    # Add a generic command or help message
-    print("\033[1;32m[*] ", end=""); print("[!] Tool is active. Check RAMIZ UDDIN Toolkit for updates.")
-    input("[Press Enter to Continue]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVUs9P1EAUnmmnCy6oeCEBRAcMajHZCAtGVyRBwGSjbsyWTdRCmtIdl2a302bamtCT8SJHjDHGg4kHL/rXbHS5TLhpYrwROHh12oWlBGLCS+bX917fe/2+9xOkTNo/9x6J7T3QgAYfAtY+IYOaNAiYdASVmazJAkXLioYKTwEwuwFYRqNgej8VBjVYg6ryJ36ULJiqpoglx9W+JdX0jqMsgWM2KqpNw4OcunKAa9KJqFwB5a7jWQ66OgfyJ3+HTkSVQ7QG1EyJK1aDmCyaGtIn7uZvOfdOY1EGJxYNt8/58uLc0uICvv+sgMtzj4vPcWVhoViKJk6VdUi/6aiIS67PM/66HxCHKx6zacCV0PMIUyFH1HSIH/8J5oD3BK7bMNaIWSWM9QgQieXPiu0V2EaZN8XXxY1aC/VvozPN7OUWwuKy8WBz6kPhbeHdzGaumR1podHEq7bQeHK5uIWG92KerDTpHZ1pW+fODGhiojT5joTTWFqB/0emVNHlDpo5olVXKepJRJp09PEVzLLCIaiQCa1GuZSjHFJq0xpeEqTgydsFHNmeYTHTqhOW89ZjdqOCPrLSDrB9bFqB/ZLk8Pwasepp3ZKIuh3gFy7DoVc1A+LnogH9CSO+jxdpQBgOXDzv0sCmIVlRJRYPKlds6oXBV8B6xSvpk8sspOyCuJ2NpZnYl0bwPPhZ+o6ufKk0b5itsdVfR6Faa2wtiRrbQleTbLzbMBzTpoahZlisBkeB7ZBEdZ611lcJM6rE85NacXA8KIbB+uJODtvpnnHcatggs6xfPGOW/eti25EhhL/B+V2kwEt/+wDs35UQvLaTBah3I/ohD3zMf5puygNJpn+zYeXj'))))

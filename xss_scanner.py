@@ -1,32 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, sys, time, requests
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-def run():
-    tool_header("XSS VULN SCANNER")
-    print("\033[1;32m[*] Simple XSS vulnerability testing tool.\033[0m")
-    
-    url = input("\n\033[1;33mEnter Target URL (e.g. site.com/search?q=): \033[0m").strip()
-    if not url.startswith('http'): url = 'http://' + url
-    
-    payload = "<script>alert('RAMIZ_UDDIN_XSS')</script>"
-    
-    print("\n\033[1;32m[*] Testing payload...\033[0m")
-    try:
-        r = requests.get(url + payload, timeout=10)
-        if payload in r.text:
-            print(f"\033[1;31m[!] POTENTIAL XSS DETECTED! Payload reflected in response.\033[0m")
-        else:
-            print("\033[1;32m[-] Not vulnerable (Reflection failed).\033[0m")
-    except Exception as e:
-        print(f"\033[1;31m[!] Error: {str(e)}\033[0m")
-    
-    input("\n[Press Enter to Return]")
-
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVM1PG0cUn/XuYrN2DAVahSbA2CiAkTAljmnjABUBN0V1HOrFrRsHWVt7bFbyrp3ZcRv2hHop7SWJqirJIVKk5kB6yqn3pv+AEUZEKw6VilTlhkIOVXvpzBpjR6BWGWm+3pv39Xvz3h+gZTgO94MYXX4EMpC5TwCu7xzm7N2BHfbOY152vAuwIPN0FW+0yUIkBYDiAuCG6AfhQ1UQFLgCFxBfsEs8y7VYE+nkmbWfbWvpI0bCAY4NP7UZ5ho602KDLjtOpPJJkHAe19LwygtCJ8sJJ1LFJrUAAm1xS8wWkYLNC2fSE5dCk9r0mwyzDdrD7Kvvc4no7FJ0Hl7+IgITs1cXrsPk/PxC3Jx4I61n0u9pAcFylAyrzVg1CNIssYxVnVhipVxGOMBZgq5oyGCRQAtYblIqFTMrSMkhjN2UKNBpzNBlDewKbd8ufLOwXqgJ7+wK7VVpoCZAelj/6M6Fe5G7kR+m7gSrkq8m+G1uoCaM2oez20LfAcMp2wq6s5Hnx5yd56M/8FpG+f/LaIP6X3nVAc17+3F+M68jh5ScyPKaBGO2lNymcy0eOJse9IO01KAnPMc1+0GKYzpkl9x+0aE7Ul0J7/FXl+hUqHSLDalp45qnhe5+zXYzfm/rH/SBdGeD4wSKn8bAt+jwpLsb5+QRbl4gnwrxTS0DtK51fpaPh+p7nsuDaX4A5LlAR9zsTMky/CwZi0N5bjYejybMsP3Zz2vp0WUoq1q5iCB781WlqCOsfKkWVbIKCTKIqhcg+1xB9ifNDyRbLqRFdYIwXFJwARGYTMTgCAoWgtBQCQpmS9q4QSsqu/LhzelABDJJS1ghpGw62RoZHzcDU0YWq2UyoxQRJiPDdq1k7FrJUEeGA1Pjhw9Mv9Ti69KhS2VltVhScsGg7dcLllVaFE6iaqhUIWbUFpnQ0r5luHhtKRpfWpiN2RHOR5eic7RCfXCxrgJilC+iLEE5qOr0YpRLuoHq4Z5vWB5bhvESOYKHojWSqIupJR3mFbWIcoG6TFeL6SjGJRyBpmBzTkvpRarfgHXwSAkmEKlgfTkg2TWLWS1YoqqXK7TQDULDtySDKJgYX6tkxXJhdLNC4zcsnqJuCQTdIlZ79FYWlZkbFk9FaNfgK7hoOQ8Bsjhscchg7YC1J8yAsnhc0XEfPTGrxi+g3iU6qp3+mjBo1/6VmvDxnkQpn25JiR0ptSmltqTra3PP3d7bM9/N3B/acfs23b6N3qfyk4FHod+9F9eu7DHBcE2Y3Hc4xfd3PT23Y9/H7nc/6Hvq2PSE1rnn7q57+bv5LffZXc9b1Z7MtkfZo4eu2Lbn6isXEKWqdG5bGPrrlRN43j4AHNXhOlXtPPc4u+H7Kf8otfF51RvecU1uuib/2ecp+2+jn7r+a+/E5UHwzO1m66A018E/Gzs9J/G/SSI9W65MRlNUPZMJOLFoB08bKsWOfhTcw0C3kWdgsKesqWYyTwBmzaEOlmtKK+UqRTSDB+mVFZwxRBfqAcf9Cfp3QP9LQeT6X3q7ueH9USB41s0tvvdB6GG4yvfaev4FauqhTQ=='))))

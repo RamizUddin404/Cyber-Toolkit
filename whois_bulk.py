@@ -1,21 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import os
-def run():
-    f = input("File with Domains: ")
-    if f=="99": import cyber_deps; cyber_deps.remove_deps(); return
-    try:
-        with open(f) as d:
-            for l in d: os.system(f"whois {l.strip()}")
-    except: print("\033[1;32m[*] ", end=""); print("Error")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVU89vG0UUfrMzY2/sJE2bpiktTdZ2D2xaVYQ2seyklRLsqFFVS3gxhbrFMvEmseTdtWadRt1TBQd8KFIqhPghENxIfwgQp17bv8AlbouGHJA4IG5Rg1QJLsxsYscoObRvtTPvfbPz3s77vvkDOkzZnjdTYvgMDDDQBWBbM2LIUI4AU9ooFhG+QgySfBegqAJcwVEY206hwQJaQDr9SwaZOdRRhYoXyyp3/Cr59kJWgV0WFdXGUCtnnrZwQ9kTxTnIBndnaf1VL5zeex/ZE6U76ALogQyncxWzyLwzR/OjE6fHrbMvY15A8807tjW/mU1PvZ1OadPvJbXs1MXZy1oulZrNeKMvlfVo/nVLJ1xxXB5wr7s10+K0ysp2jdOlatVkOuLELlqmK0+iceDhmuNUCotmsWQyFhYgEa97Tgw3YJ0EPp79cLa+0CSH1klXIzTcJJpw6jMrZz5P3kp+OrlyqhGKNEnUX9WbZMR3Xn1Mjm3KPs11Nj3Y4vk88nlua2CHURtygklfPwclewZcQM7+LIVd1qErGIJ8m+MctHIpYCs5pR/Oj4i8OK+2vsiGdmcTqiI5nO15UaVcPAkQFrPhP2NKWys7Z+rq1EoETsJr2yslgc8rGgyLFQ0yR87iYZhHEbl7X3s3NQJGMKH8D1N3Mg5DZnxrnx7KeP0z5YqpLZdri1rKsYpl201qXEkkmPwvL7C86JRdzQv7In3Dyo9c1ZjsgZACNu0Sp2nGHOYF82m7ZrKruspp2a4u1Xho7voHJiuUzKrLw8y0nGvmVkCcqmkzyQoLiIFTt8bKVSZJENpD8+yARFGJo4or5STl7ZfkmC3Z7BXhyVa7HvgqU3savbE19fiNqV+Dav34R8trfZGnscSjWKIZm7j/zoaC6eR6z/6VyM1LX6DfBg6toK+Vb7u+6vpuZnX0x/jt+N3E6olGdPzJ4fitt55j6B34OwA0VNcfk4PPgyL85NK/v5OJm+nGgeiq8kv3iXu5n+I/vP+PKxn5Pjytws+jU3H8IKYK90E8NE2DDxEW/kPqj+rgdARztVCQrS0UdOqfnJNa2TL9G+MfSH4gL1ahcBtYt0T9A6uTllNaqpjn2JAIJYF+2Q2MEPoT9j0jFA1t9gEKPVOCaGCjD0h3/fIaHvyy/5uBBh70M/0Ho84K3w=='))))

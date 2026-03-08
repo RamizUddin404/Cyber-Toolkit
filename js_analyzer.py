@@ -1,19 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import os
-import cyber_deps
-def run():
-    print("\033[1;32m[*] ", end=""); print("\n\033[1;33m[*] JS Analyzer (Hidden Endpoint Finder)\033[0m")
-    url = input("Enter JS URL: ")
-    if url: os.system(f"curl -s {url} | grep -oE '(http|https)://[^\" ]+'")
-    input("\n[Press Enter]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVUt1P01AUv21vyyiEj5hg+NLLCGGFIOLAxIkkA0Yc4GJWl6gFm7ndjCVr19x2DzQ8EF8kxkSMMWqiCQ++6F+zyHipxBcfjG8E/gFv7zYc2V44yf3o75z7O6fnd36DBuNr59k63d4DFajcGiDVkyOcyg8Awl9ABSKoAkXhhqjCyGMA0gEANmAQzNWoEMhxOU4R//ofiQzXkE2kS/CzfWfZtHNHkgdNFqTZ5rg6pybWcZVviQopkGxrZqlX1QXCrd/Blqj4H80BRUp4YqaA08SdHdRm7oZvG/cuY66EmLnD1XMpGYs+ii2jxScRlIw+iD9FqeXleMKduRTroHbTUKDHF21PsrdtBxueaJG86XhiybIwUTgPmmkD2/6fIA94HU6xWNC3cDqLCemgIKTLXqDbLjiG0sv4i/hergL7jmF7Wb5egYhe9lb2Zz9E3kbeze/fKMsjFRhkXqUCJ9hl6AgOn/l9yjQ2/Vznz1Wdz2dApROlCnd41Ig1KiA0K2CCFAjV0PQAABqsxySlZr3p1EgpqrbaFhZa8gYuKNuecDuYpLcMbWITEZk6aOMEbGbdWZl5wsyzqqKomS5su5ig0P18NotNFDOzVpE2HK3kTdpTxVfE7YqZDo2h8ankegS5gUyJFNCUjdxRtINyBFtoqhhD46Etx7F2/M1WItPT2rMg2pwcd7tk7SHBto0YzaYCiT/Unpg3rZJD/MYSqVYj5a1qy6r2BFIySS8bdSprtCYr1WjggP8BR7+mypNblbH8sdxd7kGH8sju0q82+fXim/ir+MfAwZUDsTwWL/etVjrX2KvBIzhEOn3igK4b6byp64rECvCgkzcwmyBPzmw/x0TPYstmuf1gf+h0/Rtgr6u1BeaNYrZUwAvkKv30i7Yn6XYicBz3B3SfQpG7dtYDOPkn6D3lITd8IgPYueceCv2fwl/mykI/I/sHulrtkQ=='))))

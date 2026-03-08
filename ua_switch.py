@@ -1,19 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import random
-def run():
-    print("\033[1;32m[*] ", end=""); print("[*] User-Agent Gen")
-    if input("Gen? ") == "99": import cyber_deps; cyber_deps.remove_deps(); return
-    uas = ["Mozilla/5.0 (Windows NT 10.0)", "Mozilla/5.0 (iPhone; CPU iPhone OS 14)", "Mozilla/5.0 (Linux; Android 10)"]
-    print("\033[1;32m[*] ", end=""); print(random.choice(uas))
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVU1tPE0EUnt2dbUupeOGWgMhYg2EhQsst4S5yEUQqdmlQCmlqOymbdHeb2VZhHwzRB3nEGKM+mPjgi8TEV3+Cj9WWmGx408T4RuAPOLNtsQRCwkn2zDln5lxmvm9/gTLhi+vBBFWvgQxkbhaQwsoRTuYbAOFtTyCCLFAPLosyHHgAQNQFwDL0gt5iCQQSXIKTxL/MCcS4si4i/QTWZdvuEj7cCPLgmHhpt16uVDMsluIyf2JUCIGg83iV0lRVoPvkPHhiVPwfTQDJEbDEWBJHidnTGPYPdvepw2cR04FsMZsK63hwcmxhcgLdejiAgmNzM0soNDExEzD9Z6raGPapErR43bAcxrqRxqolpoiipS0xk0phInEW1KIqNthNkAWsyrSuJyOrOBrHhFTSIKSfMULVBtiFjhczz2Y2E3lYtwsrsu7mPETU2Jza6nkz8HLg1dBWR9Z9NQ+99q6Uh222cXkHNh2wd4qVP/ohzr8LOB9yQKZMkoV+HpXHyhEQjiMgO2yW1VDLKYNZXj8VZ4ZXJ5Bd9zmNO71v2FWygu7j9bwgdMi+E+erOMIQd8CstKnRpYbbVhBhFSkAAtbi5iUWCRmY3BhLYC2NbmPNFKkaRRbf308Y9SXBbJrTTSWZjHb2dvhQ66KixfUnBgosIL+vwyeZ149sK/OruoYH0fh8CBVsdE9G/h7JbD5y7q6iZdYG0ZgWJ7oSp6Uk0xme1NKYrEgOwp7REhUtlUlb7tj6I0wicZwyrEqCVf0xLjgOEqWjqJYjtqorMSzx5CJLEzJRw2Cjo8JlLYFkNFJHrXOMVYtFVlGKNHzgf8BrH0PZ9tF8y81dp2dz8fnTtzU5Z1Ou2feza/p713S+6863Kcu9tjF+JONz35fh7eGv1bn24XzLCGOjtANriIe1c0UialTRIhF6D0Y3C6YVFdu0JtVM1RVPsV8gEvkE7LTCqK4hVY9nkniENFKXwWi0UrUncBz3B5zfhyJ35eAC4Kr2eZGr3fMA6Nlcygn176rf12aFervSP5n8Chs='))))

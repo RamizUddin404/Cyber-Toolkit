@@ -1,28 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import cyber_deps
-cyber_deps.ensure_deps(python_mods=["requests"])
-import requests
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;36m[*] Advanced IP Geolocation Lookup\033[0m")
-        ip = input("\nEnter IP Address (or '0' to exit): ")
-        if ip == '0': break
-        try:
-            r = requests.get(f"http://ip-api.com/json/{ip}")
-            data = r.json()
-            if data['status'] == 'fail': print("\033[1;32m[*] ", end=""); print("[-] Invalid IP."); continue
-            for k, v in data.items(): print("\033[1;32m[*] ", end=""); print(f"[+] {k.capitalize()}: {v}")
-            print("\033[1;32m[*] ", end=""); print(f"[+] Maps: https://www.google.com/maps/place/{data['lat']},{data['lon']}")
-        except: print("\033[1;32m[*] ", end=""); print("[!] Connection Error.")
-        input("\n[Press Enter to Lookup Again]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVM1vG0UUn9kP27GdOI3bpJ/JJIW27oedkCZQJwW5SWhTSIi8sQS4kbuxJ45be3eZXbd0gQpxIYhLSkFVD0AOHErVQw/8AUVw4MBh4pg2GnJBICFugV4QB8TsOmmNkirqSDvz5s2+37yP35tfQd2Q1taHGp8+AwpQ4CuA1FZIoCLsBkRwdyIRz4lJH9gwuoAixqAinYCoZicTWZG5neecV/HEXwdA5VbnPF2gb80CgTzMw4j3D2cznoV1YDL/RMef264/6UcHSWHTm2EfXMdMy+t6RdhUK6ZA0rsRZd2rJtC7uZ20qVZ+rM2DiGecydkiVol9fE+6Z6C3v3TyaYbtQe6w99XWoeRIYnJkGJ16I46SibHRN1FqeHh03O55KtQ96e5SRGKCbjKPecW0cInJBiloFpPLhoFJBDJJU0vYdCJBDLCApevFzCxWc5iQAKjRw3yRT++DFcnz4egHo3P5qtS6IjVQf0dVQlyYe3n++I34tfj1wfko9XdWpS73NFKVDrvC3p+kfQ+dPDEfwW+VsWmZ/N6AccWa1bVMSc+Z2fpqeNcJ8C90CNAO0o/ooXA6KuIJAdXr6osjbiyOBlJgjYRck3fw1ikPkp6NZOCU8qb+RwUNpmCy4cm00YSUoPgcXigN7j1tYCuf/Y99HiMApIRk4Mn4YXAmCkCZ0984vgVuICUmG5+M1ASUYErisdXlbKwbgABAW3ncyGNskmsYIS431+TezbPfUof/CwCdW+Nve2zRAcYPnBQ7wAyMhMftgNtNz5XSh6cQ8fMfOHdErOXsqH+tz5yTRO6SqmVxDo1OoNNYL+pZ1SroGnpV1y+WDacN7Gf8I5qFifNHIpcj2DTRIZ2gg90HkaUj/HbBisQRg91226xlGfFYrGAcU41CNKuXYhdMXYvxFrJUq2wyaUYtFO1Q+tgUGtUuqcWCc23UltJHppAtxJF91JHGVMOMIwfL5GCXL1+O5nU9X8QuYIkfxoyimsUxJhZVi8GjfNU1e0e6cwoN6ZqGs24AI4ToJGq3+9MTrsu1GLjDtchQIq8WtKmIlzhtw+SCZpQt4lCAiXlsMcnxnKt555vMn+XxWNxfG0dkJhQMBgmTcqqlMniRwUumU1P39XETzURS1kgnl0L8M33QeQSW/U0rvkba1L5wquI7eGcHjc1UI/mVxhYaji81DswJy4HG+fDHJ+bxquBpmIArzTtvBD8J0o7+u+Ruju4bWGoenEssh7ff6L/Wf/2FueHlUHj+zEdXF1qXQi7cS/eSlciZH5+lE2r17PRirri8c++X/pv+L4LXpHn4FaZHB+91VQ6MfF/+waKTqQeT5xcnzy9NTlMlS7OYzuQpnqVjhfunL9wMrgS30ZauW0IleOROivapdHqG5ouL0yWqalTTqWHRsr1ovEP1d2nve9VjV39zQotVfd1/toFA6O/V7YCH8KlMWw/cOlVpjn2zgz4/fr/ntX/MMM/I7YR3aD/4tjexny/f7W8bGhSZL5Mp8YJkMhEfcbLJJKtQwu5LytN/ZRqTTA4bJgtgzSwT7G7ccrl5dsyd5ziT+RqQoKN16+Ab5I9kuYhfJIf41ukTc4BPqyKE8HcQ+kuSYfvDZgBbloH/AWitgNaFswuDFdD9Mz8UgrBndTeQgnP2krjrZu/nfVTc5YL/BwS/wBE='))))

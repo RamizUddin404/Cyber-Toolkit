@@ -1,17 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-def run():
-    print("\033[1;32m[*] ", end=""); print("[*] SMS Spoofer SIMULATION")
-    if input("Start? ") == "99": import cyber_deps; cyber_deps.remove_deps(); return
-    print("\033[1;32m[*] ", end=""); print("Sending via Gateway... Sent.")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVUs1PE0EUn92dbUtL/Agghg8ZIBwWk0agmFARg4JYPmrSoYlQyGZth9qE3W2mWwx7Ml7sEWOMejDx4EXP/hEeq11iMuHmwXgj8A84swWs0mh4ybx5896833szv/cdNIh8tB9OcvUSYIClBUDru0QlLHcBKmOFa2UNYhh/AIARAmBNGQDjR6kI5KW8pKk/xSGZlRrQVb4Ugf7RR8+cBFIyOCUDvOa4dIyZUY/9WG7qVdIgFTyNctzVOTDWPA829aq/vXmgBZJMzW4Sg7qx7szIjbHr5s2ziBtAvri99f1OanZ6eXYG3V6Jo9T0UmIVpWdmEkl35Eyo3ZlrpgaZbJdYoLRdcojJ1CItWA5Ty8UioZrEoGWYpCReghhgEce2N/VHxMgRSiPcCfkqTXH1BOzBwLPE00Ql78FLe7ClGu7zIOJG5e5O7FX8efzF5E60Gu734IAf1Tw47Bs9u7D3UPxTtvHTT3j+VOf5ZAYwnyCsTMio0dfIgHKaARzwp6ydW0EMFmT7nzwLvv5TL9S0XssfjIeTbsSnetTMDK8jGuYB/qEKsXJul/DgJYxw0bY3CEU4sZRenF5O3E+6QewY1LmFmDwxQcVQuz2Y5xSsPNoqGGjOcMhjYzsajSLudqJuMDNrOYSua5CKRzG1YBXLDgtntx8SqudIscQilJj2FvEPmkQvCtJ8Sv2mmELLFm3jVqsILByxyanpeid/hYPv09Wrc97Qvb1ga2WlFux8HasF+2r9o99i819i815s8fPGX7cT3tC8YF7bhe1UgLKQrptGwdJ1TaWCWgadgkn8EfIriwti0nT9A/Az6p2FJk07V94kU/QyP4qWS4Nc7SuSJP0A5w+gKl05uACljv0wgK2V1ZrS+abtbUdV6fRBfgG0j+Ox'))))

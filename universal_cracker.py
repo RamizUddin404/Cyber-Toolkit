@@ -1,35 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, sys, time, subprocess
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-def run():
-    tool_header("UNIVERSAL ARCHIVE CRACKER (ZIP/RAR/7Z)")
-    print("\033[1;32m[*] Brute-force password protected archives.\033[0m")
-    
-    # Check for fcrackzip
-    if subprocess.call(["which", "fcrackzip"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL) != 0:
-        os.system("pkg install fcrackzip -y")
-
-    file_path = input("\n\033[1;33mEnter Path to Archive: \033[0m")
-    wordlist = input("Enter Path to Wordlist (default: pass.txt): \033[0m") or "pass.txt"
-    
-    if os.path.exists(file_path) and os.path.exists(wordlist):
-        print("\n\033[1;32m[*] Cracking Archive...\033[0m")
-        # fcrackzip works for ZIP files
-        if file_path.endswith('.zip'):
-            os.system(f"fcrackzip -u -D -p {wordlist} {file_path}")
-        else:
-            print("\n\033[1;33m[*] Only ZIP supported via internal fcrackzip.\033[0m")
-            print("[*] For others, try john/hashcat manually.")
-    else:
-        print("\033[1;31m[!] File or Wordlist not found!\033[0m")
-    
-    input("\n[Press Enter to Return]")
-
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVd1v01YUv47txPmgLYV2MOh26dSu6WjarnyMQBkhDUqgC2280EGAyHOcxJDY0bVDiB/4einiBaZpGnuYNKRJsD31YX/EHlM1VSQrD5OoNO0Nwf6A3es0wVWiCazk3utzz/39zsc9xy+B7XFsz28W8fAD4AFPXQCoNVOIsmYHclgzjWje8SFADE/jkb3q5JngNwAIHABX2VFwdBsKghyVo/zsP+QlLlI2Nhb/acL2u8WW6mwkHKDrGcWcR6k2Zopty3lHTymdBAlXN0rbqj4w1/sc01PKvpXmgN8ZN1mxIAnIOHIgNXty7lhx/n0ewwmtxxhpzeFEJPR1ZAGevRyEidBXsSswubAQixuz74V6IDVT9DOmQ9VMp1bVdKlosiUkK7rJlkslCfkpk1GEoqQRT6AJTK+uqoV0XhIyEkJeLGTwXzuNh3ugyThXYw9iD3N1ZrjJuGuej+sMxIuH554c+TH4XfD7U08CNc+hOjNq7frrzKS1OLjJjLwhcRLtQXe281xyWHnu3IEdGaV7ZpTp3AlnzztB88y0w6bFdWv9/y7PnqB5Z7CCb+4w1vV0dH09+Vw22/o7GFxbqtil7rZ0nprYlmUc5CTvUSgb00A3U2JPtywJ2nhtNKG6w+J3xaG6cJLAHn/vWx9xFQ11I/C+LoSRd4jdriTVB/i+JKk+W51dHLVx9/e8EQM2ba9NvrtnNgZ3VOueuDGejMcuRRJ8aBGGEuEoXuOiC4UvRBJw4kpsaToRSkwfv+I3jlvl/HkxNXkNnkVlXZrKqkiUYEnQtIqKMrCEVF0SdSkDBSTm5VuSFiB1Z7KVvCzmTXdWRIJ405BLfgeuQj2jlnVrxhWGSE8z9pVu5qCsaLpQKMCONpyqGp94LPK5YkTRJQSXBD0PdRWGWjxBSHiMmZ2bK9imgqzpcCIjZYVyQQ9apgb027p/+wTXFrQJWt6FCbOs5Nr4gYDliMEEsDnGHptlZTi1AKdK0KSgEWzbSCAuKoUqxNGDGu4vKiJBuSUL2DlsoSLYvGshT5Iz51QEVT0vIe0w1FEV3lDzynRe0PKioMOioJRxWKoBY9KimS2mDuEjckGC+FjHV0XVYVYtK5lDFu4+T2oJSZoGW6HBUUlIehkp1/xeq6sh8hUwPVr5W5w8ESuajIhZTNdC5FI8ubiISJdHpLmYrKyUcMKYEg6v6ZRuYzbN5CQlo1VkPY9T6s5iY9LWNlfZtkcjeYUQkctv0qisoIN4RZi1l6DVS/trA1/UmRNWh4zVmfP/OgE3uHr3wd2nrl8O1D6Y+uNG41h0/Vi0vpxqLIvr+OfK1PLyhktucp7H7kfu2uDhOje1NTBUGz67MRC+F2v2760Nnd/ov9Dov/yncS+65XKvVu5XVu/cv/NEbrjgugv+mni+8mzl+fVn19eijbH59bH5Jrer1hescyf/8u5teEfWvSNPsw3v2Lp3rOnrexx7FKvt++xF9EVwbXmtunYTU236wlu+3bXBZN13qUkWpzd9X24RlDN1LrRF3BnbZMYRqXaTS6eLgqyk036XFVKTxl8hk9HlooRIE2ol4+C2KvkSpdO/AetsK3bcqaKaKRek02gUv5IK1sbx8IqmKOpvABsAvmZY6qPXfcPUp69mAON7aGzQ+3+a+/lojd5v4fwH2M7V+w=='))))

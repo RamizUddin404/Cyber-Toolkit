@@ -1,27 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time, cyber_deps
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-def run():
-    tool_header("SQLMAP INJECTION TOOL")
-    print("\033[1;32m[*] Advanced SQL Injection Scanner via SQLMap.\033[0m")
-    
-    cyber_deps.ensure_deps(system_pkgs=["sqlmap"])
-    
-    target = input("\n\033[1;33mEnter Target URL (e.g. site.com/php?id=1): \033[0m").strip()
-    if target:
-        print(f"\n\033[1;32m[*] Starting SQLMap Scan on {target}...\033[0m")
-        print("[!] Using --batch and --random-agent for efficiency.")
-        time.sleep(1)
-        os.system(f"sqlmap -u '{target}' --batch --random-agent --level=1 --risk=1")
-    
-    input("\n[Press Enter to Return]")
-
-if __name__ == "__main__":
-    run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVN9v00YcP8fnxHGarHQClRbYUW1Lw5Sw0LKNjDJ1JEihaQpxIm1Nq8g419QQO97ZqVY/VZOmVWgSnaZpe+Rx7C/gcX9CRoPQrIoXKk28VfAP7M5OQ7pmD5zk791973vfz/fH5/wCDIxAb36dpeIXIAOZWwDEnznCeXOABOTABCC8zFMJVwQZZr4CQBEBWIFT4HLPBQINrsElhJdsU1S5ARSBfjxD+cNDqfYPSgFwbExRzMvcoc+qcKiXA0O1fAWUQse9HEYVAzPD78GhWuGNtgESwaIrqE2sEGd2spr+fOYTfe5thhNE3nDO+vP1Um6+nMuiL7/OoNL8Yn4ZVbLZfNFJv5XXyerHegK6gZblBq1Ny8a6K5hEM2xXaJsmJgnOhYaiY4tlglzgRuxWq1lbx0odExKhSkg/6xoVW2APBn/If5ffbnThqT0Y7kjvdSGii+0bO7O/Zn7K/Hx1J9WRznfhlHea6MIL3uLMU3j2NauTOlj0fp+znNfnPgeOdJQf2lHY50RwKCf4i5wMr3DUMny8W6XI/zPAABUw3VsrN8EgfrBC+SGHZvih0YkD2pF+dLGh0YUHbEf7tmNDbSUPNXIE9U1OI0cYGC06J+XbhcX5WyhfvJm7Xs4vFVF5aangXPEYeUmvXlhF8/UNxVBxHVFTlDfuYtXWWgaSVcUwMEEbmsJOFhUzxchDafNNU1dMSpSIT6Caea9hOZ9KnssZPWfY9FZZIQ1so0qpgKZxqpFClmbjlNrSL5rr5hdafS6dyCDmz3lfGohFthVia0ajh+gFgWgwTiiV8uCd2er5VVSxmE0yeUex1XWkGHW6JnRq6UmlgQ0brbUIwmtrmqphQ91MvWRVcSJ+5CjZRnHno3j//n/uJpNNvIGbc2l2oFn35tLOuFS9RbBlIT85u4VK2G4TYzUheW+CsH+IK6mbdzCp1bFpuRFsWG2C/Y2gGWabvjDLJprpQlvTMd00MTYJIz1hnKX1DNpe0fynRyTmkidtg4zTFUOxtoD/6t7pjMa7cNp7SwtdWNiHsWdw4gmc+F186DyBl/ajY5135d1o+Vl0+a/o8m50ZevG81B0T4x2Rj97fOqx+KfUiS10xQLTxLJdMbcnjjyQ7ks76R+plfQgfD+8s/Aw+Nu3nXipMyZ3xfI+w/rgKfyQMDK7Yq2mK5pRqyWCfgonmTjBhFeP8Z4R+5XUao+Ad8tPSbyqt+rtJr5GztAty9VKUHHAcxz3D5jcBZOvoMCdexWLcvGDcwCObDu7/Om/Yej73AEP4ITn6l+iWFhX'))))

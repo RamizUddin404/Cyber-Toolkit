@@ -1,32 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import base64
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;35m[*] Cryptography Tool\033[0m")
-        print("\033[1;32m[*] ", end=""); print("1. Encrypt (Base64)")
-        print("\033[1;32m[*] ", end=""); print("2. Decrypt (Base64)")
-        print("\033[1;32m[*] ", end=""); print("99. Uninstall This Tool (Remove Packages)")
-        print("\033[1;32m[*] ", end=""); print("0. Back")
-        
-        action = input("\nCrypto > ")
-        if action == '0': break
-        
-        text = input("Enter Text: ")
-        if action == '1':
-            print("\033[1;32m[*] ", end=""); print(f"Result: {base64.b64encode(text.encode()).decode()}")
-        elif action == '2':
-            try: print("\033[1;32m[*] ", end=""); print(f"Result: {base64.b64decode(text).decode()}")
-            except: print("\033[1;32m[*] ", end=""); print("[!] Invalid Hash")
-
-if __name__ == "__main__":
-    run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVU1sG0UUntmdXTu282NSUnCbZBI1ajZAyL+I21g0tikWioO8sZTEDe7GnjgW9tra3VRkq0oICRGpFyNAcOQYUA899MCBGz0UcWBruySscqMS4hYlF8SJ2XWcuk0gyUjz87737XvPb94b/wEaBnOw74fo8hUQgQjfA0pthwoUGR9QGFtiFVZkqYRucCLyzwMgOQG4gXrB+IEJDDIwAwXuL0uIpmCDF45O1vLyve0lcaiIMeDI6KXexmHdZoKr4yJzLMrGQcxx1Eo9qhYwevx36FiUe4ZmgMBHTS6VI5Kij11IDF8ZnchPnWXoPLaH3lnbg7HwtblwCE8v+HHs2kxkEcdDoUhUHz6T1QuJobyATKagmry6rmokb3JFJStrJrdWLBJFgCaSpTxRrV+CTWC6tUIhl1wlUpooipuCiE41QJePwQ7iP4t8EtnIVFHHDmoyXN1VhOlh453S2Nf+z/1fXC0NGq6eKuq1tUIVDdiHi09Q576Vp1Rj0h31e84x1j13gcRhFYi0lkR2ksGNWOMd/D+TOzWTPzXTcWqms4HJHqJNdVQGcSC67J6gSKaR4z7kQMrx2JwIOMlfcwLVzzEeHBm9IA5jTUfxes3Xfcbc/815vi9m36bRtdjR+c8Unef46M4ewXU48woAPSffReuzb7pB9OIU2w1WoNAW1d12i47kEwNLWHFRAm0Elshpvcdla8ZtTVBZL2qFjCIVV9fxHG0Mq5309uFBHJZTlg73T0sqmRgT9PaRQRwiL4DC5OQgjstZWdWkXA7PrWZV2wzuj5F84RbB70upD6UMUQXdMTSIp6mku1w1rziATTike8KyRhQ8Rz7S/BQY1p0xoq7lbGFEb0v0LOGIfEvKZdP4XUldFRyK1Vcml5WLa5rJL9uRmE3LE2NEThXSxOTre5rYu6WqHQXG5KWUli3IJtKoP9V6b3EtPSarrMmKj56a6VTboPUebLtadpzNRkvXt9Nl5+V7LxtvLlSFxRegUFUInwwtVoXEc9DmelWYfOrtKN2pePs2+G23tyTenfqm72nrudIHldZLG+gA2vF4jZd6N5my57V78fvzP65sBaLlQPSR9uvtn2//cqcSWNoKpB8H0pXAijGVMUZXn7yR3W5uL6l3l3a8Hcb5y5uxsnfoQd8P/Q8ntoJiOSgac/OV4MJW8Obj4M1KcNmYThlvpasjZK8TuFv/3u0CzbPwy7DhG7jPlM+NPogbV2Z+G4/+o1rl/VOnP+QDD33nQ6Os6Uwm81JWTiYFXrH+NWhas3liv6pKu7VY+bRY1gucTH4HFMtELd/Oq/lCei1HAko3Fa0qVl+nyy4LIfwTtO4hDnbttwHYsse0wVm4ewkgz4ZeYV/9HTk+De+yAPlsa/8CB/mIIQ=='))))

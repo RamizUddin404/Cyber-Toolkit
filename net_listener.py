@@ -1,19 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import os, cyber_deps
-cyber_deps.ensure_deps(system_pkgs=["netcat"])
-def run():
-    print("\033[1;32m[*] ", end=""); print("\n[*] Port Listener (Netcat)")
-    p = input("Port: ")
-    if p=="99": import cyber_deps; cyber_deps.remove_deps(); return
-    os.system(f"nc -lvp {p}")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVUk1PE0EYntmd3S4tCoRQEr5cqCYuRhQBYwuSoGCsaGO61ijFbGq7KY3d7WZ2i6EnogebeMEYIx5MOHjR+AP8GU2pgUy4eTDeCBy8OrNbapVeeJOdj2fmffd553l+gKZA9fnQpMM7oAIVLgLszRBDlesDmPsH5TG/zMclcCxGgMpfgioKQxmoAs0TlkVVjDwCIEVvLwsjYKp+UwZZmIWK7xfbxNKwqYhAP57x+eLySTYO4lzLP8IpeFQzKRzhKtcS5RMg7jte5YjVaTDROg+1RIW/aBYoYowI6byewqXJ/uT49MRV4/pJoiTKbpQGvflmfGHuwcK8fONxRI7P3YsuyYn5+WisNH6iqv3Jy4aCCFewiWiv2Y5uEMHCOdMhQtGydKxAgsyUodusE5kAEnAKhby2oqcyOsYB4NnDnqXDOthD4qvoi2g5W0PBPdRW8Z+pIZkuyrc2Jt9H3kTezmyMVfzDNTTinio1NOouBr6jwUP2TkQ0dSedcuhfAx4bzXqWtdPNWjTk/+rJ37CGSq2o8mFObsaaheGPC2OCBKgbsIfiPhUscoWuuNjKSE3WBMmGueP+VndVKfGfWagB2mKlgKv8FSM5+kTGLJN2yutmptTvZ9D9AnbkuznauKlj+XzMe4ySyPCITLhwGDOPlyQzLV/Mr1qyImJmVyLkTKvoEH967amOtYxu2SSAdaOwqrsbzB4Ns64UjkALdzPNWCXZY0F4XDRx0HU4PVmoq0ml6dviqij0KVG5EK2du7MnnSqvvO5Yn9v1SeWzL59vdw7vhMLVULgWmv72sC7/hrTZtcmXTSoqbmfFJU0zUjlT0xSfS4QgJ2fornlcJiSgm3YR16kG6ynMdZr2Gbg1PJbSjFHIFPP6LB6gW/a09jU67PMQwp+g4wAJcOh3J4DBXeDfAcEqCG7d3opUwdgBh+DQvh+g9vLSNt/7oftjT4XvdSv/ARhj89Y='))))

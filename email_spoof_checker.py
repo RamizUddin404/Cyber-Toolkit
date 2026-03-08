@@ -1,34 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, sys, time, requests
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-def run():
-    tool_header("EMAIL SPOOF CHECKER (DNS AUDIT)")
-    print("\033[1;32m[*] Check if a domain's SPF/DMARC records are misconfigured (Spoofable).\033[0m")
-    
-    domain = input("\n\033[1;33mEnter Domain Name (e.g. apple.com): \033[0m").strip()
-    
-    print("\n\033[1;32m[*] Checking DNS Records...\033[0m")
-    try:
-        # Check SPF
-        print(f"\n\033[1;36m[*] Checking SPF Record for {domain}...\033[0m")
-        os.system(f"host -t TXT {domain} | grep spf")
-        
-        # Check DMARC
-        print(f"\n\033[1;36m[*] Checking DMARC Record for _dmarc.{domain}...\033[0m")
-        os.system(f"host -t TXT _dmarc.{domain}")
-        
-        print("\n\033[1;33m[!] Analyze: If No SPF or DMARC is found, the domain is likely SPOOFABLE.\033[0m")
-        
-    except Exception as e:
-        print(f"\033[1;31m[!] Error: {str(e)}\033[0m")
-    
-    input("\n[Press Enter to Return]")
-
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJydVM1PG0cUn/Xu2uv1B4gkiIQEBkSAjRoXYiCV8yE5tlEtwIm8WKV1kLW1x8aKd9edXUth1UPUS1EvpaqqqodKSK0qmr8ghx5Q2kOPG+EIacWtSFVvKHCo2ktnd20wAbVKR9p5s+/N+703v/dmfgMdw9OSB/Nk+gqIQKTmAHYlhSlHerDHkTSmRc8lgBmRJjP70CsysSUAJA6Ah+wwmG5BQVChKpTA/mH/ZIpURzSWfLQd7akTLX9kyHrAqTFMYk5Tbcw829aLnjO1dA5kfadR2lmFQfRsP+ZMLXusrQDBm7HYYg1J2Jjqz0/eis7Id95kGF7oDOOKKxPZVHwxlYT33o/BbHwh/QHMJZPpjDH5Rqj9+QlZYCyPqllebVXTkWyxdVxVdItt1OsIC5TFKJKMNPsk0AJWQFfVWmEFSSWEcYAoGfJpd8n0BOwy3k/Tn6TXKk2md5fxm/xgk4FksTa7PvV17IvYl7fXIyY/1GSGHavQZK45i8svmSsHNk/FTtJ97Tr/QDl1PuqBExWl/6uibe2/1VXpxOmo5UCnns2R+oveKN0Rh2tbs/xpdNJ7PseHO+FzjOj/H4h87vUuPMYLnMlAuLMLh0A+2Lb4gDRMzk51IATzXe117ohlkmOoM8dBcrMVKk5loq4sU2Vwhx4EZUroyhiDqYV4eh6KD+7fn4WJd1OJuVQWjiczIoznkulFwRCd7r8h568tw8QKKj6C1TKUYEmVpaoyphHP2beTC/FsAmJUVHFJgxJGUK5qRVUpVysNjEpwXKyraln6sIaEiN3CxgTvoEbllKIjDJMOGMyQzoXjKFKJQKler6FIUZWFGHQ8xvjX86gqFWjnmXXDRiIu9Ajfuq4nNpIsWxthWcXQ8LW3B1dUTYfXdbi4tAiNAPwYVjCqQ61eNq6fieSetQOrUJIlXIwY5zqR2spc+6D5oWUYV6TaqoFiMF2GGdXJifi7gFWNgDWU0ltQX0Etdm1lrfoI1Vbd+sTvzafcrHsc1EkHNYWximPQYBxLH59/gJGmQZdZXSWp6g2sLAucc/+xfa8stqrUG+TR0HRcrWO7+bDX1vtTj4uorldVxaKJTfBYXjcVi0Ka/V5DiO1Gt2jcUPB5srIxtV+A+550md2TTeaG80qgJlPeC/WY5+a3Qws7IfFFSNwO5Z7M7tnGWJO5te8Jsjf3uJDZ/c6z3mfcFm+G55rc/C7Hf+7/zL8+v9G7wW0GzJ6pJjd96AX+sNkd3xrd6vv1khlebHK51kbz/Nimd+Ox2TPR5CZtuHCtycmHPGB5k7/6khn989AHghcOAMXe3LWjXf2+uDn0XXljafM9Mzy9w8284Gb+3qeJ+S+tjxzkp/jleyPg+Qif6KafR/oSAfrnAEvWFlco2FQUCoLPoYxQtKpZjF6VkcVh9FEDabrmkmwzY++33+JC4UeA7VvsMsfdltVSo4bu4n7ya99SbZRMJAGK+h0M7ICBVwxLDbwKX6DG9iOACa4Z2/TFb6LfTpv0RQfnH4KtpzU='))))

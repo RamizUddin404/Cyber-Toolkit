@@ -1,34 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, sys, time, socket
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-def run():
-    tool_header("DOMAIN INFO (DNS RECON)")
-    print("\033[1;32m[*] Extract DNS information from a domain name.\033[0m")
-    
-    domain = input("\n\033[1;33mEnter Domain Name (e.g. google.com): \033[0m").strip()
-    
-    print("\n\033[1;32m[*] Getting DNS Info...\033[0m")
-    try:
-        # Get IP
-        ip = socket.gethostbyname(domain)
-        print(f"\n\033[1;32m[+] IP Address : {ip}\033[0m")
-        
-        # In a real tool, we'd use 'dnspython' for A, MX, TXT records
-        # But let's use the standard 'host' command in Linux/Termux
-        print("\n\033[1;36m" + "─" * 45)
-        os.system(f"host -a {domain}")
-        print("─" * 45 + "\033[0m")
-        
-    except Exception as e:
-        print(f"\033[1;31m[!] Error: {str(e)}\033[0m")
-    
-    input("\n[Press Enter to Return]")
-
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJzNVM1vG0UUn/2y1xuviRJKEuo0Y0NMN6gWwU0iTFvJjR1q0WwqOy4FN7Jce+1aZHet2bXU+BRxIYJDg/gqB6RKcAicuPTWU/kHtmSrSKucIBLiFjU5ILgwsxu7prFAPcFodmb2vZnfe/N7b94voKfRR/PBZTx8DvIgT70NkDdTiHJnGtHuzCAmT78IEJtn8Mhd9+XZ5DUAyjwA17komDmCgqBO1SmJ+438yBWqxxqHP4ZY+961VuwqcjQ41qLY5gzVwSxyHXme7itlCiDnP47S8SoEEv3PsX2l3BNpHUg+2eEqq0oZtc+eLE6/mZhVzz9La/ug29rj3jyfy6SWM2l48d0kzKUWs+/BQjqdldvTz4R6sviaKrEOrRuOz1gzTEV1uCZqaKbDtZpNBUmUw2plVTHITaADnAFT11dLN5VyVUFoAAtZ/BkX8LAOdlnfh9kPsht1m31hlw1YwoTNQrzYWNg8+2Xyk+Sn5zbjlhCx2airlWx2yl2EH7HjB4SnSi/p/k6cv6DcOHdz4G8RZf4toh3pP8VV68XpieUpUOQ78pxw/HwUFEBnt0b1YHAFKgTyvgTT11N/jzTYxQ/1w8/zhaez7glOoO+NB3qzLgKKgx2NH5Sj2E+6B0EoDnfWha6Npz2fwC9Zo1O0nPDmGlUD55kJUKOkoNweSS8tprIyzMoLS/B0Ws7DXGZ+SZbaSTfLX1eLUyswc8tE5YoJibqh1XSkls2GrsEa0lVYhlVdLTc0SBItTjKyPS24hxNqRjMVBNOeXsZ6eFqJ1+Owruv1VSVe0VUpCd0jLwk99t5STLOh1V17WWwvHvdwx7qbXl2B2SswVa0ixTBgErZZsqF1G99YOHqeP3+2/n/obf6mbpjwTBm2Psbe/ef+eN2lc8hlalotRnCIEdIR5nFUKF5xOfVCZ+owp5gtpK1IglsvEHmHDtfQmi1cZAwTNZq49OiV9xXTEeuKSS57Y42kAiI5jXxkeyBzq6I0Sco4DD4iMY7PyxmHxscpxSApjYsiIo/UYVBLQyN4RewZ94BXm56zBrsV57LNLu6JQ9bw4rYo74jLD8XlbfHq+sIeUc7a7Nw+HeTm9sThHTHykxi5G9sWpQ16lxetwTNbN7aWfxixQm/YfPKQB4GQFZJsfmqXF24HPgpsXrpz9c4la2jS5mNkf+hlm588FAAnWMLkIzb2+6EfBE8cAIqbc+Emv61sRb6p3b229Y4VmtnhZx/ys3/uM1j9hzGKPb+fev5iGDwIC/M88yA2Os8wPzIcXjt8qUQIKJUkv0sUJmbNcFizgYkjT94jm7BAthI+S6XvACL1xmOJP6fq1daqcgGN41/y2o0YHrBtivoVhHdA+DHLUaceh05Qr+zHARvcaG8zY18lvp6xmDEX5y+hABQs'))))

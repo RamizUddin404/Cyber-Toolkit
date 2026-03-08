@@ -1,23 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import cyber_deps
-cyber_deps.ensure_deps(system_pkgs=["nuclei"])
-import os
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;32m[*] Nuclei Template-Based Vulnerability Scanner\033[0m")
-        target = input("\nEnter Target URL (or '0' to exit): ")
-        if target == '0': break
-        # Requires nuclei (pkg install nuclei)
-        os.system(f"nuclei -u {target}")
-        input("\n[Press Enter to Scan Another]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVUs1PE0EUf9P96HYrIEQxiOBINLgmCgiYUBADghG1jelSoxazWdtJaexum9mtkT0ZLxI9iDFGPGi4avxjGqyRrNw0Md4U/gFnZ/lohIsv2Zl57+37/P2+Q4OIW/emzY7XoIOOrgMNb0SRHjkKNMI1gQpzQlqBPdIDutCHdHEE4d14icVJc7IuJ24DmCxqTuqB4a0IDAVUQFr0V6CkcqghmcQ+IejnI+8nu+NIR/atjIbRds6stG3XI/tahQyko3uzbHfVDIP7x4n7WqVdawE0OeVLuRIxqTfUmR0YHbxgXfwf8WTMxesK78vp6YnZ6Sk8eSeB0xPJmbs4MzU1k/IG/itrZ7bf0kQ/UnZ82VlwXGL5UoUWbdeXqpUKoRryRdu0iBNMgn3w4265XDLmiZknlMYhpIczzo7HsC7KT2eezCwW6mL7uhirqcfrImaPxStLQ28SLxOvxpbO1dQTdbGHe7W6eIY/jn0RuzaDPfmyXWUrKrKq8bAbo/Kg4OQasdiB/z2HvxuyO+TQGRl1YSSCG22N0Ah7obEhA1sUZJYCZLfpDml5LxEYnaKZf2mwm1XZtSaTAFos5cU51uet7Jl7mKrMxWYTiJ33RtUGT4qPjWeJVSmZLjk7aTokj29VSzah5v1iqeguYD1n2kwNEPNOqtO2SyieNWmBuDiTvoFPlynu7e/FbhmTR0VXS2Af9XtquFB8toq9bjV7kxLHwWEs+zFIiSfssjtP6D1NpAH1faloV6ouDfZM5bBh2eV1QhLwKXyBVm16iL1aAvyTHP81tXldaao1d69Mriq9nw7X+py65q63tteOjH9uvbQor8Vbl/TnF5dP/VDUF7FnsaVryw+X52ttvXXlNI/sqyv9f5og3kIPBEUUw7DMom0YWpT344tu0SKcdr6aW7hPqJEnFcePE9upUsIV3lQQGdDWMD4ATxU2rYxZ5Xy1RMZpJ1ODaZxRdvwWEEI/oWVDlFD35kFAbWugfoX2VWhfubqSWIVz3yC2EYmigd8HQTyw6H0WOt4OvhuuCR08+V/qMhEy'))))

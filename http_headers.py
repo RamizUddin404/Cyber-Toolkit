@@ -1,23 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import requests, os, cyber_deps
-cyber_deps.ensure_deps(python_mods=["requests"])
-def run():
-    print("\033[1;32m[*] ", end=""); print("\n[*] HTTP Header Analyzer")
-    u = input("URL: ")
-    if u=="99": import cyber_deps; cyber_deps.remove_deps(); return
-    try: 
-        r = requests.get(u)
-        for k,v in r.headers.items(): print("\033[1;32m[*] ", end=""); print(f"{k}: {v}")
-    except: print("\033[1;32m[*] ", end=""); print("Error")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVk01sG0UUgN/sztpbO01/nB/RJvXGTpHcImhpArLjtnIa06RNTdn1FlqnWCYZ3Ih4bWbtoOypggOGItEIVSkHpBx6AIRQj1yQEOqhx63jttEoN5AQt6g9gDgxu44TV7ZAHWln9r0382bee9/7DVoG3lqfLvLpFmigofNAGyuiSBMOABVcSaTiM1ZM8QxWfdA2QqCJryANR5ECmsTPe2a8mif2DkBOBpjxhGB0a6cCeZRHEe+fjpCaRS1OJP6Jzru+d9+V2TaoQscb0Shq+sxITb0mdNSKOqjedi/NV3XDic7ncEettKPNQ8STYtLsAslRa+Rg5vjYidcKJ59nWB7FHdZgYz2jJhPp5IQyfjmmqIkLU1cUfWJiKmUdfy6vBzPHChHMhKLJPOaSWSYFJpXovFFmUqVUIjSCGDZyBWI6kSgMmL9cLC5kr5HcHKHUDw1MzFN8ug4b2PPp1MdT1Xwd923gXbYvWMcK/6m+cXNkJbYc+yp+82XbN1THIdcaqeMj7s/AQzz41MkTkyn5sELMssnv9ZeWyteKRrZQnDNnW6vhaQJQQi4A23BoHEpNjApKq661NGJ7aQzQYQvBXq73anBeKO5TPZ1QaoETDkFGblo6o67D9h2CLqhd7XvUPe265h0BmAwCVDjSpZH/jlAXu0GTdczhFHdivTAE4H82Zl8rjkOg/F/mdu3sD0Lq8EkxCO+jiD9l+V1+Xy1kjlxVqBM7r5ZIjDnrBZ+jmkynLyqTLiFKwsgtLFmEWpKuTscUJkSj1GlTS+CClKS0SC1vJmmUCb0akanTe0yaN0qVMvPNLr1HaHaOlEzmp6RQXCSuQHc7m8Q8KTNvg0OTH+HkmhGJoQrtccyIMvQBQ4um041uv7gPZSKtGHQQnFbm2N6GBracwQOrQg2H7+j20bP1w5Mb8u5q/kb39cS6V64Of/LR2t6hx+FoLRyth8d+urQpiFJ8o6vny+nPp2/vu/FmFa0Helaiy9GV08unHwWGPztTTdwh9kvxX0K1F5P3KvbFt+6btpq29Ut2+u37mUdnLz8IDP/OGyPyEPf8vSmCFP8iae8PfSvUuo7+oN99/cd3/zEdYH5OBMYH4NeB/vFRkcnZbCE3b2SzPFFOWAyX5wvEbUI3J43I/cQwK3QrVU6kzjmnhbPZ74A6ThuZkOO8sSoL5BQNc9GptDnGp00RIfQH7HmCJXTor72AlDUIroPvMfTVoG/13Gq8BseeCDLq3dwPuKt6ZU3s/zrwTa8t9rvO/wWERDmS'))))

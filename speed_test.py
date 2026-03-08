@@ -1,19 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import os, cyber_deps
-cyber_deps.ensure_deps(python_mods=["speedtest-cli"])
-def run():
-    print("\033[1;32m[*] ", end=""); print("[*] Speed Test")
-    if input("Run? ") == "99": import cyber_deps; cyber_deps.remove_deps(); return
-    os.system("speedtest-cli --simple")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVks9PE0EUx2d2Z7elRTRaSgIiK0TNYlAoYNKCGLQQKrEmuxCVQja1nZQm3e1mdmvCHozRgz1ijFEPJhy86F/gn+CxKSWQDTcPxhuBg1dntqWW0Asv2fnxZua97773+QVaDDXmI4MOH4AKVLgISH2GBKpcLyDcCS9P+FVe8YNTNghU/jZUURRKQBXoO2FVVMXYUwDS9PaqMAgmGzclkIM5KPv+sE0yA1uCCPTjmZ7vnp5U80Dh2maEk/A4Zko49qtcWy+/DBTf6SjHqrrAePt3qK1X+O/NAVlMukKmgNPEmehLjU2N39HvnsUcUfLM6a/PD5S52aW5uHT/WUxSZh8lVqTleDyRdMbOFLUvNarLyOWKlitaG5aNdVcwSd6wXaFkmpjI0EVGWscW+xPJBW7QLhYL2jpOZzEhQVDHw5qhwyuwj8S3ideJcq6GwvuooxIYqCGJLsrzmxMfY+9i76c3b1UCV2to0DuVa2jYW1zeQf1HrE7OOcvEOGtjyx7JFPI0edDcsNeLhqYXs1amtSVNCn7UKWgSolIiVT7KSa2+1v7wp/vTYLCbrnwqWOSKQBHbsdRCJ0g1+VYC7e6q/rY5O04wEUg6QQ+GiJ4aXpMIi0T/msdG1uliHpXVQ1qiBXEEpWTck1wuGiUMdCd8olbSyIiV180CdnypOcPGZE0WCUPZFfKGWbLdQGbjOSZaFpuWGyRYL77A3oawShLRS0wusmZ6rfakuDwpGSQEGPn0IN7oMm1Z7xZXRUNflys3p2rXpvd9neUnb15+Cm37+rcHRncjC9XIQi3y8Od8A4lK1/UausFQkHdQiHSy2H5N09N5Q9Nkn6fBRXZexx5Tng43iA2rRBoqQ40nDEZN+wa8GHWR/mlKR6mAZ0gv3TL1VpQOBzyE8Dc4f4gEeOXvBQDDeyCwC8JVEN56XBmaqILJQw7B7oMAQJ3llW2+5/OlL90VvscL/Q8onPjG'))))

@@ -1,26 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import requests
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;32m[*] Subdomain Finder (Recon)\033[0m")
-        domain = input("\nEnter Domain (e.g. google.com) (or '0' to exit): ")
-        if domain == '0': break
-        url = f"https://crt.sh/?q=%25.{domain}&output=json"
-        try:
-            data = requests.get(url).json()
-            subs = sorted(set([entry['name_value'] for entry in data]))
-            print("\033[1;32m[*] ", end=""); print(f"\n[+] Found {len(subs)} Subdomains:")
-            for s in subs: print("\033[1;32m[*] ", end=""); print(f" - {s}")
-        except: print("\033[1;32m[*] ", end=""); print("[-] No subdomains found or API error.")
-        input("\n[Press Enter to Search Another]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVE1MG0cUnt2ZdYxtDMQCBBQzQPnZIAzYoVUdSEUwtKhgIW9cNTHUce3FuLJ3ycw6avZU9VKkXkh/lFZKJY60yoFDjz1A00N6c7Cboi23VKp6o3Bpe+rsOjauoEIZaefne7PvffPeN/MM1DT++XgcYt0XQAIS9xYg5ZEjnMS3A8JbK0igBNkKLQkSCr4DQMIOwBLqAePPXWCQ5tKcKPxhLsJJriaKwD5oRvnWihKrGiI8ONV6WLRxruIzJlRwiT8ThVEQuXDaS4WVGwTO/g+diQonaBqItrAhJLNyguiXO2JjVwKv5CZfpOk2bDW9szxOR2amrs+E8LUbQRyZWpi7iaOh0FxYH3shrx2x0ZyIDF6lho3epZqcM4Q1klE0Q8ivrclE5AykJHIyNU+CDWA4NVXNxlflREomxMlAxD56lXUfggNk+3juo7n1dAm1HKC6gqOrhDCbrM9uXL4fvBf8bGLDV3B0l1CPZRVL6JI1eeln1Hls5ilZm/S6Sp33ObPOXhCrqkBiWpLgazyuxWprAE/XQAFRINksrTEkDaQLUVZPyR6ACsd8o8ofEdvp+veAaFVFkbr/14fCx5wVLFZfmUV5D3gbUn4EUDZ7k+lLDUh1pkwW+QXmzckYU16BlQhVxuicEztiDdUY1dOzMzkD8CQXUcRidjBvwjneXFHhv/pe6Cxzq8mmu8b6E6s7X2a+AroBPq8+9Sf/doHw0CTsAiuc2BDWndZ18Odil5YxcbANTHRQVlL6oKPGIuXfS6m5REbBsxmFiQ8PRuSkqoimgnW/Y0bRGBYq7xiUfWkfTqtqOiv7kmpOxIMqwQOjA1hTsfxBRhOD2OBG9ZZVTVujwZGRJNF8dHXk9duTff5xn+7qV/PaWl6bfJ+qiuEwL0D8TiKbl3WnIza0jGfVvJLCuuuEFA3qEA9jvS82vIzDKqZVA16xNrP4U4tzmF0alfh07IgtEplSXKbNWEnsYUiu4ilF1VZlsizaifkOGUJGYTwMO5Fv52WqUQOmZc1AFi8bVYkmpwxIGQSzsiLaDFs5qgHzJGugVEJLGIKsaOSugRglanCUmvouPyFWsg1I8grxspkpWPoMmDd53+E+sNcX3N7Na3v2gYfNhZFbJTFx0NRSaJ0vNi2s2/adTRvSJ5Nf9u039m/e2VzdyhbcV9bhIS/U3eIOPB33Jz6d2IRFz8u/eMQnHrHoGVoPHXjaHvTuoqJ35ge0nd9cKnX5d9ET70yxfbboeYPZXU2Fiz1b/J5r6GF0e+nH3p3UI3Gn4/F8IXCjNHzz1+a2De7BeKF7bJvsdQS/n9mZfszt0B3x6cT8veu/mXTHSnb/n63A2fD3kRt0zXJ/HdoA4/O5UGjp37q21zjyXXPh1XefjsX/oeaBt/3TjWC3xz3tdO2OTrnZ4pFTMPvG1mkRGvZ43MxlPC7aiHlbDaRlcrL16JGLZmf6MHdZ+oh/A4jLRK2k2idyaiqfla+SXrY0hU8HWXcIOY77HTQcIYHzHjcCrvGId3GBw3aAXOt6EbZ9Ffh6vADbLE//AsJ2kBc='))))

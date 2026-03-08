@@ -1,24 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import cyber_deps
-cyber_deps.ensure_deps(system_pkgs=["exiftool"])
-import os
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;32m[*] Digital Forensics: Image Exif Scanner\033[0m")
-        img_path = input("\nEnter Image Path (or '0' to exit): ")
-        if img_path == '0': break
-        if not os.path.exists(img_path): print("\033[1;32m[*] ", end=""); print("[!] File not found."); continue
-        # Simple use of exiftool if installed
-        os.system(f"exiftool {img_path} || echo '[!] Please install exiftool (pkg install exiftool)'")
-        input("\n[Press Enter to Scan Another]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVU11vG0UUveP9yHpdYkiEIZSEaQRytg+NQxqkumlLShzhokaRF0tQJ1ot9mS9wrtrza7VdlVViBcSeEgQQoQHpLyC+BH8gD5sU6NGi99AQryV5g8wu7YTS7aEOtJ83Zl77rlzz/wJA43vzSc2G74HFVT0EdDujChSE28ATcQ7jnKbXEmCoTYLKjePVP4Kwmf+AvMTNkVVzH8CoDOvTWEWlnoeGAxkIGXsn2izXkUDYALrXMTnl5hP5fSglBgZGS2hPmZF6NvVxEgrV4bS2DBKn9U4LI7240dahTOrAYq4HgrVBtGpf/l8ZeHq4nvWtRdpvojj5k935w9KhZWPC6v45qd5XFq5XbyDy6urxXV/4YVQz1dylsKHCccNRfe+6xErFJrUtL1QaDWbhCoo5G3dIm6UCQ4hTHmO09DqRK8RSlPQlYd7nQ1fQIcXvyp+Wdwx2nymwycD+a02j9liZ23/8g/5b/PfLe9fCuQLbX42PlXa/MV48ebv/PRJ9E6hRO6Z21EEFjfV5aM1Pzfc6mA1TgWQQZEAZqByKg+VyVHlriTwoG2wONxwcWwoQ0+EzGJApS94KInDUiglh21l6GPN9Sy11+D/WI2dsbrN0huIKg9HYDKWykx+anKRG5mNPIC2C6Ck1v1UrLJ3rcrFLUwjTPamHLFr/pI8cLJqGqanN/CaQ4ntmlU3j4uWbhBcYJXAalW3bUIjlfhvywXbI7R3vKF7dTznUJzNZbHnYFY4T8njEOX8ycqFLbxmNgi2HQ9vOy27dslP9iuL/Wv4wQNMqnUHZ6ObG+xPuASbtst4NPDpvTlW+CGrkvVn5MoGJa6Lu3RY7IglXmHB6oRuKSKNfnAomHaz5dFILCHfZGxDkYG4nkvF7ltIpmVo0UFX2/EThRxt2TTDVmnW3XsQyfpYHu9ILwXjM4c3j6Tsr68G81ZbsTuTrwdT7z+ZXNmRjlOT++43Nw4KnfQre3d37+493H14UH+azj5Ox9dv/FY6Uj589E6wQdq3th/Xm39J8l7y6+R+8aB+cCfI1oIJ0pa24yDzbSn3bxpSaXou4iNpmqWbtqYpY71UPNMi8ccL5er9zwjVaqTphilWvBYl8SbmH3lGH1fTfoYYqpuftGw5tVaDXKfTbBsl7l5lwzMOIfQ3pJ/zApo5eRnQxDHITyFzBJnDW4fLR5D7A5LPExJaeDYB/Lkd/wk39ePiT0sBNxWD/wceE02W'))))

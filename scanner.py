@@ -1,29 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time, socket
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-def run():
-    tool_header("PORT SCANNER (LIGHT)")
-    print("\033[1;32m[*] Simple socket-based port scanner.\033[0m")
-    
-    target = input("\n\033[1;33mEnter Target IP: \033[0m")
-    if target:
-        print(f"\n\033[1;32m[*] Scanning common ports on {target}...\033[0m")
-        for port in [21, 22, 23, 25, 53, 80, 110, 111, 135, 139, 143, 443, 445, 993, 995, 1723, 3306, 3389, 5900, 8080]:
-            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            s.settimeout(0.5)
-            result = s.connect_ex((target, port))
-            if result == 0:
-                print(f"\033[1;32m[+] Port {port:5} : OPEN\033[0m")
-            s.close()
-    
-    input("\n[Press Enter to Return]")
-
-if __name__ == "__main__":
-    run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVN9rW1UcPzf33CS9SdrUNmnXWncstFs6DKtth4tbXdqkXVibhtwEpmkJMb2LF3vvDefe4Lw+OAVZxsB1U+kEwT34MMWHPQ6G4J8QaYb1WkSZIPWpbv4BnnOatCkpyL5wP+fc7/d8v+f78zwBLeRorM9iBL4AEpC4SwDvrRzm2OrADskxADAv8QThsiDByGUACm4AluEwmGqYQKDElbiQsEN/kkWu5RaBfDy95Tt2S25fkHaANhomd05xTZs5ocmXHEdy+SxIu9qtNL3qBBNH68EjucIBtwRCzqQtFNfkArYmB3Pjr0+cUc8/D1lOxMga2ltn0/FoJh5DM29GUDq6mHgLZWOxRNIafy6rg7nTagjaDt2wncb7himrtlDGimbaQqVclnGIs6FWUGWDRoJsYHtMXV/LvyMXVmWMPYQJyWdME7gGtqHzeuLjRLVUh8Ft2FETj9chIpvq3PrkRuR25LNz6+Ga+HIdDjNpqA7H2ObFx3DoGc1TsTXpzmad73Cszvs9cKii/P9VtMnVQBacbHALn4NWTZgllZWECf7AguTsARc/JFpcztk8l97fHdAwaJG72+UtUrFdOtXoWM2RdaR97XLJdeAROdHVfuIyN7kft8ZnecnNpsl/KL6OLCeJXUDytEZI7HUf4RFoyhc/AsBzOJfeQ/3sS1q9qaV0Bkmz0WQynkYnFxLzFzMh6zRr71fV3NgKkhS1vCYjQy++K5uvvF0w5FVU1rGJjGJB02Qcpg1oDYlMZUKNa6aMUaaAS7KJEqkIYuIRsdUiVVS0EirqqqprzJqByMZyhcPMXKh3J0Cc3AlS6KNwjAINbSdFQaOgU7hO4SaFWwSURyQ+5QcKf5DsKU8oPCIVVP72EjhPKqR4iUFl/TggGWD0+xuYFtHyN108tYJSNECbm7I8KIKWUvEki6JfzKWwbBhoL0hTR2nZrGBtJdTBBgnTh8cWFK1cMckwsozZruhcPpGMZ2yPtDR7KS9lyNQv2qIhm6aiyjo5KRZ1ksiimZev0vdFN2Qyz06TpdCGNDs2R4ab3FxZMw06rfT1wLQbbR5XNDwCaKHJEH8D9oa4q+YfrcMTbDRn6nD2T98LtZ6zm77ItbnfXL5tt6/mP/tw9GH/jwO1zoW6e/HX3veqsW1/cMN3x/fVla+1L7Xvr/wcvvBT+MKmP1qNbnl9txZuLNztqXuHtgLBjeXby/fO3AtvBsarc1tdgbvdNz/Y9gdq/afuxx5033/twXQtOFP3z1K1+Rvznyb+8YHAVe5fPxDEmjjyGI5iL/Xdnc+rBUXL50NOTFvUhjQjeJBmkqVzpHGKPl/5/LeAqe3F7T6n6quVNXkaj5Ff2tRGiMAuz3HcX6BvE/Q9hQL30tPOLu7E7jCA3qq1yR/7Bbo+ie/yAA4wU/8BEvxl3w=='))))

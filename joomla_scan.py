@@ -1,20 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import requests
-def run():
-    u = input("URL: ")
-    if u=="99": import cyber_deps; cyber_deps.remove_deps(); return
-    try: 
-        if "Joomla" in requests.get(u).text: print("\033[1;32m[*] ", end=""); print("Joomla Detected")
-    except: pass
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVU81PE0EUn9md3ZaW7w8xIrKABxfQgIBJy0dSKSYI9tClRinY1HaoJGxbZ7cKDYlED9Z4QdEQDybejMY/wKs3Dx6KlEAm3DQabwQuxpMzWwpNyoWXzJt5H/vem/n99gcoEuFg3/cy9RpoQIPjgOR3SKAmnAFEsCyRiJrILDQtach9C4CwHYBp1Ab6D0ooIAZjUJX+cMMXgUVdJLZE3uWj1SV4GPALoETaWLd+WKgZlAp+TTjWKwaA31ZapTBVJeg9/jt0rFc68saAKvuoFJnHYZLuawr2DPRe0YdOImlZsSTdnN9H/KOeyVGvcvW2W/F7boxNKQGvd8yX7jlR1aZgt64iKiQMKhuLhol1KiXJXNykUiqZxESFFMXDOjb4TRQKqNNMJOZD93A4iglxMidiyxhmahnsIPnp2OOxTCyHTu2gsqyjJYcUdshcW+lbc79wrw6uXMo6WnOozYqqOdRhHc5uouZ9/k6R4kc/xPlXHudDDhwhGgcBhqTFn3qOngbGYaLGL4ESKeIVOMfwCsqFiN9emt3G6hZ6+B2l8QG2wg0ABCuOsNZkzeYSlGKfvYgVR9OXFbOilekW4KseElvALFQdvrQU8E+4FSq4XITzmcrXEwl9Ppx2WqS5rAc7ZhTCZ2LQiDgeTVflExQvNnHExNG0LTgaNzGZUW1UmosnUyZ1RBbvYhKK4qRBnQTriQc4b9gJvp/ChmlQMYZNiky8YBL+A6gChSlSy7HlUyj5llQkqTg5zU78ksadPOr2ikzseeWyZ9tmz5x/8nCjunWr3bXe7sq1D3y+uSsIUs22s+7VwtrSy6V3ntVHW42d642dG87OT4Fs78jX2u8XJ77h7CTO+WZ/Mq6om6j+764IpJpn3n8GZ9h7l6cLfOkSPN0itYdCenguHgqpMuEws5HndGwRkdRzxYfjWZy0odAHQMq51xrePqgnoql5PEyamclBMC4wtStCCH+Dqj0kwXP71QBW7wkybNitBKg8M7UhNr6pe9uQFRutSv8BqIL16g=='))))

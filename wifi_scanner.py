@@ -1,35 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import os
-import cyber_deps
-# airmon-ng is part of aircrack-ng
-cyber_deps.ensure_deps(system_pkgs=["aircrack-ng"])
-
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;32m[*] WiFi Security Scanner (Root Required)\033[0m")
-        print("\033[1;32m[*] ", end=""); print("1. Check Monitor Mode")
-        print("\033[1;32m[*] ", end=""); print("2. Scan Networks (airodump)")
-        print("\033[1;32m[*] ", end=""); print("99. Uninstall WiFi Tools")
-        print("\033[1;32m[*] ", end=""); print("99. Uninstall This Tool (Remove Packages)")
-        print("\033[1;32m[*] ", end=""); print("0. Back")
-        
-        c = input("\nWiFi > ")
-        if c == '0': break
-        if c == '99':
-            cyber_deps.remove_deps(system_pkgs=["aircrack-ng"])
-            break
-        if c == '1': os.system("sudo airmon-ng")
-        elif c == '2': os.system("sudo airodump-ng wlan0")
-        input("\n[Press Enter to Continue]")
-
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVM1vG0UUn/HuOu564yRAHJq0yTQg0W1pPhuE05Kq+UKhJFTeRDR1KmuxR84q3lkzu6byXkBciJSLKUURB6QcW8SBP8VKt0q05FAJJOBWkhsnZsex4yQWpCPtzLzfvK958377G2gY4uF6QNj0PdCABu8AWl0hhVqoG9DQMVSgwoqQjIBTox9owiDUxAREQJOYnbQS1sLj9wDQmfaK1A/GDjURyMEcVFv+CoSFDGxwIrFPCPL5ieeTqh8kQ00jwjFY85mSargWaooKSyDZctpLLasYGG1uJzZFpSM0B9Twgi9l8lin7vWe1PCN0ffMD15luGHEh3uxuk4lZ24vzkyjyeVxlLw9P3cfLU1Pzy24w6/ktSc1ZKqiH7JsP2yXbAebvlSgBnF8qVgoYKpCXyS6ie3gJsgHftSxrHx6FetZTGkUVNvDnmDTV2BPDH8z9/Xces4T43viuYrc54mIbdZny9c3x78d/+5meaAiX/LEfn6qeuIVvrnwXLx4ENTpn6hu0AzVM2vXSO4p9KPVlNKFtZydaXyQeg/8CYMe6AWpeodorCM1IRFCjVjj+/y3pnRmzfCZNVvOrBk5s+a5Bk2hjso1lIAloEU5sxiSCySFS3EAUjVGg2QYnBqMMa2Mo7GAo9yujdt1Mbs6o5NyU7v2o5w+ucAsO+oR/8/ytaa3ef0Ind8HQH1jwY1y6oyYqSsPEA18sQYVMMm6Y3LDyafGrIE0nClSwykhLaMTgim6nLQsByXx50WD4qwatL7bOTyAplZxZg3NW8RwLMrWLHZ7Rga4GVrAzkOLrtnoMutMK1s0C6r7ZiIxgJaIQWxHz+erwRYZK2xXPX6yuGrY/ISFxqb1BUZ3WWvrOWyrbsvQAJpkkhuRuYMJ5MMhP5RI0FZ2Kxpjkw+H3ZhdzFqIxTYtwjjhwxE3XoN4OgxED/M6GXK75dRdim0bzRCH3dax0JRFHIMU8QM1TIO/mi8ZpFB0fDlT+gzTdBYXbD9KeWZcoAGtaLhaVZipcp5X2RdokdBututgn70DArrvyrG9SGsl1rs1uR155+fOyqDpqeQENOupH56APvbU+RPQnKd+dAK676mpY9CTkqcmflc6ylefKb3rcDeqlIWN98tLwUbcSOwp8R2lf1vp/6X1yZfbyq1dpeNQ5XFyc/nRcqVv8Hnn0G5rrPzWxr3HdLP0qFS5lPC6xnmQq17k3b/7QLSNKsF1I+m0qRsknVZbeFF80TFMzP93tCuQo5jYRXpYtu5Dk+BHmU4/BdxHtW6RmyZ7pjyeoIiJQUHtG2x6KUAI/wBt+6IEew/aAZR/BR0vgLwD4tsgvjW/dWsbjO6L7fDay7eBqKy7z4TzP4z+OFYRznPn/wJuCJIZ'))))

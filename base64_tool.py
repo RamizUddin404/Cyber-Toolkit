@@ -1,22 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import base64, os
-def run():
-    print("\033[1;32m[*] ", end=""); print("\n[*] Base64 Tool")
-    print("\033[1;32m[*] ", end=""); print("1. Encode  2. Decode  99. Uninstall")
-    c = input("Select: ")
-    if c=="99": import cyber_deps; cyber_deps.remove_deps(); return
-    t = input("Text: ")
-    if c=="1": print("\033[1;32m[*] ", end=""); print(f"Encoded: {base64.b64encode(t.encode()).decode()}")
-    elif c=="2": print("\033[1;32m[*] ", end=""); print(f"Decoded: {base64.b64decode(t.encode()).decode()}")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJy9VM1vG0UUn92dtdd2UqcfbkSbwiYmwBbJStw0wm4JirOpsAoGdr0VdGuMY48cB3ttzdqF7qmiByyVQxEgxAGphx4C5x7yB/QPWH9Erla5cUDcqvbAlZnd2LgkbdULI83Me78383tv3ryZP8BYY/fnJx+Q4SegApW5DLA3M5hR2VMAs67GYW5k5QgKr/EqTH4KQEEA4BqcA+f3qURQZsqMxP9FlUyRGfPGk85Rb7+73vSRQWHBgTZHvJ1nhpw6P8RV9lCU04DiP8gyjOoIOHf4Pngoyv+LloHkyzh8sYoK2Fo6rS9eOLdce/dlmuUT3Wad8eY1ZX01uy6Lqc+SorL6YfqqqMlyOmMtvhTraX2hJkGHrZuOz7xhNlHN4Ru4YjQdvtVoICwxDjQKNWTSk4gOcELNer2a30SFEsI4REBIurlChptgD/q+TX+Tbpf78OQeDNjB1/pQJEL70p2ln5PfJ3+4eCdmB2f7cM61Sn141hVmduGZJzRPxfGk+4f3LLDuPY9qQCUVpXIJVhzHxm/g+SvHbkXnRqhviBpAA6rfrckTBBdUcJmtH31eVdDbHWMKjJhYwhR0mdLgRVGFdGEoK8GDvuaAxiqTz45h6FMJP3vN09X7UYZEN+FG9/4Lo5sci27q/4huLJ9HnnpF4YwVcp9PvKafzYmY5ooUKYeMkjUVpFCqYKLlJTFL6tSKLsbEdaNYLyFRjMdEGXliIhETNaNimM1CtWoJKqqiYjMpOmwigeknYvmy6GsKMItWwNtfolrcCngURLP8+rrRRDgnBTAtDoevGI1W0wkWb2wgnC+hhumEMKrVryNP8W24gTmBjeUl5HI6vuFcclldkydKnMMU8XHKyzRNmgzy5N3DOhxuGXiGSDThZh94L488o1N32S6M3tPst1f68+/9B/q4P//JnjDZ3uoJr9xcfegX2q/f+qo3NTuIJjrRRD96YecKNW/eDnvW6K3r37XsyPx2vBuO3ed3Ag/eGKSUbkqx1exA1Tuq3lNzvdTngxTqpFAvVbZXN+3lyu7C1sNAsL12++SPEXv6zW2le3Th/vyO9ODSQM525aytXRlouY6W62n5nvzFQC535HJPrthrW/Y7X/bjVfpdSLvwBJ6gZxXy+VqhYuTzkg/Tf9WBzUoNuf8OjtBhZn8V/aPy+d+Au83Lk3CxVi+1qmgFzxKV1pD5FhkecQzD/AnCjyHPvPr3FGCOPWYFJvLoGIAT7as9bvqX479GbG7aZfoHbtBUiw=='))))

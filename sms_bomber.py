@@ -1,23 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import os
-import time
-def run():
-    print("\033[1;32m[*] ", end=""); print("\n\033[1;31m[*] SMS Bomber PRO\033[0m")
-    num = input("Target Number: ")
-    cnt = int(input("Amount: ") or 10)
-    for i in range(1, cnt+1):
-        print("\033[1;32m[*] ", end=""); print(f"[+] Sending {i}/{cnt}...", end="\r")
-        time.sleep(0.1)
-    print("\033[1;32m[*] ", end=""); print("\n[+] Finish.")
-    input("\n[Press Enter]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVU81rE0EUn9mZjevmqygK2q9ppepajNa0gvGL1las2liyDahRQkyHGOhuwmxycE/ixSKiERU/QOjBg4oHj3rrnxDaiDDm5kF6U+sf4Mw2aSMpiA/mzczvzbw3773ffAMtojTm1YtCPQUmMOEFwNZmyKCp7AZMaUORQNE1bOLYZQAyGgDXUD8YabgiIAdz0FBX5CaehS3RVDGQjPbOi5ZaNyQU0Cb9ItoIbPpMqU3cVDZFURIktrR7ab4qBKKb38ObouoGmgOGL87V7BzNMHe4MzV0PHrUOvk/4vqIJ2732nwmMTE6MzFOxq7ESGJ0avIqSY6PT8bdof/y2pk6bBmYKwWH+5xbTolaXC2yvF3iarlYpMyAHNsZizoyE8IB95cKhbn0TZqZpYz5BYjFcE4JdRvUse/u5J3J+VwN76zjrVW9t4aJWMyfrQw/iz2KPT5RiVT1vhru96xGDR/wFl2fcfeqrFO2tehas88XodfndQ6YglEmOqaQVqy1A6i9A3ZLX1rsvqb9JNzfwGYV6cPcsn4TptYZYWpJaGoHJSMaXNsOzg2LM8o/Xrc1qYSAqSeh0P6oagYaJ7TmiYQO2kRwN7iR1dRRAPyA/KsOoU3rEP6LiR1x1+9R8IiVOnCdMBlbNBpRe9bt0T3LkGcxp0wyVrBuUEamE5ckV9zwTIblaInEyxKOEVcbtQpluxQjK9LNiozjBlKD4rJwl7dzhMNDLopEIhwGcy9fSPl02g3o8sjZvJ13bkbckJ6aZtRxyIRdouy64WOy5FzN28VyiSOPjixj5yjHpbxFuerMUVo0EEd22eIoK+ww78h0xcfw0uGIlW3WCeSfFfx8Atb4Kci2e0FZwnteJ6uDidqAWdfD1Y6+Zb3/9pm6HrxPK+eXQ71fQgMLR5b1vQILbqsMVbLP+x7RB+l5WNeC1VDPwtiStu/9jg9dHzMfzUW4uGdxx2K2euh8dXpmyUjWtcBD/Z5eiT4I/1RBqPu3D6j6Rtg3p2sDx72HdH7GXSwg36ql01Ymb6fThsokS9lOqeTn8jKQdvkH0+m3wLuwlqF2wirMlufoKdYrtrLuzqBQPxCE8DsI/8Iq7FntAFD/Cvy/FA12/9gGcGDeXUa7XkRfjVTRLs/ZH6gDH68='))))

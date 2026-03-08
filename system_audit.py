@@ -1,32 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time, platform
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-def run():
-    tool_header("SYSTEM AUDIT & INFO")
-    print("\033[1;32m[*] Extracting System Information...\033[0m")
-    
-    print(f"\n  \033[1;36mOS Type      : {platform.system()}")
-    print(f"  Release      : {platform.release()}")
-    print(f"  Architecture : {platform.machine()}")
-    print(f"  Processor    : {platform.processor()}\033[0m")
-    
-    print("\n\033[1;32m[*] Checking for Root Access...\033[0m")
-    if os.getuid() == 0:
-        print("  \033[1;31m[!] Status: ROOTED (Full Access)\033[0m")
-    else:
-        print("  \033[1;32m[+] Status: NON-ROOT (User Access)\033[0m")
-
-    print("\n\033[1;32m[*] Checking Network Interfaces...\033[0m")
-    os.system("ip addr | grep 'state UP' -A2 || echo 'Could not fetch interface info'")
-    
-    input("\n[Press Enter to Return]")
-
-if __name__ == "__main__":
-    run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJydVP9v20QUP8fnJHWzbDAGdKPhVmlt3anpl2wgtV1R1qRShJZUcQuMrIos55pEi+3o7Ahq+gMaQuuPRQjxC/8AExL8EfwB1uIKYfU3KqH9Vm3/wO4cp3HVMLGd5Lvnd+8+791793n/gNCIBOuLHJ1+AjKQuU8B6a0c4fw1QiJy5CogvMzTGT4QZLj0BQBKHIAHcALcDiAQqHN1ThKesZ+iyoW8CPTjmZcnvpfK6UY5As6NCerzNtfHrAh9vRwZquW3QDl2HqUfVRJkhp+DQ7XCQFsHUrToCWoLK8S+da2ysJz5SLvzOsOOIn/Y4711rZzPbuZz6O79JVTO3it8ibZyuULRXngt1GuVeU2CXsQwvai5a1pY84Q2aeqWJ3TabUwkzoO6omGT3QR5wBu1DKNVbWClhgkZpUpIP3OVTt+CIxh9XHhU2K+78N0jOOKIH7oQUWF//eDWz0s/LP24cpB2xOsunPB3JRfO+MIHh3D8BcuTGk76aZ3jEb/Op2/gTEX5oRUdaPkK7Mvl6PnKTvxXbQcIMIQQfyMEIYQgvhFCNISQeDWCHMvwQzHiIW3yFO3Sq9DkEZ+b1GMIRxzglEZD+tGhXhNDvQ6thHwhZHv5FCF5hkUXi/Zl+b68mb+Hslu5wiaaRIXiesme8zm1qFVmtlH+a4soqtXU60j23zQq6DsG0RSraejpdJo9entMRCjgYUlGm7tt3OPVErLfQqiMKVPNM6osURtNC6tWh+BAtUEMFZumQQIr6CPfFEOxrDWw+pBFQgNAZcOwUFZlZ4IwCOtZ9mwQyoJWub6NZEuxOiZldanECD693mm1glOS72AuMKcebg7Mi6XiLDuCprdMTM4cSA+NqIitrwzykCbHwmRHoeb93Kw320ip1QjaQ3WC22jKpD4w2tqYQrPZRbS3h7DaMNDUmtFp1ZBOL7WDLbWBmn0kKu0YU/b7YmWD0ChQnm0gy6B5penTtyXR7x2E9Vov3m4pFqsPYc/Ci5Fe7r2YptCM69gbaffzTFhT8KJ1itKseUJTb3esXwFhlCCMWR5POjq5QiUGb/4Jem3ponPphgsn/WaTdeHdYyokpN+mf597MtedWXakFUe848JVZpAY/6XxVyr9NJXupuad8QVHXHRh5v/szD9NzXdTi8545o+PHXHZhSvMj7jqwk+OYiOPdx/tfvfNgdKNvXcUv+Ak1w7juWMm5N34+nE/sqCFOsnPXPi5r71xCCf9C3rxalVTmnq1KkV7eYBWU8OEsaqXzSuBFWvY1Sp5h+kGqYmvaEat08KrZIz+Mk6ZEp1OeI7j/gVjXTD2HApc6nnybW7qZBrAxL7d5cf+hrHv8yc8gFd9qJfNfJBO'))))

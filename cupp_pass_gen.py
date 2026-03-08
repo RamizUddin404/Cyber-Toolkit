@@ -1,26 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import os
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;33m[*] CUPP: Custom User Password Profiler\033[0m")
-        print("\033[1;32m[*] ", end=""); print("1. Interactive Profiling (Targeted Wordlist)")
-        print("\033[1;32m[*] ", end=""); print("99. Uninstall This Tool (Remove Packages)")
-        print("\033[1;32m[*] ", end=""); print("0. Back")
-        c = input("\nCUPP > ")
-        if c == '0': break
-        if c == '1':
-            if not os.path.exists("cupp.py"):
-                os.system("git clone https://github.com/Mebus/cupp.git && cp cupp/cupp.py .")
-            os.system("python3 cupp.py -i")
-        input("\n[Press Enter to Continue]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVMtvG0UYn/HuOn7FCY0SVJeGIYeSTVI7wQ0lplg0DySrSmTZsaB1Umu7HtarenetmTWQPSEuRHDAAUHEAakXJKj4R7gZuhXVyjcOiFtp/gFm1o+6ddTHJ83j+32PmW/mN/M3GJJAbzzZZN33oAiK8Bog3RESWAwkAAkMUIFpwp5YFDMfAaCEANgT5sBqLwUCGtSgLP3LlR0VDq0isSbwVe76q5QHhkIAjMgcW20V9nOWpT5eDJyKCiVQGBvN0t9VHKRPjxNPRaXHqAbk4I4nqXWsEOfSufLKu+m3jfdeRpwg8sU53x03CltXd7c20fr1DCpc3c7dQKXNzdyOs/JSWc+Vlw1Z9AIW9YL0gNrY8KQG0U3bk5qNBiYy9ERTMTDllSAPeFHbsuqVGlaqmJAoA0XWaJZ1n4OOGPwy90XuUHPFmY4Ybkded0XEJocftC4dZ44y311pJduRN1xxzrfKrrjgT167L54/4eekDh/64J5/gPyeZ0F5wIIi41JRWAugYWz4Dp7tKb2wZ/CFPceGPIUBGuqjJiiBYthnOkM0rkV8LQ9AWez7F4JgRArhUawY7eed7yHVmSfyREZj2EuIDe3xeb7jp9YTf4xu/w6APLHjRH0yv2WUF/YR4bkYZQRsVp10xLekfctGKZ/PoI0mtS0DlSgmKK9Q+qlFqihPrI/1Oiacis7SShLlTBsTRbX1T3DPqJsamt9ViIZtXEUfsqi6Tm3ZkdfWkqhk6ia1lXod7dZ0inYZP9F8ARsWD1fU24qGqeyMLSfROtOcUITvBWWRB5c9uOKMqYzoycaB876m20itWyZGNdtu0EwqxZBa81ZStYzUNr7VpCnfl/tduIDUBuJqqhePks6ZxoFds8w06kMXdScRKecJphRt8aqQbaENy7R1s4n35SDhf40n6WajaRPOd09sKHbNC+LPWH2UBLvHCdXu8/OP1xNI0yTTbDbOGv0Z8Jf3IBLvhMbb8dk763+G3vxtup267cr1p6B9V775FHTDlctPQL8cuPJaJ/ZKa/FebPYQPojGWsLX77RKvUlnavr48tHl4+xR9o7819TSH1NLnckzx+Fvw+3Enju534nFv8l9lWvPLLixRT/xohta+u9VEJ0gMb75UKViKLpZqchSr2BbN7D/kfg1cQf+31QqvwI/oltz6IphVZt1nCUJpvLDoJz5DwUI4T9g4pEowdmTSQAjjwIxePFhAoixQ+eecPbH9E+rbeGsn+l/mrlYSw=='))))

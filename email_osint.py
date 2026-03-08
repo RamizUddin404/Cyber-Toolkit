@@ -1,22 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import cyber_deps
-cyber_deps.ensure_deps(python_mods=["requests"])
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;33m[*] Email OSINT Lookup\033[0m")
-        email = input("\nEnter Email Address (or '0' to exit): ")
-        if email == '0': break
-        print("\033[1;32m[*] ", end=""); print(f"[*] Analyzing {email}...")
-        print("\033[1;32m[*] ", end=""); print("[+] Leak Check: Clean\n[+] Linked Platforms: LinkedIn, GitHub, Spotify")
-        input("\n[Press Enter to Lookup Another]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVU89PE0EUnunutnWL0BghQQRHLrhq+FUwUpFYoWoVq+lKoi5kU9qh3dDdrbPbQPdkvEjiBWOMejDhqvHg0aNHjw3WSDbcPBhvCP+As9OCVRoNL9n58b2Z772375tvoMH4+ryzQIfnQAYyvAFIbYYEyr5jgPjYjiPcLJcKgn3WC2RuAMr8GERAFuh5YdYv+6N3AUjT07NCLxitn0QgB3NQCvzwNskMbCAR6Md5ebxleSh7jpSvaUQ4Cnc5FWEXl31NUW4GpAL7WXazagWR5vf4pqjwG80ByZ90hUwBp4kz0qUMXYic0y8exBw/YuZ01+bJVDx2Jz6FLt+LolTsZuI+mpmaSiSdoQOxdimDusS7PtNy/VbZsrHuCkWiGbYrlIpFTCTo8kZax5ZXCXKBG7JNs6DmcTqLCQmBmiysCTo8BJu8/3HiUWIlV+U7NvlDFfFElUd0sXJldeRF9Gn02fhqf0U8WeV7mVeq8qfZ4vgXvnvH+09ukOAHJWzZFo0bKpbtvGmoupm1Mo3d2BPAJyaAHqDsyUOmMpS5MR9qxBqbw+1vjgFmQF2EFMn9jy0wQ2UgByNcA+u/bxxqGl/8jd6cB0AKJZ0Q08WwrpyeQ0SkLvoXOGxknV6ReSLME9fTWgHdkhPJO2jaNBdLRa+JTp8YN2xM6u5YNkuwZaFTJkF9g33INhFe1mwpilw46LR6PDEjXSg7mpFDDtff3+/ElTNzaBqnF9FkHmcWo2iSitUQGaoZiziLbhfS9oJJdCtaRxLGWXRVs6+V5s8iuWja2kLZQaJym4WupUMD15Kk8Uw7j8mc5CPeE3MFzSiWbFqigL2UawpjZbscKRnkKHtwVFx5Jq4NsXUzeLjS2rN2eT3Y9669MnC/Kimb4fZKx6XP4diKsBEKr04+GX/Z/sex9z0fhQ9LHzOVgetV6cZfDEtVaZlBQ9Xg8M/DINRGWpgMVZWmZKiqFCCe2lze1nTM5O6KmfI8JmoWFy03hA2rRDDbsHy9m95zUdU3gFHV6gmOUxGXCniCdNGtV6h1ng5bHITwO2jb5gXYsxMG8MgGEL+CjnXQsXZ9bXwdDG77AjCyFQZ8y4rzmet8FXk9WuE6GfMvfbYwyQ=='))))

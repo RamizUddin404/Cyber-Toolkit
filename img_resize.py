@@ -1,17 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-def run():
-    print("\033[1;32m[*] ", end=""); print("[*] Image Resizer")
-    if input("Run? ") == "99": import cyber_deps; cyber_deps.remove_deps(); return
-    print("\033[1;32m[*] ", end=""); print("Install imagemagick and use convert.")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVUkFPE0EUnt2dbUtLVAKIAZER5LCYEChgQkUICoRCbOKuRKWQzdpO6sbubjO7JWEPxujBHjHGqAcTD1707I/wWGWJyaQ3D8YbgT/gzBawSqPhJfPmzXtvvvdmvvcdNIh4sO9PMfUSaEATlgGp7wIRNLEbEFGTmJbWoAZTdwEwYgCsSf1g4uAqAgWhICjyT37I5IQGdJktiaN/DNGzRwFVBMekn9WcEA4xs/KhXxObeqUVoEaPoxx2dQqMNb8Hm3rl394CUCIZKueK2CD+eE929OrYFevaScSPoFD83vp+Q52fvT0/h67fSyF19mZ6Fa3MzaUz/uiJUHuyI5YCqei4NOJuuh62qFwipu1RuVwqYaIIFNqGhV3+EkQBTXiOU9QfYCOPCUkwJ2TLnWbqMajByLP0k3SlEMCzNdhSjfcFEDGjsrA1/ir1PPViamu4Gr8YwP4wqgRwKDTO78Deff5PucZPP+L5U53noxnQ2ARp0qSIGn2NDEjHGdAi4ZR1MCuqgWXR+SfPnK//1Is1rdfyB+PxjJ8IqU5a2aF1ROIswD5Uwnbeb+OetGUUMFKxa/qY+LJatmcQFScnCZ9k/1Ladj2jWEQmT2PLzD1Ehp1HZRejnGNvYOIN+9HsvO1hsq5Awl9EZdMulT0az23ex0TP45JLEwRbzgYOD4pA2jhjIZ9hR1QiZZu0M6uVB5YOqGS8dL8Tv8KB9yvVy9PB4Ewt2lq58/TR647taO9238i35OKX5GKQXPq88FfyrWBQ5awrO7CDcEwa03XLMG1dV2TCaaXQMy0cjk9YmCfwKdP1DyC8UW8sNmU5+XIRT5Nz7Mg7dgeY2pUEQfgBTu9BWbiwdwYKnbtxAFsrq9tS15v2t51VqSsE+QUyGORI'))))

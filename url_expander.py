@@ -1,31 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, sys, time, requests
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-def run():
-    tool_header("URL EXPANDER (ANTI-PHISH)")
-    print("\033[1;32m[*] Reveal the real destination of shortened links safely.\033[0m")
-    
-    url = input("\n\033[1;33mEnter Shortened URL: \033[0m")
-    if not url.startswith('http'): url = 'http://' + url
-    
-    print("\n\033[1;32m[*] Expanding URL...\033[0m")
-    try:
-        r = requests.head(url, allow_redirects=True, timeout=10)
-        print("\033[1;36m" + "─" * 45)
-        print(f"  Short URL  : {url}")
-        print(f"  Destination: {r.url}")
-        print(f"  Status Code: {r.status_code}")
-        print("─" * 45 + "\033[0m")
-    except Exception as e:
-        print(f"\033[1;31m[!] Error: {str(e)}\033[0m")
-    
-    input("\n[Press Enter to Return]")
-
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJzNVc1vG0UUn9kPe7N2nBBK1dA2GQfixilNGpwE4bYpbmJUi8aKvLEacCtrZY8TC3vXzO6S1hciLgSQaBCghgNSKpCacuqxV+g/4CiuglY5QSXUW9T0gODCzDqODTFCOcFod97b996838x7b97+ApoGt0d3r9DpK6AABb4FSI1CAh3KEc6hPOEV7kVABIWns3jNpQjhOQBUCYBrYh8Y23OFwDych0HxCfuIZ2ATmkhfnqF976Cl9hUJDhwYfRRzDNZ9psS6XOFaSvkkSLgPeqnvygdCrdcJLaViQzoPgq64LWYKWCXl0eOpkXOh8eKFw4yyCzmjfLJGJxPRyGx0Cl16O4wSkenYOyg5NRWLl0cO5fV46mwxKNicbtgu46Zh4qItlkheM23RKpUwCUJb0NQiNthJkA1sj6nrhfQCVrOYEA8VCvQ1Jui0BLYF10exD2PL81Xh6LbQVpF7qwKizPKbK6O3w5+Hvzi/MlSR/VWhz9EGq8Kgw5x4JJzcZXHKNAfdXc/zNnTyvF8Df8ko/28ZrUs10Dq3jdwN7EmyIstdEpxxVjUhuBoIPSAl1eUJ+aDXPoqmuBVJaXud12CTD7nl3j3Jv9dWQ+dNwoT3IMI/2rdTe98h7H0t4/Zcc+36QaqzrnEDtY/GhWvy0JF6vs4n9zF8QOkM8Q0vvbQfaFyEi4dqNAdz4ALfC3Iw2BUvdycTV1B0biYSn4om0EAkPhs7M3M5plwOlqPObXm1mBq8jhL4fawWkLmAEWFMFhtmXlPNvK4hPYeMBZ2YWMNZVMhr7xrIUHO4cHOIFXnZLzt+QsWoZmKClH1TihxGzMQWFkyzVHazOTw8XEZyE3L0RknVsnltntkPDTk+Z5+wzAc5u0MtFPTFNMHZPMEZ07DdZr6Idcu0PqMGe7f95y+X/g9PuQPVDs8OglAYMcFUI441gWKqpmWgST2Lw8j6lJ7iP9947XFy2eWEdKSY8tPEEKITumnB0RyTUzMEGwaqZdnUacmYFtGuB2WnWxHWAWwxr5Us05YNUyWmsZg3F2yJ4PcsGgWDVgFtbjZvkYLtMZwwpDM0DHZb9EYGl1iIbN4wSZAnR5kvSGyIDXYZaFMmrCBsnlgaOUE5hmhsglpv7Kh0nq4Krzgd72pVmHssU0l4Uz63NPmTx3dr4uOJ1cCWx7/h8a9331fu9a6FHjPTUFUY3eEk8bVt75Fb059Mr760bj5IbHjfWIbbUnvFd6oqDVBmpWONX7Uqvv6qFKh9wrviHXF1sdkC3m2/0776QcU3XJXOOqtfrkr9zyQgyhW5/5EQ+O2ZG3hf2AWQwlF1Z/93mXX/t7m1ufWrFd/YljS+IY3/scNT9e9GNz3XD22RwUsXwY8X5cnT/MO2Y5MB/mFApLwtpdNFNa+l00E3EZ2g0N+LLbB7QY6wRDjZYEFipuwXk07fA4Q1uloQpfNFPWsV8ASh7QawNmIE6ETBIfwV9GyBnqeCCHue+rrgqZ0BIHiXy5t899ehb8YqfLfj50/bRD+9'))))

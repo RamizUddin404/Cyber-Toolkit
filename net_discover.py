@@ -1,32 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import cyber_deps
-cyber_deps.ensure_deps(system_pkgs=["netdiscover"])
-import os
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;33m[*] Network Host Discovery (Netdiscover)\033[0m")
-        print("\033[1;32m[*] ", end=""); print("1. Scan Local Network")
-        print("\033[1;32m[*] ", end=""); print("2. Scan Specific Range")
-        print("\033[1;32m[*] ", end=""); print("99. Uninstall This Tool (Remove Packages)")
-        print("\033[1;32m[*] ", end=""); print("0. Back")
-        
-        c = input("\nNetdiscover > ")
-        if c == '0': break
-        
-        if c == '1': os.system("sudo netdiscover" if os.geteuid() != 0 else "netdiscover")
-        elif c == '2':
-            r = input("Enter Range (e.g. 192.168.1.0/24): ")
-            os.system(f"sudo netdiscover -r {r}" if os.geteuid() != 0 else f"netdiscover -r {r}")
-        
-        input("\n[Press Enter to Continue]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJytVM1PG0cUn/Hu2sY2tkODlY8GpqRV2TQx2EAUG0rFN06CSbxYChi63dpTx8JeW7PrRuyp6qWoOZR+KeqhEkda9ZREyjXHHB3YqGjLoVJTVb1F8A90do1hC1ZFpI60M/N+73PfvPf+ALbF7p97Mt2+BwIQ4A1A6ickUHCcA8RhUQxhFpmUGxxbXUBgeqDAxiA61OeoHrfoFJzxOwBIVGuR6wID+xoI5GEe8q6/TSKZhTZjHP0YM56frXgyB4yUo6lnOAAbNjNcAxccTVEmDVKu41YaUflBX3M9tinKHaJ5wDuTBpctYolo/eczkcG+q6X3X2dpTmQt7UL9HEtNjMxNjKPR+ThKjcwkFlB6fDyR1CKvZfV8prfEs4ajrBhOZUVRccngKqQgqwZXrVQw4aHBylIJK+afIAMYXrVcLop3sZTDhHhBvTyUYbp9BnZY5xeJzxOreZ0N7bAtNU+nziJ6WZ1c638Q/zr+7dBauOZ5S2e7LC6vs5esy5sv2At7Zp4Mr4zVXEHJlj+1XHvrIYmV5byStT/IQQ2EHGYNdIDMQYUItCIFJuZAdsz+Pv8tyZ1Y0nliSdeJJd02SeYAbWmgMkgDwWP1C0XyJuW1qCgAmUafgpQTHFtddn7TDm3UuOCL36MWaV6F1lko+A8jmp2m/gKWv1Fgjy94EB/8n6Og7yycSkOz72ZZoa1+a5qjNw7RKTjTAgB/Oql5rUaLljKXlhDxUCatKQbLOa3fY3H6LE4Sq/fKZBlNlxUVje9X3wrqTtpq0ewTrT0SRkJWktHNclYqNvS0UHQfFio4W/ikkEUpSc5jjY/FwigtF2RFlYpFNHe3oKA52j2oO4VL1Cq6JWWXpTxWeM3VG0ajlNICHptXNIwM2GvACDEnmxZUqrkysnUIaaWwAaPaxQlZpeKWW9SNw/kwisSi4cjVa+FIuLcn2s/HkXb6qDq6QpAWOAqc82RuEawoqG5TLaOxsqwW5Cpe4jliDkeDK8iVqkrMJiTmKxuuPFZxtZDjHQbMGpAoZryonnKDIVWZnKG3AP2UP4E5KbY9/h13a83fsT666X73l/ZaT1HnS0egSZ2fOgJN6fz0EWhB5zP/gjZWdD720neq1vb2lu+dVbjt9a0x96+tpX+vX75LPZj/Zv5x6snCw4VHi09vbw1MPu+MPJt50b6w3epfu3j/zk6wvRYa3AoOrY7s+PxfJb5MPB59cv3h9Uc3n45s9U/UzlzeuL0x9jzU+0ysLX1YWxRrNz7SfdJLM4r3dPfl3U7gDRCf+fNuUSxJBVkUeZeVL4NVCyVsDU7Dk135GBMxhyuK4cWyUiXYIqxkmZrm4BXFn4Blqp5M91CpnKsW8TDppKRZ8sog3V4xEMK/QGCX5WDHXhDAtm3g+RWENkFofWb9g03Q9xto2XUE4ZVXXYD1rWpbzNkf+n4cqDFnLeP/AIHHoy4='))))

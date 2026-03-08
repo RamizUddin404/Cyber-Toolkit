@@ -1,25 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import hashlib
-def run():
-    print("\033[1;32m[*] ", end=""); print("\n[*] MD5 Cracker")
-    t = input("Target MD5: ")
-    if t=="99": import cyber_deps; cyber_deps.remove_deps(); return
-    w = input("Wordlist: ") or "pass.txt"
-    try:
-        with open(w, "r") as f:
-            for l in f:
-                if hashlib.md5(l.strip().encode()).hexdigest() == t:
-                    print("\033[1;32m[*] ", end=""); print(f"Found: {l.strip()}"); break
-    except: print("\033[1;32m[*] ", end=""); print("File not found")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVE1sG0UUntkfe2M7v84POE29TiCqU2ibJm4V5wcFOxFRFEO8NWnrVJZrbxwLe9fMbkizpwgO+FCkAEJNhRAcOADiwIFDjwk5cHVih8DgGwfELTRIleDCzDpOXSVp1VnNm3nfvH3vzfuZP0DNYA7XgyAhnwEJSHAaoMoKEZQYF0CMybGIlVjCcfO8xPmvAxAXAJjnuoHvUIUIUjAFvfxflAklYI0VnkyWWvnOtBI9Oggz4NjoJtZ8sKozyldxiTkRZSMgbD2upepVAxg4+T/uRJR/jKaA1xLCfCIjx5Ex2BntHx64kh19nmFYRHMYXZU1EJ4YvzYRFF+/4RfD4zNTN8VIMDgVMvqfS2tn9FLWy2FG1bBFW9F0OYv5HEorOuaXcjkZeSHmlHhW1uhNRAywXVfVTGxRjidlhOwE5MjUxghZBWXO8uHU+1P5VIlrL3N1BZu7xIlkk59cG7zn/9j/6cjahYLNU+K6zVNvieszN2d2ua4DGqdEbdCt1Tz3Mmaej2pAIpUksUOMWIvVZoA9ngEFRIBkMSutleBWCUwzavPTck1zVqNJqGoahecOsSRDpaQ6hTkLonVVyQgj2XyHlcgAhY2wTvCGSjzgoraqTNhx3G43iHDhxtP9CTefflb1Lew8XSYC6O2pzzNT4FnRtD/dlyf7QARvMnYaCfOr3v2JPNTXdoIHvAKOYkjwBWLbbeoJuUZZN1iAHiA+y0PHY41uELpS+c/bEDLsZnNdzkb7bomIRpyUMCsrSaPJRqGZoE8MoHjiHRkZjmtxlJJ1ivlFzAwNIeq7YZtTUTKT1nS/aAi5uKZd0O/oGCLDOqkuKUmCNkymM7KoqLq4QBHDGp1QdBnd8toQrSjMp5Xcko5tiZXbMool5ZyG7UjOqu/JFYZTc7KCrYtxbTGTvo3ZbNKHeU1H6Ry2yEpCTcq4blG+k0ynZE338hjqqIXqhcsYLmCY0egbY74C5g0xi5YUdJbs6snUfgOVZiSd5fqK2eF6vo4Uzo+VXn6tLNTnlaLQtTr+q1XIv/TBcrHJs9cztN0zVOoZfvA2Pc4Uhc49wbturI7vMzw/Acv1zWueNenu/Prs723ta7DsdN0b/mR4/d0vl+8vf76y57647b5YdPcXnZf3nCPbzpGic2zDs+sMlFtfLLj6fmB2Wgd+jDyY25j9eW5zbuvGxnRh+K2Sb3Zbuv43D9o7HrGgwfWPDfC2vHeXa31kJ+xH8//tC4AYvztRaOn+htlxnP8+UhgI/PJq8F+tn9xus8kRuAo2z4wLgV72p3N9hG61CATa6rUFBq1bl1i6HzTp1Y5gE4uFWCwbTyuxmNeCaPAwp6ezsvmAoTZKaPSoFH3sYrFvAaItWomuMJJVk0sZeQz1EJaWnUbLd5+FEP4JGh9yPDx70ARg40PGDtv2XwCcI3+zyHbcd37RVmA7TE3/A55PXdQ='))))

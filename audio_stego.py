@@ -1,17 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-def run():
-    print("\033[1;32m[*] ", end=""); print("[*] Audio Stego")
-    if input("Run? ") == "99": import cyber_deps; cyber_deps.remove_deps(); return
-    print("\033[1;32m[*] ", end=""); print("Use steghide --embed -ef secret.txt -cf cover.wav")
-    input("[Enter]")
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVUkFPE0EUnt2dbUtLRAOIAZERwmExJVDAhFowKBAKsYeujUrBTdkOpQm728xuUfZgjB7sEWOMejDx4EXP/giPVZaYTLh5MN4I/AFntoBVGg0vmTdv3nvzvTfzve+gTsTD/SDB1EugAlVYAKS2C0RQxU5ARFViWlqCKozfBSAXAmBJ6gVjh1cRKAgFQZF/8kNKF+rQZbYkjv7RR88eB9IiOCG9rOaYcISZlY/8qtjQK2VAOngS5airM2Ck8T3Y0Cv/9haAEkhRWV/HOeKOdmWHr41cNSZOI24A+eJ21/ab6Zmp2zPT6Ma9OEpP3Uouosz0dDLlDp8KtSs7ZCiQipZNA/am7WCDyiVSNB0ql0slTBSBQjNnYJu/BFFAI45lrWtrOJfHhESYE7JlTzL1GOzCwLPkk2Sl4MHzu7CpGu7xIGJGZXZr9FX8efxFYmuwGr7swV4/qnhwwDcu7sDuA/5Pev2nH/P8qcbz8QyobIJUaVxE9b56BqSTDKgBf8ramBVUwYJo/ZNnztd/6oUa1mv6g/Fwyo34VMeM7MAyImEWYB8qYTPvtnDPVDlftJDq4ILlyumyeR1RcXyc8Dl2hzM2RoyQwloxj1E0io0VnEdRvIpsrBPsDDoPHRTVV5FubWAy+CC34QazM6aDybICCX8clYtmqezQsL65gomWxyWbRgg2WL5/UARyjpPnU+s3RyVSNkkrs5p5YP6QVUZR5zvxK+x7n6leSXj9E7vB5sqdp49et20Hu7d7hr7F5r7E5rzY/OfZv5Lve/0aHwBlB7YRjklDmmbkiqamKTLhDFPoFA3sT5JfmCfwgdO0D8C/UWsslDCsfHkdT5IL7Mg7tvuY2pMEQfgBWvahLFzaPwuF9r0wgM2VxW2p403r2/aq1OGD/ALS7udP'))))

@@ -1,18 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-def run():
-    print("\033[1;32m[*] ", end=""); print("[*] Network Map (ARP Table)")
-    if input("Scan? ") == "99": import cyber_deps; cyber_deps.remove_deps(); return
-    os.system("arp -a")
-    input("[Enter]")
-import os; 
-if __name__=="__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVUk9PE0EUn92d3ZaW+CeAGBAc8U9cjEYsmFARgxRjQ2hMFwyykM3STkpjd7uZbTXsRaMHe8QYox5MPHjRD+Bn8FilRDPh5sF4M/AFnJlSrGljwkvmzZvfm3nvzfu9H6BJ5L19N8HUS2AAQ5oFpL5LRDLkPkBkQ2FaafiWoQHjiwDYYQCWlSEwthcCgZyUk3T1Fz+kMlJTFpUthWf5KLKY+460DFpkiOUZkxoxTbWBG3JbVFkA6VBrlEZVh0Cs/TvYFlX/ojmgaymqZgrYJsFovzlyLXbVuX4QCTQkJBio79Ppman5mQS6eS+O0lNzySW0kEgkU8HIgaL2m5cdHVK56FPNX/dL2KGqR/Juiaplz8NElyh0bQf7/CeIAhotFYsFaw3bWUxIlIGQLX+SqcdgG2rPkk+SlVwNHtuGHdXIyRpEzKjc2hh9FX8efzGxcakaOVWDQ8Kr1+CwME5swYFd3qdMc9P3ef5U53l/Bgw2SYYyLqNmrJkBpZUBQxNT1s2skAFm5eJ/eeZ8meEGmo603mRzFW6bseMfziOpICrIvuKYwyuI8EispQp2s0E/R1K49LBI7qM520Pnp9J30Ly9WsB6oBkZ272BqDw+TvhYB5pNPHTRDkLmjFvCZEXXCP8AVfOuVy7RSGZ9FRMriz2fRgl2ig+wOBDeRaKJtOQop0oQKQqhCim7pItZndwxvcchI6TvnfwVnn6/UL1wu3Y2uR3qrCw+ffT6zGZocBONfIslv8SStdjs57sNwtdqsJfzrG/BbsKD0bBlOXbetSxdFSVQWMo7WAyMyMgv8LmyrA9AvKhXFJ5witlyAU+S4+zIS/XPMfVbkSTpJzi8A1VpcOcIlHp2I0CKfFeilaVNpfdN19ueqtIr4vwBXYHbQw=='))))

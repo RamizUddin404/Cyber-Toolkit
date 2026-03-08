@@ -1,34 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import os
-import cyber_deps
-cyber_deps.ensure_deps(system_pkgs=["sherlock"])
-
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;34m[*] Sherlock OSINT (Username Tracker)\033[0m")
-        print("\033[1;32m[*] ", end=""); print("1. Search Username")
-        print("\033[1;32m[*] ", end=""); print("99. Uninstall Sherlock")
-        print("\033[1;32m[*] ", end=""); print("99. Uninstall This Tool (Remove Packages)")
-        print("\033[1;32m[*] ", end=""); print("0. Back")
-        
-        c = input("\nSherlock > ")
-        if c == '0': break
-        if c == '99':
-            cyber_deps.remove_deps(system_pkgs=["sherlock"])
-            break
-        
-        user = input("Enter Username: ")
-        if user: os.system(f"sherlock {user}")
-        input("\n[Press Enter to Continue]")
-
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVFtvG0UUnvHu2s7uxpeKWHJDk8FCarZQJyEJwm6I1FwAg2oqry3ROpVlnMExsdfW7BopKx4QL1jqi7mp8IBk8dQiHvgF/AUsZ1GjJeKFSoi30vwBZtb2xkkslI60M3O+OfPN2Tnfmb/ASOMH47FGu2+BClT4HiD9ERKoei4D4jmFcoTb5jJ+cK7FgMrNQ5VPQARUge4Ttr2qN/kBAEXqvS3EwMrAE4EyLEPF9w8z0iU4QiLQj2Px/OTEk3cXMp6xJ8IVOOTMC0Nc9YxFuRzI+M6zDKMKgKXx+/ixqHCCloHiTdtCqYqLxFyezi/eWHq99ubzNNOLnGZe6Y8bma2b2a1NtH4niTI3b6XuotzmZiptLj4X63R+oabwtqeu2159XzdwzRYapKIZttBsNDBRoM1rxRrW2Z8gG9iSUa9XC7u4uIMJkUBfHvoa7T4DR7z3i9TnqVbZ4iNH/ERXnLV4RCett9rLD5JfJr9ebce74ksWH3NWFYu/5kxe/J2/cszuyfbru5hU66W9R9CW+vEUGntlvTSaDVcAP0ImgBmQd+WhUjmqXMKDRrHR5Py/p3BhT++FPX0X9vSPeHIuOjFENZADqugUC0XKzJIcKwJAflikIOMF5xotApmW3SQru/Iod8Dlhjk4N0CLUcrnFm9GHMsXzMEzxXDCGjpBb/0GgBJOm5Kj+Ndq+Wv3EGGMVFcc1nbMRdFZWXZW1EHy0ftqKp1FczkdEyY+lCXF0h4VI1OreWkxjlRaRqVdNHQwI4lEHOW0iqYbxWrVJTKV03h2t6KjLBUwmsvgWv0TjG5T4mIZ64rpW4ijdWqZsujGsYZsuGB7EgkySWMmAdqZoS3NwMQ9OonMiaFokXlZzN8mWNdR38moo426ZlS0Jr6neAl7WWyhojWahi2W9j/EpLCDG7otEScYxyBM3YQlUfHYsGTzTXqQzl421L85myNNjdAcgRD99F8Bq7xDMXDkn+wGZjrrPf/Vn6e68xVL+fgMtGEpm2egty3lnTPQXUvJn4Ie7ltK4okcbs8fyLEWPJTkNnf/jXaOTfj7iSM58liO9eTYL+LDT3vy6qEcfhJ8oTt19SA41+L/lILfXHoQ/Sr63Z2O0fmoO33dCscd+lcs/6v/zgIpSGT2V/5CoVasaIWC4nOuwOaNSg07LwyZYraENb1JBpcUHWxhGSgUHgGHo389/tVafadZxWtklppMifoN2j3lIIR/g+AzXoAzxyEAxT9A+BCIj0GkByKddzurPbDwjA/B609fBrzcMg+46PdLP6x0uahD/h9Zw3GI'))))

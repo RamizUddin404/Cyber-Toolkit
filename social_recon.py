@@ -1,35 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import cyber_deps
-cyber_deps.ensure_deps(python_mods=["requests"])
-import requests
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;32m[*] Social Media Recon (OSINT Tool)\033[0m")
-        user = input("\nEnter Username to Search (or '0' to exit): ")
-        if user == '0': break
-        
-        platforms = {
-            "Facebook": f"https://www.facebook.com/{user}",
-            "Instagram": f"https://www.instagram.com/{user}",
-            "Twitter": f"https://twitter.com/{user}",
-            "GitHub": f"https://github.com/{user}",
-            "TikTok": f"https://www.tiktok.com/@{user}"
-        }
-        for name, url in platforms.items():
-            try:
-                r = requests.get(url, timeout=5)
-                if r.status_code == 200: print("\033[1;32m[*] ", end=""); print(f"[+] {name}: Found! -> {url}")
-                else: print("\033[1;32m[*] ", end=""); print(f"[-] {name}: Not Found")
-            except: print("\033[1;32m[*] ", end=""); print(f"[!] {name}: Error checking")
-        input("\n[Press Enter to Search Again]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVE1sE0cUnv31X2Kn2DFxDMkkFMEGiA35QTgJbYgDMSUp8trhx0GWYy/2KvauO7urFJ+qXpqql9AWpRyq5phWPfjAgWPaShWHHrYhBWubWw8Vt1B6qHrq7NoGV4mEGGnn7Xxv3ps3731v/gAtg27IFxKe7gEe8MR7ANUlgQie7AaItFYUohaouB3sGf2Ap0IET58jYN2OQQzPYDt2wcazkesAZLDVAtsPRhoWEOSJPMHZnpmLuSzR4ozBH2XG850VT+qlIk7uezIxQjR9ppgmzpP7olQSxG17vTSjcoOh/e3ofVHmFZoHHDtnMNmikEGV4WDq9NjQaGniTUaFhdaoHK7Lqfj0ZGI6Ci/ciMD45GzsJkxGo7G5yuk38hpMhUscbZCyYrDKHUUVSgZTRqKkGoxWLguIIwxaypQExbwJNIDhUmW5mC4ImZyAkAvU6aGcx9NHYIdmP4l9HFvJb9P+HdqhO3u3aYh/Vi6uDq9F7ka+GF8d1J1923S/peW26QHr59Bv9OEXZp4MOxI+0ARFVfC5rvIdtSBL6ZKcU7Kt1bA1CfAzYRKgB6Re0oPHdOSpcyRsxVqLQ+0tjgSSoEFCjOQBb0tahebtDeloSGdDuhqybZCRiCQRf1nwvYTxgpkMABomZvkIjpNt6vdvkiTFt/Puc6REJ+m4c+8O3mNFeRi87sYdSdIN+LeSFI6z5fazM6+1PGBZeoeoFiucfNf/c+dv0W4C0Afg6/z6LL+drX57wewqABNUL7hNcAfnKi6rK86UUgO3IDJvjzlACVKuEnK2aHg5K2aKcFbIiRkYF7KyBI+/z8fmEjCBicmZfK6cdE5LqoBgUhGQSV6oypDHjZctwOMygsfCx0xE+FBUuQg0iHAlUFDVshIJhZaXlwdvZ7LCoiwvDWblUqjS3aoSJUXN5FGmVNf5mjp1WVTxgXXU20TzolrQFutgV6sbVVxSG/7f5RjDfrFxouGINQ8wbIm6T4O9JKoz2qLBJsSlhLz0jKlnxqaKJUHW1GeP8LpCp07cgpW2CLwoa1KuD546DzF2CmOuCJyT1TqOoT4MdUTgNEI4EdmCkF0SpXylx5m6igRFgfW8vUrXZD4jSrc4Fpk9ZzCiVNbwyyDiZ0JB7SZE5QXVcOGgVU1JZ+WcgO9DazjvhqNczKi3ZYR3OqydGioaBFLM+K0HzKqxQSFNQv34z4M/pYMw35Ga071jb9fdPesXtuzHvu/UQ/ltrrDj8emd0cee6RW65vKsDn029hWzy4LgcDVaHdW7IrXgSDVXndcD47XAqY3cxrx+cLjWdWIjujGq+8/UusJVX5XV/Wefu9hO54pj1w26j3zTe7/3SWDg09hKdJek228SO75Da1c+v7Lu3cj86guvEjWvb23i7sT61GOvFcg7m/EtbuaXo3p8Xr+W0ucX9IWCLhb1Qkm/Kj25LO/4g/qhk9X+Lf/IA+2huhndHH0U1CeST87OP3eA7hN/twGHW3eHtu3h50eBy/PPbj/Ax345rXcPVMkt39CD5MPE5tubfv3SNX3s+tORG/8qXpyZH/yTYIokf+wK4PknMjgFMW/S6RIuTzrN2ZGZVYM2OWE9yoYze2dRQOmcUFYMlyApGhKshVU1K9+mudkc6fS3ALWZqFUP+zh+b7WicB5xeGk2qzKGp12KIIg/gecvmiF6XnQA4kANOJ8C/xbwr19eH98C4d+xkvQSp3ePA7ptpfKYCtwf+npEpwKW8/8An0Lltg=='))))

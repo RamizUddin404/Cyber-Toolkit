@@ -1,33 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, sys, time, subprocess
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-def run():
-    tool_header("PDF LOCKER (PASSWORD PROTECTOR)")
-    print("\033[1;32m[*] Lock your PDF file with a strong password.\033[0m")
-    
-    # Check for pdftk or qpdf
-    if subprocess.call(["which", "qpdf"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL) != 0:
-        os.system("pkg install qpdf -y")
-
-    file_path = input("\n\033[1;33mEnter Path to PDF: \033[0m")
-    password = input("Enter Password to set: \033[0m")
-    out_file = input("Enter Output Filename (default: locked.pdf): ") or "locked.pdf"
-    
-    if os.path.exists(file_path):
-        print("\n\033[1;32m[*] Locking PDF...\033[0m")
-        # qpdf --encrypt [user-pwd] [owner-pwd] [key-len] -- input-file output-file
-        os.system(f"qpdf --encrypt {password} {password} 256 -- {file_path} {out_file}")
-        print(f"\n\033[1;32m[+] SUCCESS! File saved as {out_file}\033[0m")
-    else:
-        print("\033[1;31m[!] File not found!\033[0m")
-    
-    input("\n[Press Enter to Return]")
-
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVVM9TG1Ucf7v7NtkEmkSgVAqFB44tqYIGCE5jwcEkDIFIMEssmmJmTZYQm+zGtxspe2hpLzBexHEc9eAMR/TkwUOPHDl4CEMYZna4yYzjrdP6B/jehoRUMjp9k7z39vv9vu/n+/sP0LDYs/N5lGzfARGIzBzA1ZPBjHWymLVODnMiexVgKHJk5+/aRBhYAkASALjLDwD/mSoEskyW8fJ/0Y/5NNOAxpM/R9F+sdCSdUacBRfWAMH0MzWdSb5GF9mmVC4B4vaLWmpWucBo83ewKZU/p2aB1zZv8um8LGFjrDvpe3d0vDDxMsuwIWsZ16pnMB6eWgyH0PsfB1B86oPIJygRCkXmDd9Lae1Ovl3wQpNVNdOmrWu6XDD5Is4pusmXikUZexkTKlJB1qgnyARmi66q+dSqLGVkjFsIEZK/Nkm2DXACbZuRx5GtbAV2nkBH2dlXgYhctqa3x74PfBP49vb2cNnZX4EDFtdbgTetS88RvPacxindGHRnLc8u1spzvQZeyCjXNKOwXhO2pjXBifAttkFKuCj131yRv8WJtsAaqdxOIuusy7Y2xbM32Oau6xBqVKWR6qhTmQaqs0adYAbPaBmW6hNbFLYB33MRP95+kZYANX01bdIEaIxma4PF/+fdpQTjAqLL2t0JYN1Z0itC0zx5KE98ZZQ758ZaGvhtTWPV/kIvdcwbfQuhaRSNBefCcTS4MCWKd2LxEFqIxxbDwcVY3GvcsrpspJC8uYyiavoeWldLGNFXK7m8jNZy+iqSkKZjVcmioqRpayrODNOGMPm11Vx61YRfFDMrXpZ0hp5RS7p1kqrHdM4Y7cV7WZRTNF3K5xEVREPrRp/TAh0thBVdJmASwdBVChpAVLPRXWNU4ShTk/Uz5lCVGSvpxZKOpomVtPXQYEZekUp5IpUnbsiZYWpVABnO80+j1/kvb3PEKQI7PGx5ZLirFg7JShqvF3VkMsgQ0Ih/nNCQ8Vr99RvLSEwEg2FR7LcMQJr0pZxBkoYMaCnqtSR9hWT/clVAUXW0opaUTL/Ff9WZXMCypqGqL8S/uKyXsLLsdVrjAtPxajq10mdFrKaJoAnTJIKmPRT+aD4RjWI6PjHtWpPPKSQOJiySKJo2+X5O0zUvZzpo+lIWUailzRRIflKUodFCIuMR06I1OVxScA+5UWjtCFSnlLvs8VXgiDV75iow+rcNCG2bDx8//MG+01m+Mvjb1WNf8MAX/H32OPrpAfnZU+V05tCeORGcXzu+cpTbblSEwVPP5XLn5KHnvY3IibujfNl/6B7fmLGuoUN3+Nid2O/ZmDm1OzbXHq1tPnj0YDt3bEcHdnQiXCq7/BVh/LSqbju2M7MT2P1w9/7u50+Eva69ln3f/tL+bLntTkVYotKed54Ivxp7V8quyJEwe0rfj1UE/yl14PUjeB3TvjSFVKog5ZRUymu3omhyZKKbUM8VZExHQDX+PWeitLRSqZ+B9bYaLeF2Qc2U8vIkHiCftN+062R7yjEM8ydAxwA9gzzT+8zVwdx4+iaArVvGIdf14+hP/jLXZen5B5ZZrrw='))))

@@ -1,24 +1,3 @@
-# CREATED BY: RAMIZ UDDIN
-import os, time
-
-def tool_header(name):
-    os.system("clear")
-    print("\033[1;36m" + "="*45)
-    print(f"      {name.upper()}")
-    print("      CREATED BY: RAMIZ UDDIN")
-    print("="*45 + "\033[0m")
-
-# CREATED BY: RAMIZ UDDIN
-import cyber_deps
-cyber_deps.ensure_deps(system_pkgs=["wget"])
-import os
-def run():
-    while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;36m[*] Website Cloner (Downloader)\033[0m")
-        url = input("\nEnter Website URL (or '0' to exit): ")
-        if url == '0': break
-        print("\033[1;32m[*] ", end=""); print(f"[*] Cloning {url}...")
-        os.system(f"wget --mirror --convert-links --adjust-extension --page-requisites --no-parent {url}")
-        print("\033[1;32m[*] ", end=""); print("[+] Cloning complete.")
-        input("\n[Press Enter to Continue]")
-if __name__ == "__main__": run()
+# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
+# SOURCE PROTECTED. DO NOT TAMPER.
+import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVU89vE0cUnvHOOut16qA0RIJAOg2qwhLsBEKqYgIS5AeKWtLKiwWtg1ZmPVoWvLNmdrfAVqqqXhq1h6aqqqqHSrm26qFHjvwJq+Cq0da3HipuQG6cmFnbiUusVoy0O/O+N+97b+Z98zfoGagz71D++wHoQIfvA9aeIYN66jBgqcSSmLQmlRSwb0wAXZqGOjoL8V68zOPktbSeLl4HoMqj1uQJMNeJwMCCFtQGnghj1YQ9ZDL/JFHPr0k9lV1HKdU3M5yDXc6K3MX1VF9UKoPSwH6WblU5MNs/DvVF5T3UAlp6NZbNOqmy8MxY5dS52Xed868zwjRORni0PS+Uli5eXVrElz4u4tLFKyuf4PLi4spqeOq1WMcqM46G4pTrxWnvgecTJ5YbzKZ+LAeNBmEajBGtOsQTJ8ExiLO+69aNW6RaI4xlQVse3gX++wK0UPqrlS9X1q0mGm2hTKS+1USYL9aXN878WPyu+P38RiFS326iicSrNdGJZHHkD3R0R9xTjO5ZxOc5s+1ajMYdyzN7O7Hb/BdJ88dBZVcaOpeiLp1N4V6stzHS/sZQUAYdAXLE+j+2gTKXgK7MSj2s3ecBSun9wuHyy5Rflc1/51D7VpzdQ698BoA2uBpmExWddionbmCmche/N4nQWjildvQlPNfITc/2CV6ou5QwfHzRvUfrruieJnofvqMuUZ87uvvKpQ/wcZfhyZlJ7LuY3Ld9rYhjOBMOCjpBY1MLh1KhUAg/FO3C+bxjM8Zj8nnTpZ8S5ufrNr3jcbtaux14fp7c9wn1bJdyqFG1SJ6Ru4Et8olN1OUgI9TH4cHK1F4O03UadeKTQnhYrXzEiOfhdq28rgWX+jYNyA0NMfFgY9mmjcBnQh8s3bmMgNXbuk2uJ5ZYQNkIXw0JyX6eSHZbzbWUN6Lc+OalLWXyt4PRtNnUaq3cm9HI/OPc+XVpO5vbOPZNcSP417bfjzw0H5YfHYuml5va5Zaifpv5OhONmFHNisxb0bDdVG6/wtveyKGppnLy2RDIDrFBUZViGE7VpoahDSTVx8i3HZI8rVg1H9wkzKiRhhdn+Q0GjCRGcgoRKZ6mYfwCEqr2KZV5x60FdXKBjXFTHN87x39PJQjhP2DoOZLh+M4BAIe3gfonGN0Co5vLm+9tgZN/gczzlALzT4cBGlwPH0uHfpr9eS6SDiXkLwGxm0nl'))))
