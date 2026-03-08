@@ -1,5 +1,5 @@
 # CREATED BY: RAMIZ UDDIN
-import os, time
+import os, time, requests
 
 def tool_header(name):
     os.system("clear")
@@ -8,33 +8,31 @@ def tool_header(name):
     print("      CREATED BY: RAMIZ UDDIN")
     print("="*45 + "\033[0m")
 
-# CREATED BY: RAMIZ UDDIN
-import requests
-
-def check_headers(url):
-    if not url.startswith("http"):
-        url = "http://" + url
+def run():
+    tool_header("WEB INSPECTOR (HEADERS SCAN)")
+    print("\033[1;32m[*] Analyze website headers and security configurations.\033[0m")
     
-    try:
-        print("\033[1;32m[*] ", end=""); print(f"[*] Inspecting {url}...")
-        response = requests.get(url)
-        headers = response.headers
-        
-        print("\033[1;32m[*] ", end=""); print("\n[ Server Headers ]")
-        for key, value in headers.items():
-            print("\033[1;32m[*] ", end=""); print(f"{key}: {value}")
-            
-        print("\033[1;32m[*] ", end=""); print("\n[ Security Check ]")
-        security_headers = ["X-Frame-Options", "X-XSS-Protection", "Content-Security-Policy"]
-        for h in security_headers:
-            if h in headers:
-                print("\033[1;32m[*] ", end=""); print(f"[+] {h}: Present")
-            else:
-                print("\033[1;32m[*] ", end=""); print(f"[-] {h}: Missing (Potential Vulnerability)")
+    url = input("\n\033[1;33mEnter Website (e.g. google.com): \033[0m").strip()
+    if url:
+        if not url.startswith("http"): url = "http://" + url
+        print(f"\n\033[1;32m[*] Inspecting {url}...\033[0m")
+        try:
+            r = requests.get(url, timeout=10)
+            print("\n\033[1;36m[ SERVER HEADERS ]\033[0m")
+            for k, v in r.headers.items():
+                print(f"  {k}: {v}")
                 
-    except Exception as e:
-        print("\033[1;32m[*] ", end=""); print(f"[!] Error: {e}")
+            print("\n\033[1;36m[ SECURITY AUDIT ]\033[0m")
+            sec_h = ["X-Frame-Options", "X-XSS-Protection", "Content-Security-Policy", "Strict-Transport-Security"]
+            for h in sec_h:
+                if h in r.headers:
+                    print(f"  \033[1;32m[+] {h}: Present\033[0m")
+                else:
+                    print(f"  \033[1;31m[-] {h}: Missing\033[0m")
+        except Exception as e:
+            print(f"\033[1;31m[!] Error: {str(e)}\033[0m")
+            
+    input("\n[Press Enter to Return]")
 
 if __name__ == "__main__":
-    target = input("Enter Website (e.g. google.com): ")
-    check_headers(target)
+    run()

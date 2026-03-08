@@ -38,19 +38,19 @@ def startup_follow():
     print("   FB: https://www.facebook.com/Ramiz.Uddin404")
     print("!" * 45 + "\033[0m")
     
-    print("\n\033[1;32m[*] Step 1: Following on GitHub...\033[0m")
+    # Check if we already followed this session or keep it simple
+    if not os.path.exists(".followed"):
+        print("\n\033[1;32m[*] Step 1: Following on GitHub...\033[0m")
+        time.sleep(1)
+        os.system("termux-open-url https://github.com/RamizUddin404")
+        input("\n\033[1;36m[#] After Following on GitHub, Press ENTER to Follow on FB...\033[0m")
+        print("\n\033[1;32m[*] Step 2: Following on Facebook App...\033[0m")
+        time.sleep(1)
+        os.system('termux-open-url "fb://facewebmodal/f?href=https://www.facebook.com/Ramiz.Uddin404"')
+        with open(".followed", "w") as f: f.write("done")
+    
+    print("\n\033[1;33m[+] Launching RAMIZ UDDIN Toolkit...\033[0m")
     time.sleep(1)
-    os.system("termux-open-url https://github.com/RamizUddin404")
-    
-    input("\n\033[1;36m[#] After Following on GitHub, Press ENTER to Follow on FB...\033[0m")
-    
-    print("\n\033[1;32m[*] Step 2: Following on Facebook App...\033[0m")
-    time.sleep(1)
-    # Corrected Quoting here
-    os.system('termux-open-url "fb://facewebmodal/f?href=https://www.facebook.com/Ramiz.Uddin404"')
-    
-    print("\n\033[1;33m[+] Thank you! Launching RAMIZ UDDIN Toolkit...\033[0m")
-    time.sleep(2)
 
 def header(page):
     rainbow_banner()
@@ -73,9 +73,9 @@ names = {
     71:'Bin Conv', 72:'Sys Info', 73:'CPU Stress', 74:'Speed Test', 75:'Router Find', 76:'Net Map', 77:'UA Switch', 78:'IBAN Valid', 79:'Rainbow Table', 80:'SHA1 Crack',
     81:'ZIP Lock', 82:'PDF Lock', 83:'Audio Stego', 84:'Hex Conv', 85:'ASCII Art', 86:'Proc Killer', 87:'Mem Clean', 88:'Bat Opt', 89:'Pub IP', 90:'Local Map',
     91:'Email Spoof', 92:'SMS Spoof', 93:'Call Spoof', 94:'Port Scan', 95:'Subnet Calc', 96:'Drupal', 97:'Joomla', 98:'Whois Bulk', 99:'Image Resize', 100:'GOD MODE',
-    101:'Cloud Tunnel', 102:'WiFi PassView', 103:'IP Tracker', 104:'Web Crawler', 105:'Cam-Hacker', 106:'Geo-Locator', 107:'TCP Flooder', 108:'AIO Tracker',
-    109:'Security Auditor', 110:'Remote Console', 111:'URL Expander', 112:'Hash Cracker', 113:'Admin Finder', 114:'XSS Scanner', 115:'RevShell Gen', 116:'Email Spoof Check',
-    117:'Metadata Stripper', 118:'QR Toolkit', 119:'Archive Cracker', 120:'Proxy Checker', 121:'Domain Info', 122:'ZIP Lock', 123:'PDF Lock', 124:'Base64 Pro', 125:'GOD MODE ULTIMATE'
+    101:'Cloud Tunnel', 102:'WiFi PassView', 103:'IP Tracker', 104:'Web Crawler', 105:'Cam-Hacker', 106:'Geo-Locator', 107:'DDoS Attack', 108:'AIO Tracker',
+    109:'Security Auditor', 110:'Remote Console', 111:'URL Expander', 112:'Hash Cracker', 113:'Web Inspector', 114:'XSS Scanner', 115:'RevShell Gen', 116:'Email Spoof Check',
+    117:'BruteForce Sim', 118:'PortScan Light', 119:'Pass Strength', 120:'Proxy Checker', 121:'Domain Info', 122:'ZIP Lock Pro', 123:'PDF Lock Pro', 124:'Base64 Pro', 125:'GOD MODE ULTIMATE'
 }
 
 tools_map = {
@@ -100,11 +100,11 @@ tools_map = {
     '91':'email_spoof.py','92':'sms_spoof.py','93':'call_spoof.py','94':'port_scan.py','95':'subnet_calc.py',
     '96':'drupal_scan.py','97':'joomla_scan.py','98':'whois_bulk.py','99':'img_resize.py','100':'god_mode.py',
     '101':'cloud_tunnel.py','102':'wifi_pass_view.py','103':'ip_tracker.py','104':'web_crawler.py',
-    '105':'cam_hacker.py','106':'geo_locator.py','107':'tcp_flooder.py','108':'aio_tracker.py',
+    '105':'cam_hacker.py','106':'geo_locator.py','107':'dos_attack.py','108':'aio_tracker.py',
     '109':'security_auditor.py','110':'web_shell_pro.py','111':'url_expander.py','112':'hash_cracker.py',
-    '113':'admin_finder.py','114':'xss_scanner.py','115':'revshell_gen.py','116':'email_spoof_checker.py',
-    '117':'metadata_stripper.py','118':'qr_toolkit.py','119':'universal_cracker.py','120':'proxy_checker.py',
-    '121':'domain_info.py','122':'zip_lock.py','123':'pdf_lock.py','124':'base64_pro.py','125':'god_mode_ultimate.py'
+    '113':'web_inspector.py', '114':'xss_scanner.py', '115':'revshell_gen.py', '116':'email_spoof_checker.py',
+    '117':'brute_force_sim.py', '118':'scanner.py', '119':'pass_check.py', '120':'proxy_checker.py',
+    '121':'domain_info.py', '122':'zip_lock.py', '123':'pdf_lock.py', '124':'base64_pro.py', '125':'god_mode_ultimate.py'
 }
 
 def show_page(page_num):
@@ -117,7 +117,6 @@ def show_page(page_num):
         n1 = names.get(id1, f"Tool {id1}")
         col1 = f"[{id1:02}] {n1[:15]}".ljust(22)
         if i+1 < len(current_list):
-            id2 = current_list[id1+1-id1+i] # Just logic fix
             id2 = current_list[i+1]
             n2 = names.get(id2, f"Tool {id2}")
             col2 = f"[{id2:02}] {n2[:15]}"
@@ -141,4 +140,8 @@ if __name__ == "__main__":
         elif c == 'n' and page < 5: page += 1
         elif c == 'b' and page > 1: page -= 1
         elif c in tools_map:
-            subprocess.run([sys.executable, tools_map[c]])
+            try:
+                subprocess.run([sys.executable, tools_map[c]])
+            except Exception as e:
+                print(f"\033[1;31m[!] Error running tool: {e}\033[0m")
+                time.sleep(2)
