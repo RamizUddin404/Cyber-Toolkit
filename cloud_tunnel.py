@@ -9,32 +9,43 @@ def tool_header(name):
     print("="*45 + "\033[0m")
 
 def run():
-    tool_header("CLOUD TUNNEL (CLOUDFLARED)")
-    print("\033[1;32m[*] Expose your local server to the internet without Port Forwarding!")
-    print("[*] Requires: cloudflared binary\033[0m")
-    
-    # Check if cloudflared is installed
-    if subprocess.call(["which", "cloudflared"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL) != 0:
-        print("\n\033[1;31m[!] Cloudflared not found. Installing...\033[0m")
-        # For Termux, usually downloaded from GitHub releases, but let's assume a simplified check or help.
-        # Actually, let's try a direct download if possible or just guide the user.
-        print("[*] Downloading Cloudflared for Android...")
-        os.system("wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64 -O cloudflared")
-        os.system("chmod +x cloudflared")
-        os.system("mv cloudflared $PREFIX/bin/")
+    while True:
+        tool_header("CLOUD TUNNEL (PRO-V1)")
+        print("\033[1;32m[1] CLOUDFLARE (Free & Fast)")
+        print("[2] LOCALXPOSE (High Success Rate)")
+        print("[0] Back\033[0m")
         
-    port = input("\n\033[1;33mEnter Local Port to Tunnel (default: 8080): \033[0m") or "8080"
-    
-    print(f"\n\033[1;32m[+] Starting Tunnel on Port {port}...")
-    print("[!] Copy the .trycloudflare.com URL from the logs below:\033[0m\n")
-    time.sleep(2)
-    
-    try:
-        os.system(f"cloudflared tunnel --url http://127.0.0.1:{port}")
-    except KeyboardInterrupt:
-        print("\n\033[1;31m[!] Tunnel Stopped.\033[0m")
-    
-    input("\n[Press Enter to Return]")
+        choice = input("\nTunnel > ")
+        if choice == '0': break
+        
+        port = input("\n\033[1;33mEnter Local Port to Tunnel (default: 8080): \033[0m") or "8080"
+        
+        if choice == '1':
+            print(f"\n\033[1;32m[+] Starting Cloudflare Tunnel on Port {port}...")
+            print("[!] Copy the .trycloudflare.com URL from the logs below:\033[0m\n")
+            time.sleep(2)
+            try:
+                # Using 0.0.0.0 for better local server binding
+                os.system(f"cloudflared tunnel --url http://127.0.0.1:{port}")
+            except KeyboardInterrupt:
+                print("\n\033[1;31m[!] Tunnel Stopped.\033[0m")
+                
+        elif choice == '2':
+            # Check LocalXpose
+            if not os.path.exists(f"{os.environ['PREFIX']}/bin/loclx"):
+                print("\n\033[1;31m[!] LocalXpose not found. Installing...\033[0m")
+                os.system("wget -q https://api.localxpose.io/api/v2/client-builds/loclx-linux-arm64.zip -O loclx.zip")
+                os.system("unzip -q loclx.zip && chmod +x loclx-linux-arm64")
+                os.system("mv loclx-linux-arm64 $PREFIX/bin/loclx && rm loclx.zip")
+            
+            print(f"\n\033[1;32m[+] Starting LocalXpose Tunnel on Port {port}...")
+            time.sleep(1)
+            try:
+                os.system(f"loclx tunnel http --to 127.0.0.1:{port}")
+            except KeyboardInterrupt:
+                print("\n\033[1;31m[!] Tunnel Stopped.\033[0m")
+        
+        input("\n[Press Enter to Continue]")
 
 if __name__ == "__main__":
     run()
