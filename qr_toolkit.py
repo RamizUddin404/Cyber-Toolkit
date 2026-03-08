@@ -1,5 +1,5 @@
 # CREATED BY: RAMIZ UDDIN
-import os, time
+import os, sys, time, subprocess
 
 def tool_header(name):
     os.system("clear")
@@ -8,49 +8,34 @@ def tool_header(name):
     print("      CREATED BY: RAMIZ UDDIN")
     print("="*45 + "\033[0m")
 
-# CREATED BY: RAMIZ UDDIN
-import os
-import cyber_deps
-# pyzbar needs zbar system library
-cyber_deps.ensure_deps(system_pkgs=["zbar"], python_mods=["qrcode", "pillow", "pyzbar"])
-import qrcode
-from pyzbar.pyzbar import decode
-from PIL import Image
-
 def run():
+    tool_header("QR TOOLKIT (GENERATE/DECODE)")
+    print("\033[1;32m[*] Create or Decode QR codes for payloads or info.\033[0m")
+    
+    if subprocess.call(["which", "qrencode"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL) != 0:
+        os.system("pkg install qrencode zbar -y")
+
     while True:
-        print("\033[1;32m[*] ", end=""); print("\n\033[1;34m[*] QR Code Toolkit (Hacker Style)\033[0m")
-        print("\033[1;32m[*] ", end=""); print("-" * 40)
-        print("\033[1;32m[*] ", end=""); print("1. Create QR Code (Link/Text)")
-        print("\033[1;32m[*] ", end=""); print("2. Scan/Decode QR Image (Read Content)")
-        print("\033[1;32m[*] ", end=""); print("99. Uninstall This Tool (Remove Packages)")
-        print("\033[1;32m[*] ", end=""); print("0. Back")
+        print("\n[1] Generate QR Code")
+        print("[2] Decode QR Code")
+        print("[0] Back")
         
         c = input("\nQR > ")
         if c == '0': break
         
         if c == '1':
-            data = input("Enter Data/URL: ")
-            name = input("Enter output name (e.g. hack.png): ") or "qr.png"
-            img = qrcode.make(data)
-            img.save(name)
-            print("\033[1;32m[*] ", end=""); print(f"\033[1;32m[+] QR Saved as {name}\033[0m")
-            
+            data = input("\nEnter Data for QR: ")
+            fname = input("Enter Filename (default: qr.png): ") or "qr.png"
+            os.system(f"qrencode -o {fname} '{data}'")
+            print(f"\n\033[1;32m[+] QR Code saved as {fname}\033[0m")
         elif c == '2':
-            img_path = input("Enter QR Image Path (e.g. /sdcard/qr.png): ")
-            if os.path.exists(img_path):
-                print("\033[1;32m[*] ", end=""); print(f"[*] Scanning {img_path}...")
-                try:
-                    detected = decode(Image.open(img_path))
-                    if detected:
-                        print("\033[1;32m[*] ", end=""); print(f"\n\033[1;32m[+] DECODED CONTENT: {detected[0].data.decode('utf-8')}\033[0m")
-                    else:
-                        print("\033[1;32m[*] ", end=""); print("\033[1;31m[-] No QR Code found in this image.\033[0m")
-                except Exception as e:
-                    print("\033[1;32m[*] ", end=""); print(f"[!] Error decoding: {e}")
+            img = input("\nEnter Path to QR Image: ")
+            if os.path.exists(img):
+                print("\n\033[1;32m[*] Decoding...\033[0m")
+                os.system(f"zbarimg {img}")
             else:
-                print("\033[1;32m[*] ", end=""); print("[!] File not found!")
-                
+                print("\033[1;31m[!] File not found!\033[0m")
+        
         input("\n[Press Enter to Continue]")
 
 if __name__ == "__main__": run()

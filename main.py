@@ -58,7 +58,7 @@ def header(page):
     print(f"  GITHUB: https://github.com/RamizUddin404")
     print(f"  FB: https://www.facebook.com/Ramiz.Uddin404")
     print("─" * 45)
-    animate_text(f"  ULTIMATE MASTER STATION v165.0 | PAGE {page}/4", 0.02)
+    animate_text(f"  ULTIMATE MASTER STATION v180.0 | PAGE {page}/5", 0.02)
     print("\033[1;33m       CREATED BY: \033[5mRAMIZ UDDIN\033[0m \033[0m") 
     print("\033[1;36m" + "─" * 45 + "\033[0m")
 
@@ -74,7 +74,8 @@ names = {
     81:'ZIP Lock', 82:'PDF Lock', 83:'Audio Stego', 84:'Hex Conv', 85:'ASCII Art', 86:'Proc Killer', 87:'Mem Clean', 88:'Bat Opt', 89:'Pub IP', 90:'Local Map',
     91:'Email Spoof', 92:'SMS Spoof', 93:'Call Spoof', 94:'Port Scan', 95:'Subnet Calc', 96:'Drupal', 97:'Joomla', 98:'Whois Bulk', 99:'Image Resize', 100:'GOD MODE',
     101:'Cloud Tunnel', 102:'WiFi PassView', 103:'IP Tracker', 104:'Web Crawler', 105:'Cam-Hacker', 106:'Geo-Locator', 107:'TCP Flooder', 108:'AIO Tracker',
-    109:'Security Auditor', 110:'Remote Console'
+    109:'Security Auditor', 110:'Remote Console', 111:'URL Expander', 112:'Hash Cracker', 113:'Admin Finder', 114:'XSS Scanner', 115:'RevShell Gen', 116:'Email Spoof Check',
+    117:'Metadata Stripper', 118:'QR Toolkit', 119:'Archive Cracker', 120:'Proxy Checker', 121:'Domain Info', 122:'ZIP Lock', 123:'PDF Lock', 124:'Base64 Pro', 125:'GOD MODE ULTIMATE'
 }
 
 tools_map = {
@@ -100,19 +101,23 @@ tools_map = {
     '96':'drupal_scan.py','97':'joomla_scan.py','98':'whois_bulk.py','99':'img_resize.py','100':'god_mode.py',
     '101':'cloud_tunnel.py','102':'wifi_pass_view.py','103':'ip_tracker.py','104':'web_crawler.py',
     '105':'cam_hacker.py','106':'geo_locator.py','107':'tcp_flooder.py','108':'aio_tracker.py',
-    '109':'security_auditor.py','110':'web_shell_pro.py'
+    '109':'security_auditor.py','110':'web_shell_pro.py','111':'url_expander.py','112':'hash_cracker.py',
+    '113':'admin_finder.py','114':'xss_scanner.py','115':'revshell_gen.py','116':'email_spoof_checker.py',
+    '117':'metadata_stripper.py','118':'qr_toolkit.py','119':'universal_cracker.py','120':'proxy_checker.py',
+    '121':'domain_info.py','122':'zip_lock.py','123':'pdf_lock.py','124':'base64_pro.py','125':'god_mode_ultimate.py'
 }
 
 def show_page(page_num):
     clear(); header(page_num)
     start = (page_num - 1) * 30 + 1
-    end = min(start + 30, 111)
+    end = min(start + 30, 126)
     current_list = list(range(start, end))
     for i in range(0, len(current_list), 2):
         id1 = current_list[i]
         n1 = names.get(id1, f"Tool {id1}")
         col1 = f"[{id1:02}] {n1[:15]}".ljust(22)
         if i+1 < len(current_list):
+            id2 = current_list[id1+1-id1+i] # Just logic fix
             id2 = current_list[i+1]
             n2 = names.get(id2, f"Tool {id2}")
             col2 = f"[{id2:02}] {n2[:15]}"
@@ -121,7 +126,7 @@ def show_page(page_num):
             print(f" {col1}")
     print("\033[1;36m" + "─" * 45)
     nav = ""
-    if page_num < 4: nav += "[N] Next Page  "
+    if page_num < 5: nav += "[N] Next Page  "
     if page_num > 1: nav += "[B] Back Page  "
     print(f" {nav}[0] Exit")
     print("─" * 45 + "\033[0m")
@@ -133,7 +138,7 @@ if __name__ == "__main__":
         show_page(page)
         c = input("\033[1;32m[RAMIZ-UDDIN@Termux]:~\033[0m ").lower()
         if c == '0': sys.exit()
-        elif c == 'n' and page < 4: page += 1
+        elif c == 'n' and page < 5: page += 1
         elif c == 'b' and page > 1: page -= 1
         elif c in tools_map:
             subprocess.run([sys.executable, tools_map[c]])
