@@ -54,16 +54,18 @@ fi
 
 echo -e "\n$GREEN[*] Step 3: Installing Python Modules...$RESET"
 if [ "$PKG_MGR" == "apt" ]; then
-    pip3 install -r requirements.txt --break-system-packages 2>/dev/null || pip3 install -r requirements.txt
+    pip3 install -r core/requirements.txt --break-system-packages 2>/dev/null || pip3 install -r core/requirements.txt
     pip3 install requests colorama beautifulsoup4 mechanize --break-system-packages 2>/dev/null || pip3 install requests colorama beautifulsoup4 mechanize
 else
-    pip install -r requirements.txt
+    pip install -r core/requirements.txt
     pip install requests colorama beautifulsoup4 mechanize
 fi
 
 echo -e "\n$GREEN[*] Step 4: Setting Permissions...$RESET"
-chmod +x *.py
-chmod +x *.sh
+chmod +x main.py
+chmod +x setup.sh
+chmod +x core/*.py 2>/dev/null
+chmod +x core/*.sh 2>/dev/null
 
 echo -e "\n$CYAN[+] INSTALLATION COMPLETE!$RESET"
 echo -e "$YELLOW[*] Usage: python3 main.py$RESET"

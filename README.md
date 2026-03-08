@@ -15,7 +15,9 @@
 ---
 
 ## 🌟 What is Cyber-Toolkit?
-**Cyber-Toolkit** is an elite hacking ecosystem built by **Ramiz Uddin** for professional penetration testing, security auditing, and digital forensics. This toolkit brings together 125+ unique, high-performance tools under one roof with a stunning 3D rainbow interface. Now compatible with **Kali Linux, Ubuntu, Debian, and Termux**!
+**Cyber-Toolkit** is an elite hacking ecosystem built by **Ramiz Uddin** for professional penetration testing, security auditing, and digital forensics. This toolkit brings together 125+ unique, high-performance tools under one roof with a stunning 3D rainbow interface.
+
+> **Note:** For a cleaner GitHub experience, all internal tools and assets have been organized into the `core/` directory.
 
 ---
 
