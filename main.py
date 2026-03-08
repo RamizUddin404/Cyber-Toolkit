@@ -38,16 +38,21 @@ def startup_follow():
     print("   FB: https://www.facebook.com/Ramiz.Uddin404")
     print("!" * 45 + "\033[0m")
     
-    # Check if we already followed this session or keep it simple
     if not os.path.exists(".followed"):
         print("\n\033[1;32m[*] Step 1: Following on GitHub...\033[0m")
         time.sleep(1)
-        os.system("termux-open-url https://github.com/RamizUddin404")
+        # Fallback redirect logic
+        os.system("termux-open-url https://github.com/RamizUddin404 || am start -a android.intent.action.VIEW -d https://github.com/RamizUddin404 > /dev/null 2>&1")
+        
         input("\n\033[1;36m[#] After Following on GitHub, Press ENTER to Follow on FB...\033[0m")
-        print("\n\033[1;32m[*] Step 2: Following on Facebook App...\033[0m")
+        
+        print("\n\033[1;32m[*] Step 2: Following on Facebook...\033[0m")
         time.sleep(1)
-        os.system('termux-open-url "fb://facewebmodal/f?href=https://www.facebook.com/Ramiz.Uddin404"')
+        # Try App intent first, then browser
+        os.system("termux-open-url https://www.facebook.com/Ramiz.Uddin404 || am start -a android.intent.action.VIEW -d fb://facewebmodal/f?href=https://www.facebook.com/Ramiz.Uddin404 || am start -a android.intent.action.VIEW -d https://www.facebook.com/Ramiz.Uddin404 > /dev/null 2>&1")
+        
         with open(".followed", "w") as f: f.write("done")
+        print("\n\033[1;32m[+] Successfully Followed! Redirects handled.\033[0m")
     
     print("\n\033[1;33m[+] Launching RAMIZ UDDIN Toolkit...\033[0m")
     time.sleep(1)
