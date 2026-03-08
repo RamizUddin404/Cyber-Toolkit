@@ -1,5 +1,5 @@
 # CREATED BY: RAMIZ UDDIN
-import os, time
+import os, time, subprocess
 
 def tool_header(name):
     os.system("clear")
@@ -8,31 +8,30 @@ def tool_header(name):
     print("      CREATED BY: RAMIZ UDDIN")
     print("="*45 + "\033[0m")
 
-# CREATED BY: RAMIZ UDDIN
-import os
-import subprocess
-
-def change_mac(interface, new_mac):
-    print("\033[1;32m[*] ", end=""); print(f"[*] Changing MAC address for {interface} to {new_mac}")
-    # These commands require ROOT access (tsu)
-    commands = [
-        f"ip link set {interface} down",
-        f"ip link set dev {interface} address {new_mac}",
-        f"ip link set {interface} up"
-    ]
+def run():
+    tool_header("MAC CHANGER (ROOT)")
+    print("\033[1;32m[*] Change your device MAC address to stay anonymous.")
+    print("[!] THIS TOOL REQUIRES ROOT ACCESS!\033[0m")
     
-    try:
-        if os.geteuid() != 0:
-            print("\033[1;32m[*] ", end=""); print("[!] This tool requires ROOT access. Run with 'sudo' or 'tsu'.")
-            return
-
-        for cmd in commands:
-            subprocess.call(cmd, shell=True)
-        print("\033[1;32m[*] ", end=""); print("[+] MAC Address Changed Successfully (if interface exists).")
-    except Exception as e:
-        print("\033[1;32m[*] ", end=""); print(f"[!] Error: {e}")
+    if os.getuid() != 0:
+        print("\n\033[1;31m[!] ROOT access not detected. Run with 'tsu' or 'sudo'.\033[0m")
+        input("\n[Press Enter to Return]")
+        return
+        
+    iface = input("\n\033[1;33mEnter Interface (e.g. wlan0): \033[0m")
+    new_mac = input("Enter New MAC (e.g. 00:11:22:33:44:55): \033[0m")
+    
+    if iface and new_mac:
+        print(f"\n\033[1;32m[*] Changing MAC address for {iface}...\033[0m")
+        try:
+            os.system(f"ip link set {iface} down")
+            os.system(f"ip link set dev {iface} address {new_mac}")
+            os.system(f"ip link set {iface} up")
+            print("\n\033[1;32m[+] MAC Address Changed Successfully.\033[0m")
+        except Exception as e:
+            print(f"\n\033[1;31m[!] Error: {str(e)}\033[0m")
+            
+    input("\n[Press Enter to Return]")
 
 if __name__ == "__main__":
-    iface = input("Interface (e.g. wlan0): ")
-    mac = input("New MAC (e.g. 00:11:22:33:44:55): ")
-    change_mac(iface, mac)
+    run()
