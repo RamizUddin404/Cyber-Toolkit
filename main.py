@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import os
-import sys
 
 def main():
     # Change current working directory to 'core' so internal imports/paths work
