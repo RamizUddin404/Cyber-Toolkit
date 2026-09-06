@@ -1,7 +1,10 @@
-requests
-colorama
-beautifulsoup4
-mechanize
-dnspython
-tqdm
-faker
+requests==2.31.0
+colorama==0.4.6
+beautifulsoup4==4.12.2
+mechanize==0.4.9
+pyjwt==2.8.0
+cryptography==41.0.7
+pillow==10.1.0
+opencv-python==4.8.1.78
+paramiko==3.4.0
+pwntools==4.12.0
