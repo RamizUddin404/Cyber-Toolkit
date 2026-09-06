@@ -1,3 +1,346 @@
-# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
-# SOURCE PROTECTED. DO NOT TAMPER.
-import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'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'))))
+#!/usr/bin/env python3
+"""
+🛡️ ULTIMATE CYBER-TOOLKIT v180.0
+🔐 Security & Penetration Testing Suite
+Created By: RAMIZ UDDIN
+Website: https://github.com/RamizUddin404/Cyber-Toolkit
+"""
+
+import os
+import sys
+import time
+import platform
+from colorama import Fore, Back, Style, init
+
+# Initialize colorama for cross-platform colors
+init(autoreset=True)
+
+def display_banner():
+    """Display the toolkit banner"""
+    banner = f"""
+{Fore.CYAN}{Style.BRIGHT}
+  ██████╗██╗   ██╗██████╗ ███████╗██████╗ 
+ ██╔════╝╚██╗ ██╔╝██╔══██╗██╔════╝██╔══██╗
+ ██║      ╚████╔╝ ██████╔╝█████╗  ██████╔╝
+ ██║       ╚██╔╝  ██╔══██╗██╔══╝  ██╔══██╗
+ ╚██████╗   ██║   ██████╔╝███████╗██║  ██║
+  ╚═════╝   ╚═╝   ╚═════╝ ╚══════╝╚═╝  ╚═╝
+{Style.RESET_ALL}
+{Fore.YELLOW}{'='*60}
+{Fore.GREEN}🛡️  ULTIMATE CYBER-TOOLKIT v180.0{Style.RESET_ALL}
+{Fore.CYAN}🔐  100+ Security & Penetration Testing Tools{Style.RESET_ALL}
+{Fore.YELLOW}{'='*60}{Style.RESET_ALL}
+"""
+    print(banner)
+
+def display_main_menu():
+    """Display main menu"""
+    print(f"\n{Fore.CYAN}{'='*60}")
+    print(f"{Fore.GREEN}📋 MAIN MENU - SELECT A CATEGORY:{Style.RESET_ALL}")
+    print(f"{Fore.CYAN}{'='*60}{Style.RESET_ALL}\n")
+    
+    categories = {
+        "1": "🌐 Reconnaissance & Scanning",
+        "2": "🔐 Cryptography & Hashing",
+        "3": "📱 Mobile & Device Tools",
+        "4": "🕵️  OSINT & Tracking",
+        "5": "🔗 Web Exploitation",
+        "6": "📡 Wireless & Networking",
+        "7": "🛠️  System Utilities & Tools",
+        "8": "🔥 Advanced & Exploitation",
+        "9": "❌ Exit Toolkit"
+    }
+    
+    for key, value in categories.items():
+        print(f"   {Fore.YELLOW}[{key}]{Style.RESET_ALL} {value}")
+    
+    print(f"\n{Fore.CYAN}{'='*60}{Style.RESET_ALL}")
+    return input(f"{Fore.GREEN}Enter your choice: {Style.RESET_ALL}")
+
+def run_tool(tool_name):
+    """Run a tool safely"""
+    try:
+        tool_path = f"{tool_name}.py"
+        if os.path.exists(tool_path):
+            print(f"\n{Fore.GREEN}[+] Launching {tool_name}...{Style.RESET_ALL}\n")
+            os.system(f"python3 {tool_path}")
+            print(f"\n{Fore.GREEN}[✓] Tool completed{Style.RESET_ALL}")
+        else:
+            print(f"{Fore.RED}[!] Tool not found: {tool_name}{Style.RESET_ALL}")
+    except Exception as e:
+        print(f"{Fore.RED}[!] Error: {e}{Style.RESET_ALL}")
+
+def reconnaissance_menu():
+    """Reconnaissance tools submenu"""
+    while True:
+        print(f"\n{Fore.CYAN}{'='*60}")
+        print(f"{Fore.GREEN}🌐 RECONNAISSANCE & SCANNING TOOLS:{Style.RESET_ALL}")
+        print(f"{Fore.CYAN}{'='*60}{Style.RESET_ALL}\n")
+        
+        tools = {
+            "1": ("nmap_scanner", "🔍 Nmap Port Scanner"),
+            "2": ("subdomain_finder", "🎯 Subdomain Finder"),
+            "3": ("web_crawler", "🕷️  Web Crawler"),
+            "4": ("dns_recon", "📡 DNS Reconnaissance"),
+            "5": ("ip_lookup", "🌍 IP Lookup"),
+            "6": ("admin_finder", "👤 Admin Panel Finder"),
+            "0": ("main", "⬅️  Back to Main Menu")
+        }
+        
+        for key, (tool, desc) in tools.items():
+            print(f"   {Fore.YELLOW}[{key}]{Style.RESET_ALL} {desc}")
+        
+        choice = input(f"\n{Fore.GREEN}Select tool: {Style.RESET_ALL}")
+        
+        if choice == "0":
+            break
+        elif choice in dict(tools).keys():
+            tool_name = dict(tools)[choice][0]
+            run_tool(tool_name)
+        else:
+            print(f"{Fore.RED}[!] Invalid choice{Style.RESET_ALL}")
+
+def cryptography_menu():
+    """Cryptography & hashing tools submenu"""
+    while True:
+        print(f"\n{Fore.CYAN}{'='*60}")
+        print(f"{Fore.GREEN}🔐 CRYPTOGRAPHY & HASHING TOOLS:{Style.RESET_ALL}")
+        print(f"{Fore.CYAN}{'='*60}{Style.RESET_ALL}\n")
+        
+        tools = {
+            "1": ("hash_cracker", "🔓 Hash Cracker Pro"),
+            "2": ("base64_pro", "📊 Base64 Encoder/Decoder"),
+            "3": ("crypto_tool", "🔑 Encryption Tool"),
+            "4": ("pass_gen", "🎲 Password Generator"),
+            "5": ("md5_crack", "🎯 MD5 Cracker"),
+            "6": ("pass_strength", "💪 Password Strength Checker"),
+            "0": ("main", "⬅️  Back to Main Menu")
+        }
+        
+        for key, (tool, desc) in tools.items():
+            print(f"   {Fore.YELLOW}[{key}]{Style.RESET_ALL} {desc}")
+        
+        choice = input(f"\n{Fore.GREEN}Select tool: {Style.RESET_ALL}")
+        
+        if choice == "0":
+            break
+        elif choice in dict(tools).keys():
+            tool_name = dict(tools)[choice][0]
+            run_tool(tool_name)
+        else:
+            print(f"{Fore.RED}[!] Invalid choice{Style.RESET_ALL}")
+
+def mobile_menu():
+    """Mobile & device tools submenu"""
+    while True:
+        print(f"\n{Fore.CYAN}{'='*60}")
+        print(f"{Fore.GREEN}📱 MOBILE & DEVICE TOOLS:{Style.RESET_ALL}")
+        print(f"{Fore.CYAN}{'='*60}{Style.RESET_ALL}\n")
+        
+        tools = {
+            "1": ("adb_scanner", "📱 ADB Scanner"),
+            "2": ("apk_analyzer", "📦 APK Analyzer"),
+            "3": ("firmware_flasher", "⚡ Firmware Flasher"),
+            "4": ("mac_changer", "🔄 MAC Changer"),
+            "5": ("mobile_recovery", "🔧 Mobile Recovery Tool"),
+            "0": ("main", "⬅️  Back to Main Menu")
+        }
+        
+        for key, (tool, desc) in tools.items():
+            print(f"   {Fore.YELLOW}[{key}]{Style.RESET_ALL} {desc}")
+        
+        choice = input(f"\n{Fore.GREEN}Select tool: {Style.RESET_ALL}")
+        
+        if choice == "0":
+            break
+        elif choice in dict(tools).keys():
+            tool_name = dict(tools)[choice][0]
+            run_tool(tool_name)
+        else:
+            print(f"{Fore.RED}[!] Invalid choice{Style.RESET_ALL}")
+
+def osint_menu():
+    """OSINT & tracking tools submenu"""
+    while True:
+        print(f"\n{Fore.CYAN}{'='*60}")
+        print(f"{Fore.GREEN}🕵️  OSINT & TRACKING TOOLS:{Style.RESET_ALL}")
+        print(f"{Fore.CYAN}{'='*60}{Style.RESET_ALL}\n")
+        
+        tools = {
+            "1": ("ip_tracker", "🌍 IP Tracker"),
+            "2": ("geo_locator", "📍 Geo Locator"),
+            "3": ("sherlock_osint", "🔍 Sherlock OSINT"),
+            "4": ("aio_tracker", "📊 AIO Ultimate Tracker"),
+            "5": ("social_recon", "👥 Social Media Recon"),
+            "0": ("main", "⬅️  Back to Main Menu")
+        }
+        
+        for key, (tool, desc) in tools.items():
+            print(f"   {Fore.YELLOW}[{key}]{Style.RESET_ALL} {desc}")
+        
+        choice = input(f"\n{Fore.GREEN}Select tool: {Style.RESET_ALL}")
+        
+        if choice == "0":
+            break
+        elif choice in dict(tools).keys():
+            tool_name = dict(tools)[choice][0]
+            run_tool(tool_name)
+        else:
+            print(f"{Fore.RED}[!] Invalid choice{Style.RESET_ALL}")
+
+def web_exploitation_menu():
+    """Web exploitation tools submenu"""
+    while True:
+        print(f"\n{Fore.CYAN}{'='*60}")
+        print(f"{Fore.GREEN}🔗 WEB EXPLOITATION TOOLS:{Style.RESET_ALL}")
+        print(f"{Fore.CYAN}{'='*60}{Style.RESET_ALL}\n")
+        
+        tools = {
+            "1": ("xss_scanner", "⚠️  XSS Scanner"),
+            "2": ("sql_injector", "💉 SQL Injector"),
+            "3": ("web_crawler", "🕷️  Web Crawler"),
+            "4": ("web_shell_pro", "🐚 Web Shell Pro"),
+            "5": ("phishing_sim", "🎣 Phishing Simulator"),
+            "0": ("main", "⬅️  Back to Main Menu")
+        }
+        
+        for key, (tool, desc) in tools.items():
+            print(f"   {Fore.YELLOW}[{key}]{Style.RESET_ALL} {desc}")
+        
+        choice = input(f"\n{Fore.GREEN}Select tool: {Style.RESET_ALL}")
+        
+        if choice == "0":
+            break
+        elif choice in dict(tools).keys():
+            tool_name = dict(tools)[choice][0]
+            run_tool(tool_name)
+        else:
+            print(f"{Fore.RED}[!] Invalid choice{Style.RESET_ALL}")
+
+def wireless_menu():
+    """Wireless & networking tools submenu"""
+    while True:
+        print(f"\n{Fore.CYAN}{'='*60}")
+        print(f"{Fore.GREEN}📡 WIRELESS & NETWORKING TOOLS:{Style.RESET_ALL}")
+        print(f"{Fore.CYAN}{'='*60}{Style.RESET_ALL}\n")
+        
+        tools = {
+            "1": ("wifi_scanner", "📶 WiFi Scanner"),
+            "2": ("bluetooth_scanner", "🔵 Bluetooth Scanner"),
+            "3": ("arp_spoof", "🔀 ARP Spoofer"),
+            "4": ("packet_sniffer", "📦 Packet Sniffer"),
+            "5": ("net_discover", "🔎 Network Discovery"),
+            "0": ("main", "⬅️  Back to Main Menu")
+        }
+        
+        for key, (tool, desc) in tools.items():
+            print(f"   {Fore.YELLOW}[{key}]{Style.RESET_ALL} {desc}")
+        
+        choice = input(f"\n{Fore.GREEN}Select tool: {Style.RESET_ALL}")
+        
+        if choice == "0":
+            break
+        elif choice in dict(tools).keys():
+            tool_name = dict(tools)[choice][0]
+            run_tool(tool_name)
+        else:
+            print(f"{Fore.RED}[!] Invalid choice{Style.RESET_ALL}")
+
+def system_utilities_menu():
+    """System utilities submenu"""
+    while True:
+        print(f"\n{Fore.CYAN}{'='*60}")
+        print(f"{Fore.GREEN}🛠️  SYSTEM UTILITIES & TOOLS:{Style.RESET_ALL}")
+        print(f"{Fore.CYAN}{'='*60}{Style.RESET_ALL}\n")
+        
+        tools = {
+            "1": ("sys_info", "💻 System Information"),
+            "2": ("security_auditor", "🔍 Security Auditor"),
+            "3": ("metadata_stripper", "🧹 Metadata Stripper"),
+            "4": ("file_encryption", "🔒 File Encryption"),
+            "5": ("termux_optimizer", "⚡ Termux Optimizer"),
+            "0": ("main", "⬅️  Back to Main Menu")
+        }
+        
+        for key, (tool, desc) in tools.items():
+            print(f"   {Fore.YELLOW}[{key}]{Style.RESET_ALL} {desc}")
+        
+        choice = input(f"\n{Fore.GREEN}Select tool: {Style.RESET_ALL}")
+        
+        if choice == "0":
+            break
+        elif choice in dict(tools).keys():
+            tool_name = dict(tools)[choice][0]
+            run_tool(tool_name)
+        else:
+            print(f"{Fore.RED}[!] Invalid choice{Style.RESET_ALL}")
+
+def advanced_menu():
+    """Advanced & exploitation tools submenu"""
+    while True:
+        print(f"\n{Fore.CYAN}{'='*60}")
+        print(f"{Fore.GREEN}🔥 ADVANCED & EXPLOITATION TOOLS:{Style.RESET_ALL}")
+        print(f"{Fore.CYAN}{'='*60}{Style.RESET_ALL}\n")
+        
+        tools = {
+            "1": ("reverse_shell", "🐚 Reverse Shell Generator"),
+            "2": ("payload_gen", "🎯 Payload Generator"),
+            "3": ("dos_attack", "💥 DOS Attack Simulator"),
+            "4": ("tcp_flooder", "🌊 TCP Flooder"),
+            "5": ("proxy_checker", "🔍 Proxy Checker"),
+            "0": ("main", "⬅️  Back to Main Menu")
+        }
+        
+        for key, (tool, desc) in tools.items():
+            print(f"   {Fore.YELLOW}[{key}]{Style.RESET_ALL} {desc}")
+        
+        choice = input(f"\n{Fore.GREEN}Select tool: {Style.RESET_ALL}")
+        
+        if choice == "0":
+            break
+        elif choice in dict(tools).keys():
+            tool_name = dict(tools)[choice][0]
+            run_tool(tool_name)
+        else:
+            print(f"{Fore.RED}[!] Invalid choice{Style.RESET_ALL}")
+
+def main():
+    """Main function - Start the toolkit"""
+    display_banner()
+    
+    while True:
+        choice = display_main_menu()
+        
+        if choice == "1":
+            reconnaissance_menu()
+        elif choice == "2":
+            cryptography_menu()
+        elif choice == "3":
+            mobile_menu()
+        elif choice == "4":
+            osint_menu()
+        elif choice == "5":
+            web_exploitation_menu()
+        elif choice == "6":
+            wireless_menu()
+        elif choice == "7":
+            system_utilities_menu()
+        elif choice == "8":
+            advanced_menu()
+        elif choice == "9":
+            print(f"\n{Fore.GREEN}[✓] Thank you for using Cyber-Toolkit!")
+            print(f"{Fore.CYAN}[✓] Stay Ethical & Stay Powerful{Style.RESET_ALL}\n")
+            break
+        else:
+            print(f"{Fore.RED}[!] Invalid choice. Please try again.{Style.RESET_ALL}")
+            time.sleep(1)
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        print(f"\n\n{Fore.RED}[!] Program interrupted by user{Style.RESET_ALL}\n")
+        sys.exit(0)
+    except Exception as e:
+        print(f"\n{Fore.RED}[!] Fatal error: {e}{Style.RESET_ALL}\n")
+        sys.exit(1)
