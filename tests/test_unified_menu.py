@@ -30,6 +30,23 @@ class UnifiedMenuTests(unittest.TestCase):
         self.assertEqual(menu.PIP_ALLOWLIST["bs4"], "beautifulsoup4")
         self.assertNotIn("some_unknown_import", menu.PIP_ALLOWLIST)
 
+    def test_obfuscated_dynamic_execution_is_blocked(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temp:
+            path = Path(temp) / "opaque.py"
+            path.write_text(
+                "import marshal, base64; exec(marshal.loads(base64.b64decode('AA==')))",
+                encoding="utf-8",
+            )
+            self.assertTrue(menu.source_needs_manual_review(path))
+
+    def test_plain_utility_source_is_not_flagged_as_obfuscated(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temp:
+            path = Path(temp) / "plain.py"
+            path.write_text("print('hello')\\n", encoding="utf-8")
+            self.assertFalse(menu.source_needs_manual_review(path))
+
     def test_every_discovered_python_tool_parses_without_execution(self):
         for tool in menu.discover_tools():
             if tool["path"].suffix.lower() != ".py":
