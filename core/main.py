@@ -105,7 +105,7 @@ def discover_tools() -> List[dict]:
             "name": path.stem,
             "path": path,
             "category": category_for(path.stem),
-            "blocked": path.stem in BLOCKED_TOOLS,
+            "blocked": path.stem in BLOCKED_TOOLS or category_for(path.stem) == "Lab-only / Disabled",
         })
     return found
 
