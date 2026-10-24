@@ -62,7 +62,7 @@ class UnifiedMenuTests(unittest.TestCase):
         report = output.getvalue()
         for tool in tools:
             self.assertIn(tool["name"], report)
-        self.assertIn("runtime not verified", report)
+        self.assertIn("Static checks do not prove that a tool works", report)
 
 
 if __name__ == "__main__":
