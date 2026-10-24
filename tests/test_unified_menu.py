@@ -1,5 +1,7 @@
 import importlib.util
+import io
 import unittest
+from contextlib import redirect_stdout
 from pathlib import Path
 
 MODULE_PATH = Path(__file__).resolve().parents[1] / "core" / "main.py"
@@ -27,6 +29,23 @@ class UnifiedMenuTests(unittest.TestCase):
     def test_package_allowlist_is_explicit(self):
         self.assertEqual(menu.PIP_ALLOWLIST["bs4"], "beautifulsoup4")
         self.assertNotIn("some_unknown_import", menu.PIP_ALLOWLIST)
+
+    def test_every_discovered_python_tool_parses_without_execution(self):
+        for tool in menu.discover_tools():
+            if tool["path"].suffix.lower() != ".py":
+                continue
+            _, parsed = menu.imports_for(tool["path"])
+            self.assertTrue(parsed, msg=f"Syntax/encoding problem in {tool['name']}")
+
+    def test_health_audit_reports_each_tool_and_says_runtime_is_unverified(self):
+        tools = menu.discover_tools()[:3]
+        output = io.StringIO()
+        with redirect_stdout(output):
+            menu.health_audit(tools)
+        report = output.getvalue()
+        for tool in tools:
+            self.assertIn(tool["name"], report)
+        self.assertIn("runtime not verified", report)
 
 
 if __name__ == "__main__":
