@@ -1,3 +1,33 @@
-# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
-# SOURCE PROTECTED. DO NOT TAMPER.
-import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVU8tvE0cYn9mZtR07JVRAggyETQxSF0RIHB7ygwiXBDVCuMVbl8eCrMUejCXv2ppxgOwpggOWuIAgajkgOHAATikn/gynMaIa5QYSyg3BqbfOrOMHJBc+aV7fzPf8/eY96BFlff2SFNMiMIABzwDaWiGFhhIGVDGQmNFlbOD4BQCsAACX0Sg4um6qgSIsQl1dk4d0HvZ4V8VA0vsrz7vZucgoYIOMiphHYdunqbb1hrKpFmVBxr/RSzurLWByczu8qVbtaotA96W5mi8Ti7pHdpkTiclj9onvEdeneeLuaa2nMjOp32emtZ8vxrVM6uzsJS07PT2bdie+y+suc9zWMVcqjPvYPKsRm6tVWnJqXJ2rVgnVIceOZRMmK9E44KFapVLOXSdWgVAaEkosBpsS0wJYxb67s7dn68UmHlzFfY3g3ibWxKZ++v6RP+MP4g+T98cawZEmHvVu9SY+4G12v8V7vsg+5Xub3sH5QwvnDge6iDogK5D0+LNdomeAM7DyY0YFG6SHV8DsIJwFbU9mXxfLsNBv61i0X/y0frYUieyv0ECHZAaKGepY+gy/EYgpggNdXV9W2QKM4CTqYUi3ktBXDOlPu77fLMbiGldiMSrp/BXzZTcmZUdOiikibBa9TH8RtYuqe19+U/UNsKhq4OwgACEv0nF0DeowLcD1l1ihVCzVdIUrY+Mc5pmMqmk0KBbelywSh9yq0ik+SOecsWS5krfKbGqsox8Qz5jwC9YE/o1w9DV8MfE09jj2NPFX4jX8j0l23N49DNckJm7II37UNg9caUUQGSDiFFy/ka9QEtdcdDg67vrNGadG6BXdx9WSU52r8WB+/iqhuQKpMh6ixK7cIK0DKhOHI8uZpxJUHXFYpTtl6pAx5FWyXgoS+dNhseuXGUuiCb4GfqhfvzewkPrXH6jvu3NzZevIu0hsORJrRhJv/lgNhOqpe75HbDkc/RuuhKPvhqLLQ9EHI2/gciC+kPKoG36m/IMjz7Mvzi+dWzq1xBoHE839Scl5/S3eTmUwHsjlbKvk5HK6SmUbOK6VbOJ9Hi8j+UD+sVzuJfAsWhkHknalMFcmUzQijhJdJjefEITwIxj4jFU4/HmrCnd86ge4v35pBQ093vZkRwMNeU7+BypKEc0='))))
+#!/usr/bin/env python3
+"""Estimate password strength locally; input is hidden and never stored."""
+from getpass import getpass
+import string
+
+
+def estimate_strength(password):
+    if not password:
+        return "Empty", 0
+    score = 0
+    score += len(password) >= 12
+    score += len(password) >= 16
+    score += any(ch.islower() for ch in password)
+    score += any(ch.isupper() for ch in password)
+    score += any(ch.isdigit() for ch in password)
+    score += any(ch in string.punctuation for ch in password)
+    if len(password) < 8:
+        score = min(score, 1)
+    if len(set(password)) <= 3:
+        score = min(score, 2)
+    label = "Very weak" if score <= 1 else "Weak" if score <= 2 else "Fair" if score <= 3 else "Strong" if score <= 4 else "Very strong"
+    return label, score
+
+
+def main():
+    password = getpass("Enter a password to assess locally (input hidden): ")
+    label, score = estimate_strength(password)
+    print(f"Estimated strength: {label} ({score}/6)")
+    print("This is a rough local estimate, not a guarantee against guessing.")
+
+
+if __name__ == "__main__":
+    main()
