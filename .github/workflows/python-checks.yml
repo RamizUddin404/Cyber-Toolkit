@@ -21,5 +21,7 @@ jobs:
           python-version: "3.12"
       - name: Compile Python sources without executing tools
         run: python -m compileall -q -f .
+      - name: Run non-executing static audit
+        run: python core/audit_toolkit.py . > audit-output.json
       - name: Run safe audit tests
         run: python -m unittest discover -s tests -v
