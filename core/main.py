@@ -255,16 +255,46 @@ def launch_tool(tool: dict) -> None:
         print(f"[!] Could not start tool: {exc}")
 
 def health_audit(tools: List[dict]) -> None:
-    errors = []
+    """Report each discovered script's static readiness without executing it."""
+    counts = {
+        "static_ok": 0,
+        "missing_dependencies": 0,
+        "syntax_error": 0,
+        "disabled": 0,
+        "review_only": 0,
+    }
+    print("\nPER-TOOL HEALTH CHECK (no scripts are executed)")
+    print("-" * 76)
     for tool in tools:
-        _, parsed = imports_for(tool["path"])
-        if not parsed:
-            errors.append(tool["name"])
-    print(f"\nPython files discovered: {len(tools)}")
-    print(f"Syntax/encoding issues found by static parse: {len(errors)}")
-    if errors:
-        print("Needs review: " + ", ".join(errors))
-    print("Note: this does not execute tools or prove their runtime behavior.")
+        name = tool["name"]
+        path = tool["path"]
+        if tool.get("blocked"):
+            status = "DISABLED — safety review required"
+            counts["disabled"] += 1
+        elif path.suffix.lower() != ".py":
+            status = "REVIEW ONLY — script type not enabled"
+            counts["review_only"] += 1
+        else:
+            missing, parsed = missing_packages(path)
+            if not parsed:
+                status = "SYNTAX/ENCODING ERROR"
+                counts["syntax_error"] += 1
+            elif missing:
+                missing_names = [module for module, _ in missing]
+                status = "MISSING IMPORTS — " + ", ".join(missing_names)
+                counts["missing_dependencies"] += 1
+            else:
+                status = "STATIC OK — runtime not verified"
+                counts["static_ok"] += 1
+        print(f"{name:<27} {status}")
+    print("-" * 76)
+    print(f"Static OK (not runtime-tested): {counts['static_ok']}")
+    print(f"Missing imports/dependencies:  {counts['missing_dependencies']}")
+    print(f"Syntax/encoding errors:        {counts['syntax_error']}")
+    print(f"Disabled by safe mode:         {counts['disabled']}")
+    print(f"Review-only scripts:           {counts['review_only']}")
+    print("Static checks do not prove that a tool works. Test each supported tool")
+    print("with safe sample inputs and required permissions before marking it working.")
 
 def main() -> int:
     tools = discover_tools()
@@ -328,7 +358,7 @@ def main() -> int:
             page = 0
             continue
         if choice == "h":
-            health_audit([t for t in tools if t["path"].suffix.lower() == ".py"])
+            health_audit(tools)
             input("\\nPress Enter to return to the main menu...")
             continue
 
