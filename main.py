@@ -1,41 +1,30 @@
 #!/usr/bin/env python3
-"""
-Root entry point for Cyber-Toolkit
-Launches the main application from core directory
-"""
+"""Root entry point for Cyber-Toolkit.
 
-import os
-import sys
+Uses the current Python interpreter and an argument-list subprocess call.
+The legacy menu and its tool scripts still require individual safety/functionality review.
+"""
+from pathlib import Path
 import subprocess
+import sys
 
-def main():
-    # Get the directory where this script is located
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    core_path = os.path.join(script_dir, 'core')
-    core_main = os.path.join(core_path, 'main.py')
-    
-    # Check if core directory exists
-    if not os.path.isdir(core_path):
-        print("[!] Error: 'core' directory not found!")
-        print("[!] Please reinstall the toolkit.")
-        sys.exit(1)
-    
-    # Check if core/main.py exists
-    if not os.path.exists(core_main):
-        print("[!] Error: 'core/main.py' not found!")
-        print("[!] Please reinstall the toolkit.")
-        sys.exit(1)
-    
-    # Run the core main.py
+
+def main() -> int:
+    repo_root = Path(__file__).resolve().parent
+    core_main = repo_root / "core" / "main.py"
+    if not core_main.is_file():
+        print("[!] Error: core/main.py not found. Please check the repository checkout.")
+        return 1
     try:
-        result = subprocess.run(['python3', core_main], cwd=core_path)
-        sys.exit(result.returncode)
+        completed = subprocess.run([sys.executable, str(core_main)], cwd=str(core_main.parent), check=False)
+        return completed.returncode
     except KeyboardInterrupt:
-        print("\n[!] Program interrupted by user")
-        sys.exit(0)
-    except Exception as e:
-        print(f"[!] Error running core/main.py: {e}")
-        sys.exit(1)
+        print("\n[!] Interrupted by user.")
+        return 130
+    except OSError as exc:
+        print(f"[!] Unable to launch core/main.py: {exc}")
+        return 1
+
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
