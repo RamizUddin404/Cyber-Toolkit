@@ -390,12 +390,12 @@ The unified menu discovers top-level Python scripts in `core/` and organizes the
 |---------|--------|
 | **100+ Tools** | ✅ Included |
 | **Easy Installation** | ✅ One command |
-| **Cross-Platform** | ✅ Works everywhere |
-| **Regularly Updated** | ✅ Active development |
+| **Cross-Platform** | ⚠️ Depends on each tool and OS |
+| **Maintenance** | ⚠️ In progress |
 | **Free & Open Source** | ✅ MIT License |
 | **Well Documented** | ✅ Full guides |
-| **Community Support** | ✅ Active |
-| **No Dependencies Issues** | ✅ Auto-install |
+| **Community Support** | See repository issues |
+| **Dependency Handling** | ⚠️ Some tools need manual setup |
 
 ---
 
@@ -417,15 +417,17 @@ The unified menu discovers top-level Python scripts in `core/` and organizes the
 
 ---
 
-## ✅ Status: FULLY FIXED & WORKING
+## 🧪 Status: Under active repair and verification
 
-**This version is production-ready and tested!** 🎉
+**This repository is not yet certified as production-ready.** The project contains legacy scripts with mixed quality, dependencies, and safety characteristics. Passing CI syntax and unit tests covers only the tested paths; it does not mean every tool has been functionally tested.
 
-All code has been debugged, dependencies are properly configured, and the toolkit is ready for professional use.
+- The unified launcher reports static readiness and keeps obfuscated/dynamic-execution scripts disabled by default.
+- A bounded TCP checker and a small group of readable utility scripts have focused automated tests.
+- The animated dashboard is a static UI prototype and is not connected to a command-execution backend.
+- Tools that need Android permissions, external binaries, network access, or service credentials require environment-specific verification.
 
-**Last Updated:** September 6, 2026
-**Status:** ✅ Active & Maintained
-**Version:** v180.0 FIXED
+**Version:** v180.0 (maintenance in progress)
+**Last verified automated test run:** See [GitHub Actions](https://github.com/RamizUddin404/Cyber-Toolkit/actions).
 
 
 ---
