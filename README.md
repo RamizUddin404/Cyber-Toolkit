@@ -316,63 +316,67 @@ of this software and associated documentation files...
 
 ## 🌟 Features Highlight
 
-✨ **100+ Professional Security Tools**
+✨ **100+ Discoverable Python Tool Scripts**
+The unified menu discovers top-level Python scripts in `core/` and organizes them by category. Discovery does not mean every script has been functionally tested or approved for use.
+
 - Reconnaissance & Scanning
-- Cryptography & Hashing
-- Mobile & Device Analysis
-- OSINT & Tracking
-- Web Exploitation
+- Cryptography & Password Hygiene
+- Mobile & Device Diagnostics
+- OSINT & Privacy
+- Web Security Testing
 - Wireless & Networking
-- System Utilities
-- Advanced Exploitation
+- Files, Media & System Utilities
+- Lab-only / Disabled legacy modules
 
-🎨 **Beautiful User Interface**
-- Colorized menu system
-- ASCII art banner
-- Progress indicators
-- Error messages with icons
-- Cross-platform compatibility
+🎨 **Unified Terminal Interface**
+- Colorized category menu and tool search
+- Browse all discovered tools from one place
+- Clear status and error messages
+- Runs with the active Python interpreter
+- Designed for Termux and Linux; individual tool compatibility varies
 
-🔒 **Security First**
-- No malware or spyware
-- Open source code
-- Regular updates
-- Community verified
+🔒 **Security & Transparency**
+- Open-source repository for review
+- Static audit helper and automated syntax/unit checks
+- High-risk legacy modules remain visible but disabled by safe mode
+- Audit pattern matches are review flags, not proof of malicious behavior
+- No claim of community verification or a guarantee that every legacy script is safe
 
-⚡ **Performance Optimized**
-- Lightweight (small footprint)
-- Fast execution
-- Low resource usage
-- Runs on Android/Termux
+⚡ **Lightweight Setup**
+- Small baseline dependency set
+- Installs missing Python packages on demand only when they are on the explicit allowlist
+- Unknown packages are not installed automatically
+- Tools requiring external programs or platform permissions may need separate setup
+- Android/Termux support depends on each script's requirements
 
 ---
 
 ## 🎯 Use Cases
 
-✅ **Penetration Testing**
-- Network scanning
-- Vulnerability assessment
-- Exploitation testing
+✅ **Authorized Security Assessment**
+- Scan networks and systems you own or have written permission to test
+- Review configurations and identify potential security weaknesses
+- Document findings for remediation
 
 ✅ **Security Auditing**
-- Security assessment
-- Compliance checking
-- Risk analysis
+- Inspect source code and dependencies
+- Run static checks and review risk indicators
+- Prepare notes for manual risk analysis
 
-✅ **Digital Forensics**
-- Data recovery
-- Evidence gathering
-- Analysis & reporting
+✅ **Digital Forensics & File Analysis**
+- Examine files and metadata using suitable local utilities
+- Organize analysis outputs and reports
+- Preserve authorization, privacy, and evidence-handling requirements
 
 ✅ **Educational Learning**
-- Security concepts
-- Practical hacking
-- CTF preparation
+- Learn Python, networking, cryptography, and defensive security concepts
+- Practice in isolated labs and intentionally vulnerable training environments
+- Prepare for CTF exercises within their rules
 
-✅ **Bug Bounty Hunting**
-- Vulnerability research
-- Target reconnaissance
-- Exploitation testing
+✅ **Responsible Bug Bounty Research**
+- Perform in-scope reconnaissance and security checks only
+- Follow each program's written scope, rate limits, and disclosure rules
+- Do not run disabled exploit, spoofing, flooding, credential-attack, or payload modules against real targets
 
 ---
 
