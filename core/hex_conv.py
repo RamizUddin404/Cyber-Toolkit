@@ -1,3 +1,23 @@
-# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
-# SOURCE PROTECTED. DO NOT TAMPER.
-import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVUs9PE0EUntmd3ZYWBSI/EhBdWj0sJkYEDC21CQqahthDlxplIZvaTkoTdreZ3SrsiejBJl4wxhgPJh48iB64+hd4RimRTLh5MN4I/APObKHUAAdeMm9m3tv3zdv3fb9BkwkH+36CubdAAxqcBqS+QwI1oRcQQROZF+eQhuKPAMgFAZgTI2D0oFQBRViEqvSXX9J52IQusSVy9C8+ut5IZARwzCLszVF4iKlLh3FNODEqZkEmcBzlsKvzYPjkOnRiVDqKFoEqp6mUX8Q54o306UPjw7fM22cxT1Z88/rr+93M1MTM1KRy53FcyUw8SM0q2cnJVNobOhNqn37DVBEVbIfKzrLjYpNKZVKyXCpVymVMVEiRlTOxw/9EoYCGXdteNBZwroAJCbMgYstJMrcCdpD8MvU8VS3WUPcOatkIXa4hhR2q91ZH3sVfx98kVq9vhAZqKOJn1Roa9A8Xt1D/Pp9TvnnoDZ6/13luaOCIUQtkGZO+fjo5exqYhnZHRgLHrElXQG8wrCFN0uSYoDTFmAJaTq/PhE/PNWngqNfAfxoIpj15Bi+5cYUKsRjhgvXCvhpumvrgvEJCLMJmLmKr4AX0KcvFZF6VqVSyyhWXhvLLTzAxCrjs0DDBpv0U+xfCu6cytvJ2AVNxAS+pAoUu6eDc8EeUOjIVScUi3ezUyjP366wFz1UXXrWtTGwHgtUrL55ttg/8isZ+RGO16Pi3hz5BvR+Fnyj6Kft5aH1sbexrfD25lty8Nl67muDsqluok3BAGjQMM1eyDEOVCCeBIrdkYl8m/qv8A64mw1gDfkW9q2DCtAuVRZwkfezK5+VEmdsVIYR/QNsekuClvXYEu3ZDALVWZzfFnvcXPnRtiD0+yD+0jtWF'))))
+#!/usr/bin/env python3
+"""Convert plain UTF-8 text to/from hexadecimal bytes."""
+
+
+def main():
+    print("Hexadecimal Text Converter")
+    print("1. Text to hex")
+    print("2. Hex to text")
+    choice = input("Choose (1/2): ").strip()
+    value = input("Enter text/hex: ").strip()
+    try:
+        if choice == "1":
+            print(value.encode("utf-8").hex())
+        elif choice == "2":
+            print(bytes.fromhex(value).decode("utf-8"))
+        else:
+            print("Invalid choice.")
+    except (UnicodeError, ValueError) as exc:
+        print(f"Could not process input: {exc}")
+
+
+if __name__ == "__main__":
+    main()
