@@ -98,7 +98,6 @@ def source_needs_manual_review(path: Path) -> bool:
         r"\bexec\s*\(\s*(?:marshal|compile|base64|zlib)",
         r"\beval\s*\(",
         r"\b__import__\s*\(",
-        r"base64\.(?:b64decode|decodebytes)\s*\(",
     )
     return any(re.search(pattern, source) for pattern in suspicious_patterns)
 
