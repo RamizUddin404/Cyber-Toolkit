@@ -1,10 +1,10 @@
 # Cyber-Toolkit — Tool Catalog
 
-> Generated from the current top-level `core/*.py` inventory. The unified menu discovers these files at runtime. A listed file is not a guarantee of safety, compatibility, or working behavior. High-risk legacy modules are visible but disabled by default.
+> Inventory generated from the current top-level `core/*.py` files. The unified menu discovers these scripts at runtime. A listed file is not a guarantee of safety, compatibility, or working behavior. High-risk legacy modules remain visible but disabled by default.
 
 - **Discovered tool scripts:** 128
-- **Disabled pending review:** 29
-- **Inventory scope:** top-level Python files under `core/`, excluding launcher and internal audit helpers.
+- **Disabled pending review:** 30
+- **Inventory scope:** top-level Python files under `core/`, excluding the launcher and internal audit helpers.
 
 ## Cryptography & Password Hygiene (17)
 
@@ -52,7 +52,7 @@
 - [`cam_hacker`](./core/cam_hacker.py) — **disabled by safe mode; manual review required**
 - [`dos_attack`](./core/dos_attack.py) — **disabled by safe mode; manual review required**
 - [`email_spoof`](./core/email_spoof.py) — **disabled by safe mode; manual review required**
-- [`email_spoof_checker`](./core/email_spoof_checker.py)
+- [`email_spoof_checker`](./core/email_spoof_checker.py) — **disabled by safe mode; manual review required**
 - [`frp_bypass_helper`](./core/frp_bypass_helper.py) — **disabled by safe mode; manual review required**
 - [`ftp_force`](./core/ftp_force.py) — **disabled by safe mode; manual review required**
 - [`god_mode`](./core/god_mode.py) — **disabled by safe mode; manual review required**
@@ -163,4 +163,4 @@
 
 ## Dependency behavior
 
-When a tool is selected, the launcher parses its imports without executing the file, checks which imports are missing, and automatically installs only packages present in the explicit PyPI allowlist in `core/main.py`. Unknown package names are not guessed. External binaries and platform-specific packages may still require manual setup. See [README](README.md), [SECURITY](SECURITY.md), and [AUDIT_REPORT](AUDIT_REPORT.md).
+When a tool is selected, the launcher statically parses its imports, checks which imports are missing, and automatically installs only packages present in the explicit PyPI allowlist in `core/main.py`. Unknown package names are not guessed. External binaries and platform-specific packages may still require manual setup. See [README](README.md), [SECURITY](SECURITY.md), and [AUDIT_REPORT](AUDIT_REPORT.md).
