@@ -47,6 +47,11 @@ class UnifiedMenuTests(unittest.TestCase):
             path.write_text("print('hello')\\n", encoding="utf-8")
             self.assertFalse(menu.source_needs_manual_review(path))
 
+    def test_readable_base64_utility_remains_enabled(self):
+        tools = {tool["name"]: tool for tool in menu.discover_tools()}
+        self.assertIn("base64_tool", tools)
+        self.assertFalse(tools["base64_tool"]["blocked"])
+
     def test_every_discovered_python_tool_parses_without_execution(self):
         for tool in menu.discover_tools():
             if tool["path"].suffix.lower() != ".py":
