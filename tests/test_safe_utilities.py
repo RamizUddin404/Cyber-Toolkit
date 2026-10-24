@@ -66,7 +66,7 @@ class SafeUtilityTests(unittest.TestCase):
         self.assertFalse(invalid)
 
     def test_ascii_banner_and_system_info(self):
-        self.assertIn("+ test +", self.run_main(ascii_art, ["test"]))
+        self.assertIn("| test |", self.run_main(ascii_art, ["test"]))
         info = self.run_main(sys_info, [])
         self.assertIn("Python:", info)
         self.assertIn("Operating system:", info)
