@@ -1,3 +1,33 @@
-# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
-# SOURCE PROTECTED. DO NOT TAMPER.
-import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJy9VM1vG0UUn9kPe712bOfLStJ8bFIRZRsa4sQJleukcmwXRaVOZdcSsI0s19kYi3gdzW6ksBUS4kKkXowqhDgggTgAhUP+BSh/wLZxlWjlGxWIW2gqgeDCzDibOCQI5cJIO+/t7715H/PmvZ9Ay2IO6cHrePsYZEEW3gCoSSGClDKIoZRFbJbpA4jLsnjn77iyXPQNAAoCAHf4ETBzaEoCJViCMv8r+UkXYYs3Hn8s8faQelOOBBkGnFoj2OcMdGwqvINnmTNRNgcy7tNWnKj8YPrsc9yZKH+MloDsStt8cU0tIDNyQQlfnZ6tzJ1nmS6JLnOgSROZVPx2KiktvBmVMvGbi29JuWRyMW2Gz2X1gjJZkTmbqeq2S39XN9SKza+jsmbY/Mb6uopkaHNaoaLqJBPJBrbXqFbX8m+rhRUVIS8GOfzp83h7HzQ414eLHyxulepcqMF5LHGozkmY2bpei3wS/Sj6IFabsMThOjdCpXKdu0SZ/qfcwAG5p2LrpbudOk8wpM6DQDl6BSdqyp5Z02OUPRP9j4ppIAeyLvoyMVJq1XEf6cBBoiVQrQUAFJejkxFOPSH8EnMw4z2NO2/LsZpp+3cdjWnJwJNj/CArTrfkt/QajsdL44mfiMf/P8TjOx1Py635j9GbPwMwDJSgI3ODwgi2xbbYalM6HT53ZO+f1ofwhNHYOJuONOkqXAVz7BBYhXIgbfYtxLOp2Yh0K7MkjaXSiaVk6pVkihDZlGgDTlWU8LKU0orVFVW6rW4aklGVFgq6Ohsxe5WpZSmpUlETIkKiZPqUyWWMFd8hvWOK4qF4XrLhpNkmpjRDRVKyYBSiGAmb3aLjbBw7o3Eko5LJkdM2nDopbwZI5J1NOFxRhvExhKoIg32icgupui41neCIElXNKGsb6rIs0m5EpGtsvqytbxi26y4NzfbcnY2oNE3b5dAVmhsVOWxqs6iuG+WqZrO6gfBUgEWbW8GJ2Cx2akNVJ71OZg8SiRcWbWhoAHPEsf47ICNgT/Q3hE6ra7IuhBtCm+WfrgsRysh14RJlhuqC9MzXXru845O24J7XV2PvX6nlngW6rO6XdgKjW9w+I3jm9gLBWuL+ZiPUvxsafRIa/dz46t4X9758byc0sxuKPQ7FdkLzNbYR7LZ6wtsXt7u3S1Zo/mnw2l57R634oOd85+rBay8E4PFb/vG68PJvMvAG/ngxAoK9BwB65hq+dqtr/LvENvz2+tdXtl+1Oq7u+mKPfbG/9lks/lOXcO7f++LuxBj4oYuSR2Nisot9NNWTDLA/BnjM20I+XymUtXxediOe3h8euDZnlCsq6iClo/Uj90lUydDN578ByEdQet9CrFJd2VhT59FF/EvaQB/FG44Bwl9A/y7of87xcPC5vxte3p8AnG/L3GF7P53+bMZie6mdvwG/3IHa'))))
+#!/usr/bin/env python3
+"""Base64 and URL-safe Base64 text conversion; decoded output is never executed."""
+import base64
+import binascii
+
+
+def main():
+    print("Base64 Pro — text only")
+    print("1. Standard Base64 encode")
+    print("2. Standard Base64 decode")
+    print("3. URL-safe Base64 encode")
+    print("4. URL-safe Base64 decode")
+    choice = input("Choose (1-4): ").strip()
+    value = input("Enter text/value: ")
+    try:
+        if choice == "1":
+            result = base64.b64encode(value.encode("utf-8"))
+        elif choice == "2":
+            result = base64.b64decode(value.encode("ascii"), validate=True)
+        elif choice == "3":
+            result = base64.urlsafe_b64encode(value.encode("utf-8"))
+        elif choice == "4":
+            result = base64.urlsafe_b64decode(value.encode("ascii"))
+        else:
+            print("Invalid choice.")
+            return
+        print(result.decode("utf-8") if choice in {"2", "4"} else result.decode("ascii"))
+    except (UnicodeError, binascii.Error, ValueError) as exc:
+        print(f"Could not process input: {exc}")
+
+
+if __name__ == "__main__":
+    main()
