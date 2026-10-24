@@ -1,8 +1,5 @@
+# Minimal cross-platform baseline for the unified menu.
+# Optional packages are installed on demand from the explicit allowlist in core/main.py.
 requests>=2.32.3
 colorama>=0.4.6
 beautifulsoup4>=4.12.3
-mechanize>=0.4.10
-PyJWT>=2.10.1
-cryptography>=44.0.0
-Pillow>=11.0.0
-paramiko>=3.5.1
