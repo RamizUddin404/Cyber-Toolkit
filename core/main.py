@@ -30,7 +30,8 @@ BLOCKED_TOOLS = {
     "hash_cracker", "md5_crack", "sha1_crack", "ssh_force", "sms_bomber",
     "sms_spoof", "sql_injector", "tcp_flooder", "reverse_shell", "revshell_gen",
     "web_shell_pro", "payload_gen", "phishing_sim", "universal_cracker",
-    "zip_cracker", "wifi_pass_view", "ip_rotator",
+    "zip_cracker", "wifi_pass_view", "ip_rotator", "email_spoof", "ftp_force",
+    "hydra_tool", "brute_force_sim", "web_cloner", "cam_hacker",
 }
 # Python import name -> PyPI distribution name. Only these mappings can be installed.
 PIP_ALLOWLIST = {
@@ -52,6 +53,14 @@ PIP_ALLOWLIST = {
     "Crypto": "pycryptodome",
     "nacl": "PyNaCl",
     "bs4.element": "beautifulsoup4",
+    "pyfiglet": "pyfiglet",
+    "tabulate": "tabulate",
+    "tqdm": "tqdm",
+    "fake_useragent": "fake-useragent",
+    "speedtest": "speedtest-cli",
+    "phonenumbers": "phonenumbers",
+    "colorama": "colorama",
+    "urllib3": "urllib3",
 }
 # Package modules that are part of Python itself and must not be pip-installed.
 STDLIB = set(getattr(sys, "stdlib_module_names", ())) | {
