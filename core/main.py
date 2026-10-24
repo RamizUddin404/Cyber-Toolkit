@@ -179,13 +179,22 @@ def show_categories(tools: List[dict]) -> List[str]:
     print("   0. Exit")
     return categories
 
-def show_tools(tools: List[dict]) -> None:
+PAGE_SIZE = 15
+
+def show_tools(tools: List[dict], page: int = 0, page_size: int = PAGE_SIZE) -> None:
+    """Show one page of tools; numbering is local to the current page."""
     if not tools:
         print("No tools found in this category.")
         return
-    for i, tool in enumerate(tools, 1):
+    total_pages = max(1, (len(tools) + page_size - 1) // page_size)
+    page = max(0, min(page, total_pages - 1))
+    start = page * page_size
+    visible = tools[start:start + page_size]
+    print(f"  Showing {start + 1}-{start + len(visible)} of {len(tools)} | Page {page + 1}/{total_pages}")
+    for i, tool in enumerate(visible, 1):
         status = " [DISABLED: review required]" if tool["blocked"] else ""
-        print(f"  {i:>3}. {tool['name']}{status}")
+        print(f"  {i:>2}. {tool['name']}{status}")
+
 
 def launch_tool(tool: dict) -> None:
     name = tool["name"]
@@ -266,27 +275,48 @@ def main() -> int:
             print("Invalid choice.")
             input("Press Enter to continue...")
             continue
+        page = 0
         while True:
             clear_screen()
             banner(len(tools))
             print(f"Category/search results: {len(selected)} tool(s)")
-            show_tools(selected)
-            print("\n  B. Back to categories   S. Search   0. Exit")
-            tool_choice = input("\nSelect tool: ").strip().lower()
+            total_pages = max(1, (len(selected) + PAGE_SIZE - 1) // PAGE_SIZE)
+            page = max(0, min(page, total_pages - 1))
+            show_tools(selected, page=page)
+            print("\n  N. Next page   P. Previous page   B. Back to categories")
+            print("  S. Search       0. Exit")
+            tool_choice = input("\nSelect tool/action: ").strip().lower()
             if tool_choice in {"b", "back"}:
                 break
             if tool_choice in {"0", "q", "quit", "exit"}:
                 return 0
+            if tool_choice in {"n", "next"}:
+                if page + 1 < total_pages:
+                    page += 1
+                else:
+                    print("Already on the last page.")
+                    input("Press Enter to continue...")
+                continue
+            if tool_choice in {"p", "prev", "previous"}:
+                if page > 0:
+                    page -= 1
+                else:
+                    print("Already on the first page.")
+                    input("Press Enter to continue...")
+                continue
             if tool_choice == "s":
                 query = input("Search tool name: ").strip().lower()
                 selected = [t for t in tools if query in t["name"].lower()]
+                page = 0
                 continue
-            if not tool_choice.isdigit() or not 1 <= int(tool_choice) <= len(selected):
+            page_count = min(PAGE_SIZE, len(selected) - page * PAGE_SIZE)
+            if not tool_choice.isdigit() or not 1 <= int(tool_choice) <= page_count:
                 print("Invalid choice.")
                 input("Press Enter to continue...")
                 continue
-            launch_tool(selected[int(tool_choice) - 1])
-            input("\nPress Enter to return to the menu...")
+            selected_tool = selected[page * PAGE_SIZE + int(tool_choice) - 1]
+            launch_tool(selected_tool)
+            input("\nPress Enter to return to the current menu page...")
 
 if __name__ == "__main__":
     raise SystemExit(main())
