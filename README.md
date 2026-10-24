@@ -10,11 +10,11 @@
 
 ---
 
-## ✨ What's New (FIXED & WORKING)
+## ✨ Project status and maintenance
 
-This is the **fully fixed and working version** of Cyber-Toolkit! All code has been debugged and is now **100% runnable**.
+Cyber-Toolkit contains legacy utilities with mixed levels of review and test coverage. Not every tool has been functionally validated; see the audit notes below. Do not treat a successful install or syntax check as proof that every tool works safely.
 
-### 🔧 Recent Fixes Applied:
+### 🔧 Maintenance changes:
 - ✅ **Replaced encrypted `core/main.py`** with fully functional interactive menu system
 - ✅ **Fixed root `main.py`** launcher to properly execute the toolkit
 - ✅ **Updated `core/requirements.txt`** with all necessary Python dependencies
