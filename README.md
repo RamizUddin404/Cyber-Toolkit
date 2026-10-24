@@ -10,6 +10,10 @@
 
 ---
 
+## 🖥️ Dashboard preview
+
+A responsive cyberpunk-style dashboard concept with animated 3D-inspired visuals and searchable sample tool cards is available at [`dashboard/index.html`](dashboard/index.html). It is a **static UI prototype**, not a connected web application: it does not execute Python scripts or represent live tool health. The terminal interface remains the supported launcher while individual tools are tested.
+
 ## ✨ Project status and maintenance
 
 Cyber-Toolkit contains legacy utilities with mixed levels of review and test coverage. Not every tool has been functionally validated; see the audit notes below. Do not treat a successful install or syntax check as proof that every tool works safely.
