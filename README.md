@@ -32,7 +32,8 @@ git clone https://github.com/RamizUddin404/Cyber-Toolkit
 cd Cyber-Toolkit
 chmod +x setup.sh
 bash setup.sh
-python3 main.py
+source .venv/bin/activate
+python main.py
 ```
 
 ### 💻 Linux / Ubuntu / Debian / Kali
