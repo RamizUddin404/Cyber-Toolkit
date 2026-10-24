@@ -87,6 +87,21 @@ CATEGORY_RULES = [
     ("Lab-only / Disabled", ("spoof", "bomber", "flood", "dos", "shell", "injector", "payload", "cracker", "force", "phishing", "cam_hacker")),
 ]
 
+def source_needs_manual_review(path: Path) -> bool:
+    """Flag obfuscated/dynamic-execution source before it can be launched."""
+    try:
+        source = path.read_text(encoding="utf-8", errors="strict")
+    except (OSError, UnicodeError):
+        return True
+    suspicious_patterns = (
+        r"\bmarshal\.(?:loads|load)\s*\(",
+        r"\bexec\s*\(\s*(?:marshal|compile|base64|zlib)",
+        r"\beval\s*\(",
+        r"\b__import__\s*\(",
+        r"base64\.(?:b64decode|decodebytes)\s*\(",
+    )
+    return any(re.search(pattern, source) for pattern in suspicious_patterns)
+
 def category_for(name: str) -> str:
     if name in BLOCKED_TOOLS:
         return "Lab-only / Disabled"
@@ -109,11 +124,15 @@ def discover_tools() -> List[dict]:
             continue
         category = category_for(path.stem)
         # Shell scripts are inventory-only until individually reviewed.
+        manual_review = path.suffix.lower() == ".py" and source_needs_manual_review(path)
         blocked = (
             path.stem in BLOCKED_TOOLS
             or category == "Lab-only / Disabled"
             or path.suffix.lower() == ".sh"
+            or manual_review
         )
+        if manual_review:
+            category = "Lab-only / Disabled"
         found.append({
             "name": path.stem,
             "path": path,
