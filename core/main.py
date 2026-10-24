@@ -58,17 +58,43 @@ def display_main_menu():
     return input(f"{Fore.GREEN}Enter your choice: {Style.RESET_ALL}")
 
 def run_tool(tool_name):
-    """Run a tool safely"""
+    """Launch a reviewed local script without a shell; block high-risk legacy tools."""
+    from pathlib import Path
+    import subprocess
+
+    blocked = {
+        "sms_bomber", "sms_spoof", "tcp_flooder", "reverse_shell",
+        "revshell_gen", "web_shell_pro", "sql_injector", "payload_gen",
+        "phishing_sim", "hash_cracker", "universal_cracker", "md5_crack",
+        "sha1_crack", "zip_cracker", "ssh_force", "wifi_pass_view",
+        "frp_bypass_helper",
+    }
+    name = Path(str(tool_name)).name
+    if name.endswith(".py"):
+        name = name[:-3]
+    if name in blocked:
+        print(f"{Fore.RED}[!] Disabled by safe-mode policy: {name}{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}Review and replace this legacy module before enabling it in an isolated lab.{Style.RESET_ALL}")
+        return
+
+    # Only launch Python files located directly in the core directory.
+    core_dir = Path(__file__).resolve().parent
+    candidate = (core_dir / f"{name}.py").resolve()
+    if candidate.parent != core_dir or not candidate.is_file():
+        print(f"{Fore.RED}[!] Tool not found or invalid: {name}{Style.RESET_ALL}")
+        return
+
+    print(f"\\n{Fore.GREEN}[+] Launching {name} with the active Python interpreter...{Style.RESET_ALL}\\n")
     try:
-        tool_path = f"{tool_name}.py"
-        if os.path.exists(tool_path):
-            print(f"\n{Fore.GREEN}[+] Launching {tool_name}...{Style.RESET_ALL}\n")
-            os.system(f"python3 {tool_path}")
-            print(f"\n{Fore.GREEN}[✓] Tool completed{Style.RESET_ALL}")
+        result = subprocess.run([sys.executable, str(candidate)], cwd=str(core_dir), check=False)
+        if result.returncode == 0:
+            print(f"{Fore.GREEN}[✓] Tool exited successfully{Style.RESET_ALL}")
         else:
-            print(f"{Fore.RED}[!] Tool not found: {tool_name}{Style.RESET_ALL}")
-    except Exception as e:
-        print(f"{Fore.RED}[!] Error: {e}{Style.RESET_ALL}")
+            print(f"{Fore.YELLOW}[!] Tool exited with code {result.returncode}{Style.RESET_ALL}")
+    except KeyboardInterrupt:
+        print(f"\\n{Fore.YELLOW}[!] Tool interrupted by user{Style.RESET_ALL}")
+    except OSError as exc:
+        print(f"{Fore.RED}[!] Unable to start tool: {exc}{Style.RESET_ALL}")
 
 def reconnaissance_menu():
     """Reconnaissance tools submenu"""
