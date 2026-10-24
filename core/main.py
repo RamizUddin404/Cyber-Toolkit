@@ -145,10 +145,7 @@ def install_allowlisted(packages: Iterable[str]) -> bool:
     packages = sorted(set(packages))
     if not packages:
         return True
-    print("\n[+] Missing approved Python package(s): " + ", ".join(packages))
-    answer = input("Install these packages into the current Python environment? [y/N]: ").strip().lower()
-    if answer not in {"y", "yes"}:
-        return False
+    print("\n[+] Automatically installing approved missing Python package(s): " + ", ".join(packages))
     command = [sys.executable, "-m", "pip", "install", *packages]
     try:
         return subprocess.run(command, check=False, timeout=240).returncode == 0
