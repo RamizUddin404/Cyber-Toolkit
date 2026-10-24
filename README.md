@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/badge/Platform-Termux%20|%20Linux-orange.svg?style=for-the-badge&logo=linux" />
   <img src="https://img.shields.io/badge/Tools-100%2B-green.svg?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Version-180.0-blue.svg?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Status-WORKING-brightgreen.svg?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Under%20active%20review-orange.svg?style=for-the-badge" />
 </p>
 
 ---
@@ -452,3 +452,45 @@ them from the repository and rotate exposed credentials. A new deletion commit d
 erase data from Git history.
 
 See [SECURITY.md](SECURITY.md) and [AUDIT_REPORT.md](AUDIT_REPORT.md) for details.
+
+
+## 🧭 Unified tool menu
+
+The launcher discovers Python tools directly from `core/` and groups them into categories at runtime. New top-level `.py` tools appear in the menu automatically; there is no separate hand-maintained numbered list.
+
+- **All tools:** browse the discovered tool inventory from one menu.
+- **Search:** find a tool by filename.
+- **Dependency handling:** when a selected tool imports a missing package covered by the explicit PyPI allowlist, the launcher installs that package using the active Python interpreter and checks again before starting the tool.
+- **Unknown packages:** are not guessed or installed automatically; check the tool documentation first.
+- **System binaries:** tools that require programs such as `nmap`, `adb`, or other OS packages may still need platform-specific installation.
+- **Safe mode:** legacy modules associated with spoofing, flooding/DoS, credential attacks, reverse shells, payloads, or similar high-risk actions remain visible but disabled by default.
+- **Health check:** the menu can statically parse discovered tools. This does not execute scripts or prove runtime correctness.
+
+### Menu navigation
+
+```text
+Main menu
+├── Recon & Scanning
+├── OSINT & Privacy
+├── Cryptography & Password Hygiene
+├── Mobile & Android
+├── Wi-Fi & Networking
+├── Files & Media
+├── System & Diagnostics
+├── Lab-only / Disabled
+├── General Utilities
+├── All tools
+├── Search tools
+└── Health / syntax audit
+```
+
+### Start the unified menu
+
+```bash
+cd Cyber-Toolkit
+bash setup.sh
+source .venv/bin/activate
+python main.py
+```
+
+The installer prepares the Python environment. Selecting a tool may install its missing allowlisted Python packages. Tool behavior and platform support still depend on each script's implementation and required external programs. Review [SECURITY.md](SECURITY.md) and [AUDIT_REPORT.md](AUDIT_REPORT.md) before running legacy modules.
