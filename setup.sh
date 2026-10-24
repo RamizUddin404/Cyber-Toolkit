@@ -1,91 +1,57 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -Eeuo pipefail
 
-# COLORS
-RED='\033[1;31m'
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$ROOT"
+
+CYAN='\033[1;36m'
 GREEN='\033[1;32m'
 YELLOW='\033[1;33m'
-BLUE='\033[1;34m'
-CYAN='\033[1;36m'
+RED='\033[1;31m'
 RESET='\033[0m'
 
-clear
-echo -e "$CYAN"
-echo "  ██████╗██╗   ██╗██████╗ ███████╗██████╗ "
-echo " ██╔════╝╚██╗ ██╔╝██╔══██╗██╔════╝██╔══██╗"
-echo " ██║      ╚████╔╝ ██████╔╝█████╗  ██████╔╝"
-echo " ██║       ╚██╔╝  ██╔══██╗██╔══╝  ██╔══██╗"
-echo " ╚██████╗   ██║   ██████╔╝███████╗██║  ██║"
-echo "  ╚═════╝   ╚═╝   ╚═════╝ ╚══════╝╚═╝  ╚═╝"
-echo -e "$RESET"
-echo -e "$YELLOW       ULTIMATE CYBER-TOOLKIT v180.0 SETUP"
-echo -e "$YELLOW       CREATED BY: RAMIZ UDDIN$RESET"
-echo "============================================="
+say() { printf "%b%s%b\n" "$1" "$2" "$RESET"; }
+fail() { say "$RED" "[!] $1"; exit 1; }
 
-echo -e "\n$GREEN[*] Step 1: Detecting System...$RESET"
-if [ -d "/data/data/com.termux/files/usr" ]; then
-    echo -e "$BLUE[+] Termux Environment Detected$RESET"
-    PKG_MGR="pkg"
-    INSTALL_CMD="pkg install -y"
-    UPDATE_CMD="pkg update -y && pkg upgrade -y"
-    SYS_PACKAGES="python git clang wget curl jq tar zip unzip proot openssl python-pip"
-elif [ -f "/etc/os-release" ]; then
-    echo -e "$BLUE[+] Linux Environment Detected$RESET"
-    PKG_MGR="apt"
-    if [ "$EUID" -ne 0 ]; then
-        SUDO="sudo"
-    else
-        SUDO=""
-    fi
-    UPDATE_CMD="$SUDO apt update -y"
-    INSTALL_CMD="$SUDO apt install -y"
-    SYS_PACKAGES="python3 python3-pip git curl wget jq tar zip unzip openssl build-essential"
+say "$CYAN" "Cyber-Toolkit setup • safe dependency mode"
+
+if [[ -d "/data/data/com.termux/files/usr" ]]; then
+  command -v pkg >/dev/null 2>&1 || fail "Termux package manager not found."
+  say "$GREEN" "[+] Termux detected"
+  pkg update -y
+  pkg install -y python git curl wget jq openssl
+  PYTHON_BIN="$(command -v python)"
+elif [[ -f /etc/os-release ]]; then
+  command -v apt-get >/dev/null 2>&1 || fail "This installer currently supports Termux or apt-based Linux."
+  if [[ "$(id -u)" -eq 0 ]]; then SUDO=(); else command -v sudo >/dev/null 2>&1 || fail "Install sudo or run as root."; SUDO=(sudo); fi
+  "${SUDO[@]}" apt-get update
+  "${SUDO[@]}" apt-get install -y python3 python3-venv python3-pip git curl wget jq openssl
+  PYTHON_BIN="$(command -v python3)"
 else
-    echo -e "$RED[!] Unknown System. Proceeding with caution...$RESET"
-    PKG_MGR="unknown"
+  fail "Unsupported OS. Install Python 3.10+ and pip, then run: python -m venv .venv"
 fi
 
-echo -e "\n$GREEN[*] Step 2: Installing Core System Dependencies...$RESET"
-if [ "$PKG_MGR" != "unknown" ]; then
-    echo -e "$YELLOW[*] Running: $UPDATE_CMD$RESET"
-    eval $UPDATE_CMD
-    echo -e "$YELLOW[*] Running: $INSTALL_CMD $SYS_PACKAGES$RESET"
-    eval $INSTALL_CMD $SYS_PACKAGES
-    echo -e "$GREEN[+] System dependencies installed successfully$RESET"
-else
-    echo -e "$YELLOW[!] Please install dependencies manually: python, git, wget, curl, build-essential...$RESET"
+[[ -n "${PYTHON_BIN:-}" ]] || fail "Python executable not found."
+"$PYTHON_BIN" -c 'import sys; print("Python", sys.version)' || fail "Python is not working."
+
+if [[ ! -f core/requirements.txt ]]; then
+  fail "core/requirements.txt is missing."
 fi
 
-echo -e "\n$GREEN[*] Step 3: Installing Python Modules...$RESET"
-if [ "$PKG_MGR" == "apt" ]; then
-    echo -e "$YELLOW[*] Installing from core/requirements.txt...$RESET"
-    pip3 install -r core/requirements.txt --break-system-packages 2>/dev/null || pip3 install -r core/requirements.txt
-    echo -e "$GREEN[+] Python modules installed successfully$RESET"
-else
-    echo -e "$YELLOW[*] Installing from core/requirements.txt...$RESET"
-    pip install -r core/requirements.txt
-    echo -e "$GREEN[+] Python modules installed successfully$RESET"
+if [[ ! -d .venv ]]; then
+  "$PYTHON_BIN" -m venv .venv || fail "Could not create .venv. On Debian/Ubuntu install python3-venv."
 fi
 
-echo -e "\n$GREEN[*] Step 4: Setting Permissions...$RESET"
-chmod +x main.py
-chmod +x setup.sh
-chmod +x core/*.py 2>/dev/null
-chmod +x core/*.sh 2>/dev/null
-echo -e "$GREEN[+] Permissions set successfully$RESET"
+VENV_PY="$ROOT/.venv/bin/python"
+[[ -x "$VENV_PY" ]] || VENV_PY="$ROOT/.venv/bin/python3"
+[[ -x "$VENV_PY" ]] || fail "Virtual-environment Python not found."
 
-echo -e "\n$CYAN╔════════════════════════════════════════════════════╗"
-echo -e "$CYAN║$GREEN     ✓ INSTALLATION COMPLETE SUCCESSFULLY!    $CYAN║"
-echo -e "$CYAN╚════════════════════════════════════════════════════╝$RESET"
+"$VENV_PY" -m pip install --upgrade pip
+"$VENV_PY" -m pip install -r core/requirements.txt || fail "Dependency installation failed; see pip output above."
+"$VENV_PY" -m compileall -q core DroidCheck_FilePilot_NetPulse || fail "Python syntax check failed."
 
-echo -e "\n$YELLOW📋 NEXT STEPS:$RESET"
-echo -e "$GREEN[1]$RESET Run: ${CYAN}python3 main.py$RESET"
-echo -e "$GREEN[2]$RESET Select a tool category (1-8)"
-echo -e "$GREEN[3]$RESET Choose a specific tool"
-echo -e "$GREEN[4]$RESET Follow tool instructions"
-
-echo -e "\n$YELLOW📚 DOCUMENTATION:$RESET"
-echo -e "$GREEN[*]$RESET README.md - Full documentation & features"
-echo -e "$GREEN[*]$RESET Check GitHub: https://github.com/RamizUddin404/Cyber-Toolkit"
-
-echo -e "\n$BLUE[*] Stay Ethical. Stay Powerful.$RESET"
-echo -e "$CYAN[*] © 2026 RAMIZ UDDIN | All Rights Reserved$RESET\n"
+say "$GREEN" "[+] Dependencies installed in .venv"
+say "$GREEN" "[+] Python syntax check passed"
+printf "\nNext steps:\n  source .venv/bin/activate\n  python main.py\n"
+printf "Optional static audit (does not execute tools):\n  .venv/bin/python core/audit_toolkit.py .\n"
+say "$YELLOW" "Review SECURITY.md and AUDIT_REPORT.md before running legacy modules."
