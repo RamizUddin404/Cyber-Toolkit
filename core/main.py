@@ -23,6 +23,7 @@ INTERNAL_FILES = {
     "__init__.py", "main.py", "audit_toolkit.py", "cyber_deps.py",
     "inspect_tools.py",
 }
+SUPPORTED_SCRIPT_SUFFIXES = {".py", ".sh"}
 # Explicit blocklist: these legacy modules are inventoried but not launched by default.
 BLOCKED_TOOLS = {
     "arp_spoof", "call_spoof", "cam_hacker", "dos_attack", "email_spoof",
@@ -95,17 +96,30 @@ def category_for(name: str) -> str:
     return "General Utilities"
 
 def discover_tools() -> List[dict]:
+    """Discover launchable script files for the main menu without listing data/assets."""
     found = []
-    for path in sorted(CORE_DIR.glob("*.py"), key=lambda p: p.name.lower()):
+    paths = [
+        path for path in CORE_DIR.iterdir()
+        if path.is_file() and path.suffix.lower() in SUPPORTED_SCRIPT_SUFFIXES
+    ]
+    for path in sorted(paths, key=lambda p: p.name.lower()):
         if path.name in INTERNAL_FILES or path.stem.startswith("_"):
             continue
         if path.resolve().parent != CORE_DIR:
             continue
+        category = category_for(path.stem)
+        # Shell scripts are inventory-only until individually reviewed.
+        blocked = (
+            path.stem in BLOCKED_TOOLS
+            or category == "Lab-only / Disabled"
+            or path.suffix.lower() == ".sh"
+        )
         found.append({
             "name": path.stem,
             "path": path,
-            "category": category_for(path.stem),
-            "blocked": path.stem in BLOCKED_TOOLS or category_for(path.stem) == "Lab-only / Disabled",
+            "category": category,
+            "blocked": blocked,
+            "kind": path.suffix.lower().lstrip("."),
         })
     return found
 
@@ -206,6 +220,9 @@ def launch_tool(tool: dict) -> None:
     if not path.is_file() or path.resolve().parent != CORE_DIR:
         print("[!] Tool path is missing or outside core/.")
         return
+    if path.suffix.lower() != ".py":
+        print("[!] This script type is listed for inventory but is not enabled for launch until it receives a separate safety review.")
+        return
     missing, parsed = missing_packages(path)
     if not parsed:
         print("[!] Cannot parse this tool's Python source. It will not be launched.")
@@ -251,72 +268,78 @@ def health_audit(tools: List[dict]) -> None:
 
 def main() -> int:
     tools = discover_tools()
+    selected = tools
+    page = 0
     while True:
         clear_screen()
         banner(len(tools))
-        categories = show_categories(tools)
-        choice = input("\nSelect category/action: ").strip().lower()
+        print("  MAIN TOOL MENU — all discovered scripts are listed here")
+        print(f"  Current view: {len(selected)} script(s)")
+        total_pages = max(1, (len(selected) + PAGE_SIZE - 1) // PAGE_SIZE)
+        page = max(0, min(page, total_pages - 1))
+        show_tools(selected, page=page)
+        print("\\n  N. Next page   P. Previous page")
+        print("  C. Choose category   A. All scripts   S. Search")
+        print("  H. Health / syntax audit   0. Exit")
+        choice = input("\\nSelect script number or action: ").strip().lower()
+
         if choice in {"0", "q", "quit", "exit"}:
             print("Cyber-Toolkit closed.")
             return 0
-        if choice == "h":
-            health_audit(tools)
-            input("\nPress Enter to return...")
+        if choice in {"n", "next"}:
+            if page + 1 < total_pages:
+                page += 1
+            else:
+                print("Already on the last page.")
+                input("Press Enter to continue...")
+            continue
+        if choice in {"p", "prev", "previous"}:
+            if page > 0:
+                page -= 1
+            else:
+                print("Already on the first page.")
+                input("Press Enter to continue...")
             continue
         if choice == "a":
             selected = tools
-        elif choice == "s":
-            query = input("Search tool name: ").strip().lower()
+            page = 0
+            continue
+        if choice == "c":
+            categories = sorted({t["category"] for t in tools}, key=str.lower)
+            print("\\nCategories:")
+            for i, category in enumerate(categories, 1):
+                count = sum(t["category"] == category for t in tools)
+                print(f"  {i}. {category} ({count})")
+            print("  B. Back")
+            category_choice = input("Choose category: ").strip().lower()
+            if category_choice in {"b", "back"}:
+                continue
+            if category_choice.isdigit() and 1 <= int(category_choice) <= len(categories):
+                category = categories[int(category_choice) - 1]
+                selected = [t for t in tools if t["category"] == category]
+                page = 0
+            else:
+                print("Invalid category.")
+                input("Press Enter to continue...")
+            continue
+        if choice == "s":
+            query = input("Search script filename: ").strip().lower()
             selected = [t for t in tools if query in t["name"].lower()]
-        elif choice.isdigit() and 1 <= int(choice) <= len(categories):
-            category = categories[int(choice) - 1]
-            selected = [t for t in tools if t["category"] == category]
-        else:
+            page = 0
+            continue
+        if choice == "h":
+            health_audit([t for t in tools if t["path"].suffix.lower() == ".py"])
+            input("\\nPress Enter to return to the main menu...")
+            continue
+
+        page_count = min(PAGE_SIZE, len(selected) - page * PAGE_SIZE)
+        if not choice.isdigit() or not 1 <= int(choice) <= page_count:
             print("Invalid choice.")
             input("Press Enter to continue...")
             continue
-        page = 0
-        while True:
-            clear_screen()
-            banner(len(tools))
-            print(f"Category/search results: {len(selected)} tool(s)")
-            total_pages = max(1, (len(selected) + PAGE_SIZE - 1) // PAGE_SIZE)
-            page = max(0, min(page, total_pages - 1))
-            show_tools(selected, page=page)
-            print("\n  N. Next page   P. Previous page   B. Back to categories")
-            print("  S. Search       0. Exit")
-            tool_choice = input("\nSelect tool/action: ").strip().lower()
-            if tool_choice in {"b", "back"}:
-                break
-            if tool_choice in {"0", "q", "quit", "exit"}:
-                return 0
-            if tool_choice in {"n", "next"}:
-                if page + 1 < total_pages:
-                    page += 1
-                else:
-                    print("Already on the last page.")
-                    input("Press Enter to continue...")
-                continue
-            if tool_choice in {"p", "prev", "previous"}:
-                if page > 0:
-                    page -= 1
-                else:
-                    print("Already on the first page.")
-                    input("Press Enter to continue...")
-                continue
-            if tool_choice == "s":
-                query = input("Search tool name: ").strip().lower()
-                selected = [t for t in tools if query in t["name"].lower()]
-                page = 0
-                continue
-            page_count = min(PAGE_SIZE, len(selected) - page * PAGE_SIZE)
-            if not tool_choice.isdigit() or not 1 <= int(tool_choice) <= page_count:
-                print("Invalid choice.")
-                input("Press Enter to continue...")
-                continue
-            selected_tool = selected[page * PAGE_SIZE + int(tool_choice) - 1]
-            launch_tool(selected_tool)
-            input("\nPress Enter to return to the current menu page...")
+        selected_tool = selected[page * PAGE_SIZE + int(choice) - 1]
+        launch_tool(selected_tool)
+        input("\\nPress Enter to return to the main menu...")
 
 if __name__ == "__main__":
     raise SystemExit(main())
