@@ -1,3 +1,27 @@
-# ENCRYPTED BY: RAMIZ UDDIN ULTIMATE OBFUSCATOR
-# SOURCE PROTECTED. DO NOT TAMPER.
-import marshal,zlib,base64;exec(marshal.loads(zlib.decompress(base64.b64decode(b'eJyVUs9PE0EUnt2dbUtLRAOI8kMHCIfFBEWgCbWQIMVkBRvSpUZZyGZpx9qku9vMbk3Yk/Fijxhj1IOJBy969g+ptsRkws2D8UbgH3BmC1il0fCSefPmvZnvvXnf+w5aRDzaD5NMvQIa0IRlQJq7QARN7AdE1CSmpQ2owcQDAMwIABvSCJg5eopAQSgIivyTH9I5oQVdZkvi6J8CdP0kkBHBKRlhOWeEY0xdPvZrYluvlAWZ8GmU46rOgan272Bbr/zbWwBKKE3lXAmbxJ8e0CdvTcWtubOIH0KB+EPNfTGztLC2lEK3HyZQZuGeuo6yqZSa9ifPhDqg37AUSEXHpSF32/WwReUyKdoelSvlMiaKQKFtWtjlP0EU0JjnOCXjMTbzmJAYc0K23HmmnoI9GHquPlOrhQa8uAc7atGrDYiYUb2zM/068SLxMrkzUYsON+BIEFUacDwwBnfh0CHvU6616Sc8f27yfDIDGpsgTZoVUauvlQHpNANaKJiyHmaFNbAsOv/kmfP1n3yRtvk6/mA8mvZjAdU3LX18E5EoC7CGStjO+13co1W2bOyhRbOU8zvU1euLaiqTQFScnSV8lv3BrItRsZxjccT7jh45BOWxZxZL7oQf1pdsD5NNBRL+FyoX7XLFo9Hc9hYmRh6XXRoj2HKe4OCgCOQC5ypgMqiFSqRik25mdfLAyhGJjJH+9+JXOPohW7uWbIzN7YU7q3o9fPnNWj08XB+d/hZf+RJfacTTtdX7f11XG2N3OePKLuwhHJVGDMMyi7ZhKDLhlFLoFS0cjE6Qml/gE2YYH0HwollaJGk5+UoJz5NL7MhrdkeZ2pcEQfgBug6gLFw5OA+F3v0ogJ3V9brU97b7XW9N6gtAfgGNC+F8'))))
+#!/usr/bin/env python3
+"""IPv4/IPv6 subnet calculator using Python's standard ipaddress module."""
+import ipaddress
+
+
+def main():
+    value = input("Enter IP address with prefix (example 192.168.1.10/24): ").strip()
+    try:
+        network = ipaddress.ip_network(value, strict=False)
+    except ValueError as exc:
+        print(f"Invalid IP/prefix: {exc}")
+        return
+    print(f"Network:       {network.network_address}")
+    print(f"Netmask:       {network.netmask}")
+    print(f"Broadcast:     {getattr(network, 'broadcast_address', 'not applicable for IPv6')}")
+    print(f"Prefix length: {network.prefixlen}")
+    print(f"Total addresses: {network.num_addresses}")
+    if network.version == 4 and network.num_addresses > 2:
+        print(f"Usable hosts:  {network.num_addresses - 2}")
+    elif network.version == 4:
+        print("Usable hosts:  0 (network too small for conventional host addressing)")
+    else:
+        print("IP version:    IPv6")
+
+
+if __name__ == "__main__":
+    main()
