@@ -2,3 +2,10 @@ rockyou.txt
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Local Python environments and reports
+.venv/
+venv/
+.env
+*.log
+*_report.json
