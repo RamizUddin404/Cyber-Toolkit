@@ -22,6 +22,8 @@ jobs:
       - name: Compile Python sources without executing tools
         run: python -m compileall -q -f .
       - name: Run non-executing static audit
-        run: python core/audit_toolkit.py . > audit-output.json
+        run: |
+          python core/audit_toolkit.py . > "$RUNNER_TEMP/audit-output.json"
+          python -c "import json, os; p=os.path.join(os.environ['RUNNER_TEMP'], 'audit-output.json'); d=json.load(open(p, encoding='utf-8')); print('Python files:', d['python_files']); print('Syntax errors:', d['syntax_error_count']); print('Review findings:', d['finding_count'])"
       - name: Run safe audit tests
         run: python -m unittest discover -s tests -v
