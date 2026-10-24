@@ -113,12 +113,12 @@ python3 main.py
 
 ### Minimum
 - **OS:** Termux, Kali Linux, Ubuntu, Debian, or any Linux
-- **Python:** 3.7+
+- **Python:** 3.10+
 - **RAM:** 512MB
 - **Storage:** 500MB
 
 ### Recommended
-- **Python:** 3.9+
+- **Python:** 3.10+
 - **RAM:** 2GB+
 - **Storage:** 1GB+
 - **Internet:** Required for first run (dependency installation)
