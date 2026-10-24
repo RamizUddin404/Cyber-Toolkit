@@ -417,3 +417,38 @@ All code has been debugged, dependencies are properly configured, and the toolki
 **Last Updated:** September 6, 2026
 **Status:** ✅ Active & Maintained
 **Version:** v180.0 FIXED
+
+
+---
+
+## 🧪 Maintenance and validation (2026-10-25)
+
+The repository now includes a GitHub Actions workflow at `.github/workflows/python-checks.yml`.
+It syntax-compiles Python sources and runs the safe static-audit unit tests. This workflow
+does **not** execute the toolkit's individual scripts, and passing syntax checks does not
+prove a tool is safe or functionally correct.
+
+### Run a non-executing source audit
+
+```bash
+python3 core/audit_toolkit.py .
+```
+
+The audit reports syntax errors, high-risk filenames, and patterns such as dynamic execution
+or shell/network calls for manual review. Pattern matches are review flags, not proof of
+malicious behavior. The script does not import or execute the files it scans.
+
+### Important review notice
+
+Some legacy modules are obfuscated and some filenames refer to credential attacks, SMS
+bombing/spoofing, TCP flooding, reverse shells, payload generation, SQL injection, and
+web-shell behavior. These modules are not certified as safe or working by the CI workflow.
+Use only authorized lab environments and do not run unknown or obfuscated code on a personal
+device.
+
+The repository also contains files whose names suggest possible passwords or victim logs.
+Review their contents privately. If they contain real credentials or personal data, remove
+them from the repository and rotate exposed credentials. A new deletion commit does not
+erase data from Git history.
+
+See [SECURITY.md](SECURITY.md) and [AUDIT_REPORT.md](AUDIT_REPORT.md) for details.
